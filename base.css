@@ -1,0 +1,62 @@
+/* packhelp-merch — base reset & typography */
+
+@font-face {
+  font-family: "ABC Favorit";
+  src: url("assets/fonts/ABCFavoritVariable.woff2") format("woff2-variations"),
+       url("assets/fonts/ABCFavoritVariable.woff") format("woff-variations");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, p, figure { margin: 0; }
+ul, ol { list-style: none; padding: 0; }
+img, picture { max-width: 100%; display: block; }
+input, button, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; border: none; background: none; }
+a { color: inherit; text-decoration: none; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-17);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background: var(--color-bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.section { padding-block: calc(var(--space-20) * 2); }
+
+/* Generic placeholder used in place of imagery that hasn't been supplied yet */
+.ph {
+  background: var(--gray-200);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: var(--fs-13);
+  text-align: center;
+}
