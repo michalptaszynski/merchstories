@@ -342,18 +342,29 @@
   padding: 0 var(--space-6) var(--space-6);
 }
 .lifestyle__tile {
+  position: relative;
   display: flex;
   flex: 1 1 0;
   min-width: 0;
   align-items: center;
   gap: 10px;
   padding: 8px;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease;
 }
-.lifestyle__tile:hover,
-.lifestyle__tile.is-active {
-  border-bottom-color: #000;
+.lifestyle__tile::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.lifestyle__tile:hover::after,
+.lifestyle__tile.is-active::after {
+  transform: scaleX(1);
 }
 .lifestyle__tile-thumb {
   display: flex;
@@ -365,6 +376,15 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+.lifestyle__tile:hover .lifestyle__tile-thumb,
+.lifestyle__tile.is-active .lifestyle__tile-thumb {
+  animation: lifestyle-tile-bounce 0.6s ease;
+}
+@keyframes lifestyle-tile-bounce {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 .lifestyle__tile-name {
   flex: 1 1 0;
@@ -680,20 +700,38 @@
 .category-card__swatches .swatch,
 .showcase-item__swatches .swatch,
 .pdp__swatches .swatch {
+  position: relative;
   width: 32px;
   height: 32px;
   box-sizing: border-box;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid transparent;
   background-size: cover;
   background-position: center;
   box-shadow: none;
 }
+.category-card__swatches .swatch::after,
+.showcase-item__swatches .swatch::after,
+.pdp__swatches .swatch::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--rich-blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.category-card__swatches .swatch.is-active::after,
+.showcase-item__swatches .swatch.is-active::after,
+.pdp__swatches .swatch.is-active::after {
+  transform: scaleX(1);
+}
 .category-card__swatches .swatch.is-active,
 .showcase-item__swatches .swatch.is-active,
 .pdp__swatches .swatch.is-active {
-  border-bottom-color: var(--rich-blue);
   box-shadow: none;
 }
 .swatch {
