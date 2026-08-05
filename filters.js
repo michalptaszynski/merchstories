@@ -2,6 +2,7 @@
   var pills = document.querySelectorAll('.pill-filter');
   var tiles = document.querySelectorAll('.product-tile');
   var grid = document.querySelector('.product-grid');
+  var showAllBtn = document.querySelector('.btn-show-all');
   if (!pills.length || !tiles.length) return;
 
   pills.forEach(function (pill) {
@@ -10,6 +11,8 @@
       pill.classList.add('is-active');
 
       var filter = pill.dataset.filter;
+
+      if (showAllBtn) showAllBtn.style.display = filter === 'all' ? '' : 'none';
 
       if (grid) {
         // Lock current height as the animation start point.
