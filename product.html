@@ -6,7 +6,7 @@
 <title>Custom Women Organic Cotton Hoodie — Packhelp Merch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="components.css">
@@ -122,12 +122,11 @@
 
     <div class="pdp__story">
       <div class="pdp__story-eyebrow">Details that matter</div>
+      <div class="pdp__story-gallery-media" style="background-image: url('assets/photos/productpage/tshirt1.jpg');"></div>
       <div class="pdp__story-row">
         <p class="pdp__story-body">Our merch is developed with in-house product specialists. Every hoodie is cut from GOTS-certified organic cotton and finished in certified, ethical manufacturing facilities &mdash; so your team gets something that actually gets worn, not left in a drawer.</p>
       </div>
-      <a href="#" class="pdp__story-watch">Watch more <span>+</span></a>
       <div class="pdp__story-gallery">
-        <div class="ph"></div>
         <div class="ph"></div>
         <div class="ph"></div>
       </div>
@@ -181,6 +180,22 @@
     <p class="pdp__bulk-note">Ordering 250+? <a href="index.html#get-in-touch">Get bulk pricing &rarr;</a></p>
   </aside>
 </section>
+
+<div class="font-settings" id="fontSettings">
+  <div class="font-settings__panel" id="fontSettingsPanel">
+    <span class="font-settings__label">Sans-Serif</span>
+    <label class="font-switch">
+      <input type="checkbox" id="fontSwitch">
+      <span class="font-switch__track"></span>
+    </label>
+  </div>
+  <button type="button" id="fontSettingsToggle" class="font-settings__toggle" aria-expanded="false" aria-label="Font settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+</div>
+<script src="font-toggle.js"></script>
 
 </div>
 
