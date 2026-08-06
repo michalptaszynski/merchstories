@@ -73,6 +73,15 @@
   text-transform: uppercase;
 }
 .nav-secondary a:hover { color: var(--color-text-secondary); }
+.nav-quote-btn {
+  gap: var(--space-2);
+}
+.nav-quote-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.nav-secondary a.nav-quote-btn:hover { color: var(--white); }
 
 @media (min-width: 1180px) {
   .nav-links { display: flex; align-items: center; gap: var(--space-6); }
@@ -135,6 +144,11 @@
   letter-spacing: -0.02em;
   line-height: 0.98;
   margin-bottom: var(--space-6);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }
 .btn {
   display: inline-flex;
