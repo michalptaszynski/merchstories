@@ -298,6 +298,17 @@
   width: 360px;
   height: 72px;
 }
+@media (max-width: 700px) {
+  .section--cta .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section-head__logo .logo-mark {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+}
 
 /* ---------- Lifestyle section ---------- */
 .lifestyle__panel {
@@ -379,15 +390,21 @@
   display: flex;
   gap: var(--space-4);
   padding: 0 var(--space-6) var(--space-6);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-left: var(--space-6);
+  scrollbar-width: none;
 }
+.lifestyle__tiles::-webkit-scrollbar { display: none; }
 .lifestyle__tile {
   position: relative;
   display: flex;
   flex: 1 1 0;
-  min-width: 0;
+  min-width: 240px;
   align-items: center;
   gap: 8px;
   padding: 8px;
+  scroll-snap-align: start;
 }
 .lifestyle__tile::after {
   content: '';
@@ -813,6 +830,64 @@
   .product-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ---------- New in: large-tile lifestyle grid ---------- */
+.newin-grid {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  padding-inline: var(--space-6);
+}
+.newin-card__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background-color: var(--gray-200);
+  overflow: hidden;
+}
+.newin-card__img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform var(--duration-slowest) var(--ease);
+}
+.newin-card:hover .newin-card__img {
+  transform: scale(1.05);
+}
+.newin-card__thumb {
+  position: absolute;
+  left: var(--space-2);
+  bottom: var(--space-2);
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 2px;
+  background-color: var(--white);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-shadow: var(--shadow-sm);
+}
+.newin-card__title {
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+@media (max-width: 900px) {
+  .newin-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .newin-grid { grid-template-columns: repeat(2, 1fr); }
+}
+#freshly-uploaded.newin-lifestyle-mode .product-grid {
+  display: none;
+}
+#freshly-uploaded.newin-lifestyle-mode .newin-grid.is-active {
+  display: grid;
+}
+
 .btn-show-all {
   display: flex;
   align-items: center;
@@ -1126,12 +1201,12 @@
 }
 .font-settings__panel {
   display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-2) var(--space-4);
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   opacity: 0;
   transform: translateY(8px) scale(0.96);
@@ -1142,6 +1217,12 @@
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
+}
+.font-settings__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
 }
 .font-settings__label {
   font-family: var(--font-mono);

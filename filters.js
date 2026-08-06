@@ -5,6 +5,7 @@
   var tiles = document.querySelectorAll('.product-tile');
   var grid = document.querySelector('.product-grid');
   var showAllBtn = document.querySelector('.btn-show-all');
+  var newinGroups = document.querySelectorAll('.newin-grid');
   var hasGridUi = pills.length && tiles.length;
 
   var expanded = false;
@@ -51,7 +52,16 @@
     if (showAllBtn) {
       var hasMore = matchCount > visibleCount;
       showAllBtn.style.display = hasMore ? '' : 'none';
+      var labelEl = showAllBtn.querySelector('span');
+      if (labelEl) {
+        var categoryLabel = activePill && filter !== 'all' ? activePill.textContent.trim().toLowerCase() : '';
+        labelEl.textContent = categoryLabel ? 'Show all ' + categoryLabel : 'Show all';
+      }
     }
+
+    newinGroups.forEach(function (group) {
+      group.classList.toggle('is-active', filter === 'all' || group.dataset.category === filter);
+    });
   }
 
   function activateFilter(filterValue, scrollToGrid) {

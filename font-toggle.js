@@ -32,3 +32,22 @@
     if (!wrap.contains(e.target)) setOpen(false);
   });
 })();
+
+(function () {
+  var STORAGE_KEY = 'ph-newin-mode';
+  var section = document.getElementById('freshly-uploaded');
+  var checkbox = document.getElementById('newInGridSwitch');
+  if (!section || !checkbox) return;
+
+  function applyMode(isLifestyle) {
+    section.classList.toggle('newin-lifestyle-mode', isLifestyle);
+    checkbox.checked = isLifestyle;
+  }
+
+  applyMode(localStorage.getItem(STORAGE_KEY) === 'lifestyle');
+
+  checkbox.addEventListener('change', function () {
+    applyMode(checkbox.checked);
+    localStorage.setItem(STORAGE_KEY, checkbox.checked ? 'lifestyle' : 'dense');
+  });
+})();
