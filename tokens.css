@@ -15,7 +15,7 @@
   --gray-200:  #F2F2F2;
   --gray-300:  #E7E7E7;
   --gray-400:  #CFCFCF;
-  --gray-500:  #86868B;
+  --gray-500:  #757579; /* AA-compliant on white: 4.59:1 */
   --gray-600:  #555555;
   --rich-blue: #00061A;
   --rich-blue-70: rgba(0, 6, 26, 0.7);
