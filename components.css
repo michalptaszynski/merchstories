@@ -23,15 +23,12 @@
   grid-column: 2;
   grid-row: 1;
   justify-self: center;
-  align-self: start;
-  /* wordmark's ink baseline sits ~40% down the SVG (the rest is the descender swash); nudge so that point lands on the nav row's vertical center instead of centering the whole bounding box */
-  margin-top: 20.8px;
+  align-self: center;
 }
-.logo .logo-write {
+.logo .logo-mark {
   display: block;
-  height: 48px;
-  width: auto;
-  overflow: visible;
+  width: 120px;
+  height: 24px;
 }
 .nav-right {
   grid-column: 1;
@@ -296,30 +293,10 @@
 .section-head__logo {
   flex-shrink: 0;
 }
-.section-head__logo .logo-write {
+.section-head__logo .logo-mark {
   display: block;
-  width: 480px;
-  height: auto;
-  overflow: visible;
-}
-.logo-write .pen path {
-  fill: none;
-  stroke: var(--white);
-  stroke-width: 5.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  animation-name: logo-draw;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
-}
-.logo.is-written .logo-write .pen path,
-.section-head__logo.is-written .logo-write .pen path {
-  animation-play-state: running;
-}
-@keyframes logo-draw { to { stroke-dashoffset: 0; } }
-@media (prefers-reduced-motion: reduce) {
-  .logo-write .pen path { animation: none; stroke-dashoffset: 0 !important; }
+  width: 360px;
+  height: 72px;
 }
 
 /* ---------- Lifestyle section ---------- */
@@ -902,7 +879,6 @@
 }
 .password-gate-input:hover { border-color: var(--color-border-hover); }
 .password-gate-input:focus {
-  outline: none;
   border-color: var(--rich-blue);
 }
 .password-gate-error {
