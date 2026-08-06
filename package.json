@@ -1,0 +1,8 @@
+{
+  "name": "packhelp-merch",
+  "private": true,
+  "description": "Static site. Edit src/pages + src/partials, then run the build.",
+  "scripts": {
+    "build": "node build.js"
+  }
+}
