@@ -1434,6 +1434,7 @@
 
 /* ---------- Shop page ---------- */
 .shop-hero {
+  padding-inline: var(--space-6);
   padding-top: var(--space-10);
   padding-bottom: var(--space-6);
 }
@@ -1488,6 +1489,7 @@
   padding-right: 0;
 }
 .shop-cats .category-card__title {
+  font-size: 12px;
   font-weight: 500;
 }
 .shop-cats .category-card.is-active .category-card__media {
