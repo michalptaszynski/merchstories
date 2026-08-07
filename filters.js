@@ -64,18 +64,22 @@
     });
   }
 
-  function activateFilter(filterValue) {
+  function activateFilter(filterValue, animate) {
     var pill = document.querySelector('.js-category-filter[data-filter="' + filterValue + '"]');
     if (!pill) return;
     pills.forEach(function (p) { p.classList.remove('is-active'); });
     pill.classList.add('is-active');
-    animateGridTo(applyVisibility);
+    if (animate) {
+      animateGridTo(applyVisibility);
+    } else {
+      applyVisibility();
+    }
   }
 
   if (hasGridUi) {
     pills.forEach(function (pill) {
       pill.addEventListener('click', function () {
-        activateFilter(pill.dataset.filter);
+        activateFilter(pill.dataset.filter, true);
       });
     });
 
@@ -93,7 +97,7 @@
 
     var initialCategory = new URLSearchParams(location.search).get('category');
     if (initialCategory) {
-      activateFilter(initialCategory);
+      activateFilter(initialCategory, false);
     } else {
       applyVisibility();
     }
