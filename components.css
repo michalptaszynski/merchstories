@@ -1443,6 +1443,10 @@
 .shop-cat-section {
   padding-block: var(--space-16);
 }
+.shop-cat-section .section-subheading {
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.4;
+}
 .shop-breadcrumb {
   font-family: var(--font-mono);
   font-size: var(--fs-13);
