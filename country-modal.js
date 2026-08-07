@@ -19,8 +19,7 @@
     document.body.style.overflow = '';
   }
 
-  var titleEl = modal.querySelector('.country-modal__title');
-  var headerFlag = modal.querySelector('.country-modal__header .country-modal__flag span');
+  var headerFlag = modal.querySelector('.country-modal__header .country-modal__flag img');
 
   openBtn.addEventListener('click', open);
   closeBtn.addEventListener('click', close);
@@ -33,10 +32,8 @@
           active.classList.remove('is-active');
         });
         btn.classList.add('is-active');
-        var name = row.querySelector('.country-modal__name').textContent;
-        var flag = row.querySelector('.country-modal__flag span').textContent;
-        if (titleEl) titleEl.textContent = 'Shipping to ' + name;
-        if (headerFlag) headerFlag.textContent = flag;
+        var flagSrc = row.querySelector('.country-modal__flag img').src;
+        if (headerFlag) headerFlag.src = flagSrc;
         close();
       });
     });
