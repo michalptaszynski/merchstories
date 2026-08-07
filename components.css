@@ -1813,6 +1813,73 @@
   accent-color: var(--rich-blue);
 }
 
+/* ---------- How it works page ---------- */
+.hiw {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding: var(--space-10) var(--space-6) var(--space-16);
+}
+.hiw__intro {
+  max-width: 720px;
+  margin-bottom: 0;
+}
+.hiw__title {
+  font-size: clamp(2.5rem, 6vw, var(--fs-64));
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: var(--space-6);
+}
+.hiw__subtitle {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+}
+.hiw__questions {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-6);
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding: var(--space-16) var(--space-6);
+}
+.hiw__q {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.hiw__q-num {
+  font-family: var(--font-base);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+.hiw__q-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+.hiw__q-desc {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+}
+.hiw__q-media {
+  aspect-ratio: 4 / 5;
+  background-color: var(--gray-200);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 900px) {
+  .hiw__questions { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .hiw__questions { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ---------- Quote drawer ---------- */
 .quote-drawer-overlay {
   position: fixed;

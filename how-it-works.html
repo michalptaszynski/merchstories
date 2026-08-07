@@ -1,3 +1,35 @@
+<!-- GENERATED FILE — do not edit directly.
+     Source: src/pages/how-it-works.html (+ src/partials/). Run `node build.js` after editing. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How it works &mdash; Merch Stories</title>
+<meta name="description" content="From first quote to the last box shipped &mdash; here's how a Merch Stories order actually moves, step by step.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="components.css">
+
+</head>
+<body>
+
+<div id="passwordGate" class="password-gate">
+  <form id="passwordGateForm" class="password-gate-form">
+    <p class="password-gate-title">This preview is password protected</p>
+    <input type="password" id="passwordGateInput" class="password-gate-input" placeholder="Enter password" autocomplete="current-password">
+    <button type="submit" class="btn btn--stroke"><span>Enter</span></button>
+    <p class="password-gate-error" id="passwordGateError" style="display:none;">Incorrect password, try again.</p>
+  </form>
+</div>
+
+
+<div id="siteContent" style="display:none;">
+
 <header class="site-header">
   <div class="utility-bar">
     <div class="utility-bar__spacer"></div>
@@ -534,3 +566,88 @@
     </div>
   </div>
 </aside>
+
+
+<main>
+
+<div class="hiw">
+  <div class="hiw__intro">
+    <h1 class="hiw__title">How it works</h1>
+    <p class="hiw__subtitle">Tell us what you're after and we'll take it from there &mdash; from the first mockup to the last box out the door.</p>
+  </div>
+</div>
+
+<div class="hiw__questions">
+  <div class="hiw__q">
+    <span class="hiw__q-num">1</span>
+    <h2 class="hiw__q-title">Browse and send a quote request</h2>
+    <div class="hiw__q-media" style="background-image: url('assets/photos/how-it-works/step1.jpg');"></div>
+    <p class="hiw__q-desc">Pick the products that fit your brand, set rough quantities, and send it over. No commitment, no login required.</p>
+  </div>
+  <div class="hiw__q">
+    <span class="hiw__q-num">2</span>
+    <h2 class="hiw__q-title">Get free mockups and a quote</h2>
+    <p class="hiw__q-desc">Our design team turns your logo into real mockups within 24 hours, alongside pricing across a few quantity tiers.</p>
+  </div>
+  <div class="hiw__q">
+    <span class="hiw__q-num">3</span>
+    <h2 class="hiw__q-title">Approve designs and confirm the order</h2>
+    <p class="hiw__q-desc">Request changes until the mockups feel right, then give the go-ahead. Nothing goes into production before you sign off.</p>
+    <div class="hiw__q-media" style="background-image: url('assets/photos/how-it-works/step3.jpg');"></div>
+  </div>
+  <div class="hiw__q">
+    <span class="hiw__q-num">4</span>
+    <h2 class="hiw__q-title">Production, warehousing and delivery</h2>
+    <div class="hiw__q-media" style="background-image: url('assets/photos/how-it-works/step4.jpg');"></div>
+    <p class="hiw__q-desc">We manufacture, quality-check, and ship &mdash; to one office or to a thousand doorsteps, wherever your people are.</p>
+  </div>
+  <div class="hiw__q">
+    <span class="hiw__q-num">5</span>
+    <h2 class="hiw__q-title">Platform and merch store &mdash; optional</h2>
+    <p class="hiw__q-desc">Plug into our platform to track stock and automate reorders, or spin up a branded store so your team can help themselves.</p>
+  </div>
+</div>
+
+<section class="section section--cta">
+  <div class="section-head">
+    <div class="section-head__text">
+      <h2 class="section-heading">Get in touch</h2>
+      <p class="section-subheading">Tell us what you need. Free designs and a full quote within 24 hours.</p>
+      <a href="#" class="btn btn--stroke"><span>Contact us</span></a>
+    </div>
+    <div class="section-head__logo">
+      <img src="assets/logo.svg" alt="Merch Stories" class="logo-mark">
+      <p class="section-head__credit">Brought to you by <img src="assets/logo-packhelp-black.svg" alt="Packhelp" class="section-head__credit-logo"></p>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<section class="font-settings" id="fontSettings" aria-label="Display settings">
+  <div class="font-settings__panel" id="fontSettingsPanel">
+    <div class="font-settings__row">
+      <span class="font-settings__label" id="fontSettingsLabel">Sans-Serif</span>
+      <label class="font-switch">
+        <input type="checkbox" id="fontSwitch" aria-labelledby="fontSettingsLabel">
+        <span class="font-switch__track"></span>
+      </label>
+    </div>
+  </div>
+  <button type="button" id="fontSettingsToggle" class="font-settings__toggle" aria-expanded="false" aria-label="Font settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+</section>
+<script src="font-toggle.js"></script>
+<script src="quote-drawer.js"></script>
+<script src="nav-megamenu.js"></script>
+<script src="country-modal.js"></script>
+
+</div>
+
+<script src="password-gate.js"></script>
+</body>
+</html>
