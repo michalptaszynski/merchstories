@@ -1444,8 +1444,10 @@
   padding-block: var(--space-16);
 }
 .shop-cat-section .section-subheading {
-  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  font-size: 32px;
   line-height: 1.4;
+  max-width: none;
+  white-space: nowrap;
 }
 .shop-breadcrumb {
   font-family: var(--font-mono);
