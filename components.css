@@ -1742,9 +1742,6 @@
   color: var(--color-text-secondary);
 }
 .quote-drawer__summary-row--total {
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-4);
-  border-top: 1px solid var(--color-border-default);
   font-size: 16px;
   font-weight: 500;
   color: var(--color-text-primary);
