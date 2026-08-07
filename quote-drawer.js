@@ -62,6 +62,12 @@
     e.preventDefault();
     open();
   });
+  document.querySelectorAll('.js-open-quote').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      open();
+    });
+  });
   closeBtn.addEventListener('click', close);
   overlay.addEventListener('click', close);
   document.addEventListener('keydown', function (e) {
