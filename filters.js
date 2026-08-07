@@ -5,7 +5,15 @@
   var grid = document.querySelector('.product-grid');
   var showAllBtn = document.querySelector('.btn-show-all');
   var newinGroups = document.querySelectorAll('.newin-grid');
+  var shopOverview = document.getElementById('shopOverview');
+  var shopDetail = document.getElementById('shopCategoryDetail');
   var hasGridUi = pills.length && tiles.length;
+
+  function setShopMode(showDetail) {
+    if (!shopOverview || !shopDetail) return;
+    shopOverview.hidden = showDetail;
+    shopDetail.hidden = !showDetail;
+  }
 
   function getColumnCount() {
     if (!grid) return 1;
@@ -69,6 +77,7 @@
     if (!pill) return;
     pills.forEach(function (p) { p.classList.remove('is-active'); });
     pill.classList.add('is-active');
+    setShopMode(true);
     if (animate) {
       animateGridTo(applyVisibility);
     } else {
@@ -99,6 +108,7 @@
     if (initialCategory) {
       activateFilter(initialCategory, false);
     } else {
+      setShopMode(false);
       applyVisibility();
     }
   }
