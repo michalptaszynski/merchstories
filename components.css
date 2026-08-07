@@ -1817,7 +1817,7 @@
 .hiw {
   max-width: var(--max-w);
   margin-inline: auto;
-  padding: var(--space-10) var(--space-6) var(--space-16);
+  padding: var(--space-10) var(--space-6) 0;
 }
 .hiw__intro {
   max-width: 720px;
@@ -1830,17 +1830,13 @@
   line-height: 1;
   margin-bottom: var(--space-6);
 }
-.hiw__subtitle {
-  font-size: 18px;
-  color: var(--color-text-secondary);
-}
 .hiw__questions {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--space-6);
   max-width: var(--max-w);
   margin-inline: auto;
-  padding: var(--space-16) var(--space-6);
+  padding: var(--space-10) var(--space-6) var(--space-16);
 }
 .hiw__q {
   display: flex;
