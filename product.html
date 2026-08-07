@@ -44,8 +44,8 @@
   </div>
   <div class="nav-row">
     <nav class="nav-secondary" aria-label="Language and quote cart">
-      <button type="button" class="btn btn--stroke btn--sm btn--circle" id="langSwitchBtn">EN</button>
-      <a href="#" class="btn btn--dark btn--sm nav-quote-btn" id="navQuoteBtn">
+      <button type="button" class="btn btn--stroke btn--sm btn--circle" id="langSwitchBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="countryModal">EN</button>
+      <a href="#" class="btn btn--dark btn--sm nav-quote-btn" id="navQuoteBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="quoteDrawer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <span>Quote</span>
       </a>
@@ -359,9 +359,9 @@
 </header>
 
 <div class="quote-drawer-overlay" id="quoteDrawerOverlay"></div>
-<aside class="quote-drawer" id="quoteDrawer" aria-hidden="true">
+<aside class="quote-drawer" id="quoteDrawer" role="dialog" aria-modal="true" aria-labelledby="quoteDrawerTitle" aria-hidden="true">
   <div class="quote-drawer__header">
-    <h2 class="quote-drawer__title">Products in quote</h2>
+    <h2 class="quote-drawer__title" id="quoteDrawerTitle">Products in quote</h2>
     <button type="button" class="quote-drawer__close" id="quoteDrawerClose" aria-label="Close quote">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
@@ -412,10 +412,10 @@
 </aside>
 
 <div class="country-modal-overlay" id="countryModalOverlay"></div>
-<aside class="country-modal" id="countryModal" aria-hidden="true">
+<aside class="country-modal" id="countryModal" role="dialog" aria-modal="true" aria-labelledby="countryModalTitle" aria-hidden="true">
   <div class="country-modal__header">
     <div class="country-modal__current">
-      <h2 class="country-modal__title">Choose other country</h2>
+      <h2 class="country-modal__title" id="countryModalTitle">Choose other country</h2>
     </div>
     <button type="button" class="country-modal__close" id="countryModalClose" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>

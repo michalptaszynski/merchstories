@@ -44,8 +44,8 @@
   </div>
   <div class="nav-row">
     <nav class="nav-secondary" aria-label="Language and quote cart">
-      <button type="button" class="btn btn--stroke btn--sm btn--circle" id="langSwitchBtn">EN</button>
-      <a href="#" class="btn btn--dark btn--sm nav-quote-btn" id="navQuoteBtn">
+      <button type="button" class="btn btn--stroke btn--sm btn--circle" id="langSwitchBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="countryModal">EN</button>
+      <a href="#" class="btn btn--dark btn--sm nav-quote-btn" id="navQuoteBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="quoteDrawer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <span>Quote</span>
       </a>
@@ -359,9 +359,9 @@
 </header>
 
 <div class="quote-drawer-overlay" id="quoteDrawerOverlay"></div>
-<aside class="quote-drawer" id="quoteDrawer" aria-hidden="true">
+<aside class="quote-drawer" id="quoteDrawer" role="dialog" aria-modal="true" aria-labelledby="quoteDrawerTitle" aria-hidden="true">
   <div class="quote-drawer__header">
-    <h2 class="quote-drawer__title">Products in quote</h2>
+    <h2 class="quote-drawer__title" id="quoteDrawerTitle">Products in quote</h2>
     <button type="button" class="quote-drawer__close" id="quoteDrawerClose" aria-label="Close quote">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
@@ -412,10 +412,10 @@
 </aside>
 
 <div class="country-modal-overlay" id="countryModalOverlay"></div>
-<aside class="country-modal" id="countryModal" aria-hidden="true">
+<aside class="country-modal" id="countryModal" role="dialog" aria-modal="true" aria-labelledby="countryModalTitle" aria-hidden="true">
   <div class="country-modal__header">
     <div class="country-modal__current">
-      <h2 class="country-modal__title">Choose other country</h2>
+      <h2 class="country-modal__title" id="countryModalTitle">Choose other country</h2>
     </div>
     <button type="button" class="country-modal__close" id="countryModalClose" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -577,36 +577,36 @@
   </div>
 </div>
 
-<div class="hiw__questions">
-  <div class="hiw__q">
+<ol class="hiw__questions">
+  <li class="hiw__q">
     <span class="hiw__q-num">1</span>
     <h2 class="hiw__q-title">Browse and send a quote request</h2>
     <div class="hiw__q-media" style="background-image: url('assets/photos/how-it-works/step1.jpg');"></div>
     <p class="hiw__q-desc">Pick the products that fit your brand, set rough quantities, and send it over. No commitment, no login required.</p>
-  </div>
-  <div class="hiw__q">
+  </li>
+  <li class="hiw__q">
     <span class="hiw__q-num">2</span>
     <h2 class="hiw__q-title">Get free mockups and a quote</h2>
     <p class="hiw__q-desc">Our design team turns your logo into real mockups within 24 hours, alongside pricing across a few quantity tiers.</p>
-  </div>
-  <div class="hiw__q">
+  </li>
+  <li class="hiw__q">
     <span class="hiw__q-num">3</span>
     <h2 class="hiw__q-title">Approve designs and confirm the order</h2>
     <p class="hiw__q-desc">Request changes until the mockups feel right, then give the go-ahead. Nothing goes into production before you sign off.</p>
     <div class="hiw__q-media" style="background-image: url('assets/photos/how-it-works/step3.jpg');"></div>
-  </div>
-  <div class="hiw__q">
+  </li>
+  <li class="hiw__q">
     <span class="hiw__q-num">4</span>
     <h2 class="hiw__q-title">Production, warehousing and delivery</h2>
     <div class="hiw__q-media" style="background-image: url('assets/photos/how-it-works/step4.jpg');"></div>
     <p class="hiw__q-desc">We manufacture, quality-check, and ship &mdash; to one office or to a thousand doorsteps, wherever your people are.</p>
-  </div>
-  <div class="hiw__q">
+  </li>
+  <li class="hiw__q">
     <span class="hiw__q-num">5</span>
     <h2 class="hiw__q-title">Platform and merch store &mdash; optional</h2>
     <p class="hiw__q-desc">Plug into our platform to track stock and automate reorders, or spin up a branded store so your team can help themselves.</p>
-  </div>
-</div>
+  </li>
+</ol>
 
 <section class="section section--cta">
   <div class="section-head">

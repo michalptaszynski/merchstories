@@ -18,14 +18,18 @@
     drawer.classList.add('is-open');
     overlay.classList.add('is-open');
     drawer.setAttribute('aria-hidden', 'false');
+    openBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    closeBtn.focus();
   }
 
   function close() {
     drawer.classList.remove('is-open');
     overlay.classList.remove('is-open');
     drawer.setAttribute('aria-hidden', 'true');
+    openBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    openBtn.focus();
   }
 
   function recalcTotal() {

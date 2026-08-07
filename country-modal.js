@@ -9,14 +9,18 @@
     modal.classList.add('is-open');
     overlay.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
+    openBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    closeBtn.focus();
   }
 
   function close() {
     modal.classList.remove('is-open');
     overlay.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
+    openBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    openBtn.focus();
   }
 
   var headerFlag = modal.querySelector('.country-modal__header .country-modal__flag img');
