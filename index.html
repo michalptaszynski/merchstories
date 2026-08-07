@@ -34,7 +34,7 @@
   <div class="nav-row">
     <nav class="nav-secondary" aria-label="Contact and quote cart">
       <a href="#">Contact us</a>
-      <a href="#" class="btn btn--dark btn--sm nav-quote-btn">
+      <a href="#" class="btn btn--dark btn--sm nav-quote-btn" id="navQuoteBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <span>Quote</span>
       </a>
@@ -310,6 +310,59 @@
     </div>
   </div>
 </header>
+
+<div class="quote-drawer-overlay" id="quoteDrawerOverlay"></div>
+<aside class="quote-drawer" id="quoteDrawer" aria-hidden="true">
+  <div class="quote-drawer__header">
+    <h2 class="quote-drawer__title">Products in quote</h2>
+    <button type="button" class="quote-drawer__close" id="quoteDrawerClose" aria-label="Close quote">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="quote-drawer__items" id="quoteDrawerItems">
+    <div class="quote-drawer__item" data-unit-price="16">
+      <div class="quote-drawer__item-thumb" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></div>
+      <div class="quote-drawer__item-body">
+        <p class="quote-drawer__item-name">Custom Unisex Heavyweight Cotton T-Shirt</p>
+        <select class="quote-drawer__qty" aria-label="Quantity">
+          <option value="50">50</option>
+          <option value="100" selected>100</option>
+          <option value="250">250</option>
+          <option value="500">500</option>
+        </select>
+      </div>
+      <div class="quote-drawer__item-side">
+        <p class="quote-drawer__item-price">$1,600.00</p>
+        <button type="button" class="quote-drawer__item-remove" aria-label="Remove item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6h16Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="quote-drawer__empty" id="quoteDrawerEmpty" hidden>
+    <p class="quote-drawer__empty-title">Your quote is currently empty.</p>
+    <p class="quote-drawer__empty-sub">Looking for ideas?</p>
+    <a href="shop.html" class="btn btn--dark"><span>Explore Bestsellers</span></a>
+  </div>
+  <div class="quote-drawer__summary" id="quoteDrawerSummary">
+    <div class="quote-drawer__summary-row">
+      <span>Design and mockups</span>
+      <span>Free</span>
+    </div>
+    <div class="quote-drawer__summary-row">
+      <span>Shipping</span>
+      <span>Per quote</span>
+    </div>
+    <div class="quote-drawer__summary-row quote-drawer__summary-row--total">
+      <span>Total estimate</span>
+      <span id="quoteDrawerTotal">$1,600.00</span>
+    </div>
+  </div>
+  <div class="quote-drawer__footer" id="quoteDrawerFooter">
+    <button type="button" class="btn btn--dark quote-drawer__cta"><span>View Quote</span></button>
+    <p class="quote-drawer__note">No payment needed yet. This is just a request.</p>
+  </div>
+</aside>
 
 
 <main>
@@ -991,6 +1044,7 @@
 <script src="swatches.js"></script>
 <script src="filters.js"></script>
 <script src="lifestyle.js"></script>
+<script src="quote-drawer.js"></script>
 
 <section class="font-settings" id="fontSettings" aria-label="Display settings">
   <div class="font-settings__panel" id="fontSettingsPanel">
