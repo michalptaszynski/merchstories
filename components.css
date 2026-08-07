@@ -55,6 +55,122 @@
 .nav-links a.is-active { border-bottom-color: currentColor; }
 .nav-links a:hover { color: var(--color-text-secondary); }
 
+.nav-item {
+  padding-block: var(--space-4);
+  margin-block: calc(var(--space-4) * -1);
+}
+.nav-megamenu a {
+  text-transform: none;
+  white-space: normal;
+  letter-spacing: normal;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.nav-megamenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: var(--z-floating);
+  padding-block: var(--space-6);
+  background: var(--color-bg-surface);
+  border-top: 1px solid var(--color-border-default);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity var(--duration-fast) var(--ease), transform var(--duration-fast) var(--ease), visibility var(--duration-fast);
+  pointer-events: none;
+}
+.nav-item:hover .nav-megamenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav-megamenu__inner {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-10);
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+.nav-megamenu__col {
+  flex-shrink: 0;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.nav-megamenu__title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+}
+.nav-megamenu__sublink {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+}
+.nav-megamenu__sublink:hover {
+  color: var(--color-text-primary);
+}
+.nav-megamenu__seeall {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.nav-megamenu__tiles {
+  display: flex;
+  gap: var(--space-2);
+}
+.nav-megamenu__tile {
+  width: 220px;
+  flex-shrink: 0;
+}
+.nav-megamenu__tile-media {
+  position: relative;
+  width: 220px;
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--gray-100);
+  margin-bottom: var(--space-2);
+}
+.nav-megamenu__tile.is-placeholder .nav-megamenu__tile-media {
+  background-color: var(--gray-200);
+}
+.nav-megamenu__tile-img {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform var(--duration-slowest) var(--ease);
+}
+.nav-megamenu__tile:hover .nav-megamenu__tile-img {
+  transform: scale(1.05);
+}
+.nav-megamenu__tile-cat {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+.nav-megamenu__tile-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+}
+
 .nav-secondary {
   display: none;
   grid-column: 3;
