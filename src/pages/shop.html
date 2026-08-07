@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop &mdash; Merch Stories</title>
+<meta name="description" content="Browse the full Merch Stories catalogue &mdash; apparel, bags, drinkware, tech accessories and more, customized with your brand.">
+<!--#include file="head-links.html" -->
+</head>
+<body>
+
+<!--#include file="password-gate.html" -->
+
+<div id="siteContent" style="display:none;">
+
+<!--#include file="nav-header.html" -->
+
+<main>
+
+<div class="shop-hero container">
+  <p class="shop-breadcrumb"><a href="index.html">Merch Stories</a> / <span>Shop</span></p>
+  <h1 class="shop-title">Shop</h1>
+</div>
+
+<div class="shop-cats">
+    <a href="#" class="category-card js-category-filter is-active" data-filter="clothing">
+      <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></div></div>
+      <div class="category-card__body">
+        <h3 class="category-card__title">Clothing</h3>
+      </div>
+    </a>
+    <a href="#" class="category-card js-category-filter" data-filter="bags">
+      <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20Cotton%20Bag.avif');"></div></div>
+      <div class="category-card__body">
+        <h3 class="category-card__title">Bags</h3>
+      </div>
+    </a>
+    <a href="#" class="category-card js-category-filter" data-filter="drinkware">
+      <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Double%20Wall%20Glass%20Bottle%20400ml.avif');"></div></div>
+      <div class="category-card__body">
+        <h3 class="category-card__title">Drinkware</h3>
+      </div>
+    </a>
+    <a href="#" class="category-card js-category-filter" data-filter="tech">
+      <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/tech/Custom%20Magnetic%20Powerbank%205000mAh%2020W%20.avif');"></div></div>
+      <div class="category-card__body">
+        <h3 class="category-card__title">Tech accessories</h3>
+      </div>
+    </a>
+    <a href="#" class="category-card js-category-filter" data-filter="office">
+      <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif');"></div></div>
+      <div class="category-card__body">
+        <h3 class="category-card__title">Office supplies</h3>
+      </div>
+    </a>
+    <a href="#" class="category-card js-category-filter" data-filter="travel">
+      <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Classic%20Mirrored%20Sunglasses%20UV400%20Protection.avif');"></div></div>
+      <div class="category-card__body">
+        <h3 class="category-card__title">Travel accessories</h3>
+      </div>
+    </a>
+    <a href="#" class="category-card js-category-filter" data-filter="home">
+      <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif');"></div></div>
+      <div class="category-card__body">
+        <h3 class="category-card__title">Home accessories</h3>
+      </div>
+    </a>
+</div>
+
+<div class="shop-filter-row">
+  <div class="shop-filter" id="filterPrintTechnique">
+    <button type="button" class="shop-filter__toggle" aria-expanded="false">
+      <span>Print technique</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="shop-filter__panel">
+      <label class="shop-filter__option"><input type="checkbox"><span>Screen print</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>Embroidery</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>DTF</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>Heat transfer</span></label>
+    </div>
+  </div>
+  <div class="shop-filter" id="filterColor">
+    <button type="button" class="shop-filter__toggle" aria-expanded="false">
+      <span>Color</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="shop-filter__panel">
+      <label class="shop-filter__option"><input type="checkbox"><span>White</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>Black</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>Misty Grey</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>Natural Raw</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>Olive</span></label>
+      <label class="shop-filter__option"><input type="checkbox"><span>French Navy</span></label>
+    </div>
+  </div>
+</div>
+
+  <div class="product-grid product-grid--catalog">
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom 5-Panel Heavy Brushed Cotton Baseball Cap</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');" data-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Green.avif');" data-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Green.avif" aria-label="Green"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Orange.avif');" data-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Orange.avif" aria-label="Orange"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Blue.avif');" data-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Blue.avif" aria-label="Blue"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Red.avif');" data-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Red.avif" aria-label="Red"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20White.avif');" data-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20White.avif" aria-label="White"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom 6-Panel Washed Cotton Baseball Cap</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20.avif');" data-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Red.avif');" data-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Red.avif" aria-label="Red"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Grey.avif');" data-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Grey.avif" aria-label="Grey"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Black.avif');" data-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Black.avif" aria-label="Black"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Green.avif');" data-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Green.avif" aria-label="Green"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Blue.avif');" data-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Blue.avif" aria-label="Blue"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Brown.avif');" data-img="assets/photos/shop/clothes/Custom%206-Panel%20Washed%20Cotton%20Baseball%20Cap%20-%20Brown.avif" aria-label="Brown"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Men%20Polar%20Fleece%20Vest.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Men Polar Fleece Vest</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Men%20Vest%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Men Vest</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Anorak%20Jacket%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Anorak Jacket</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Cotton%20Hoodie.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Cotton Hoodie</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Organic%20Cotton%20Zip%20Hoodie.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Faded Organic Cotton Zip Hoodie</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Faded Oversized Organic Cotton Sweatshirt</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Black%20Rock.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Black%20Rock.avif" aria-label="Black Rock"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20%20-%20gdyed.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Faded%20Oversized%20Organic%20Cotton%20Sweatshirt%20%20-%20gdyed.avif" aria-label="Gdyed"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Full-Zip Jacket</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20British%20Khaki.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20British%20Khaki.avif" aria-label="British Khaki"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20Deep%20Metal.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20Deep%20Metal.avif" aria-label="Deep Metal"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20French%20Navy.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20French%20Navy.avif" aria-label="French Navy"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20Red.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20Red.avif" aria-label="Red"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20Off%20White.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Full-Zip%20Jacket%20-%20Off%20White.avif" aria-label="Off White"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20Sweatshirt%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Heavyweight Cotton Sweatshirt</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Heavyweight Cotton T-Shirt</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Lightweight%20Organic%20Cotton%20T-Shirt.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Lightweight Organic Cotton T-Shirt</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Midweight Organic Cotton T-Shirt</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20%20-%20Misty%20Grey.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20%20-%20Misty%20Grey.avif" aria-label="Misty Grey"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20-%20Black.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20-%20Black.avif" aria-label="Black"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20%20-%20White.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20%20-%20White.avif" aria-label="White"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20%20-%20Narural%20Raw.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20%20-%20Narural%20Raw.avif" aria-label="Narural Raw"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20-%20French%20Navy.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Midweight%20Organic%20Cotton%20T-Shirt%20-%20French%20Navy.avif" aria-label="French Navy"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Organic%20Cotton%20Heavyweight%20Point-Collar%20Shirt%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Organic Cotton Heavyweight Point-Collar Shirt</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Organic%20Cotton%20Sweatshirt.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Organic Cotton Sweatshirt</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Oversized Organic Cotton Sweatshirt</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Khaki.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Khaki.avif" aria-label="Khaki"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Stone.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Stone.avif" aria-label="Stone"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Natural%20Raw.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Natural%20Raw.avif" aria-label="Natural Raw"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20mocha.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20mocha.avif" aria-label="Mocha"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20White.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20White.avif" aria-label="White"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20French%20Navy.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20French%20Navy.avif" aria-label="French Navy"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Heather%20Grey.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt%20-%20Heather%20Grey.avif" aria-label="Heather Grey"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Sherpa Fleece</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20Khaki.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20Khaki.avif" aria-label="Khaki"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20Red%20Brown.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20Red%20Brown.avif" aria-label="Red Brown"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20French%20Navy.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20French%20Navy.avif" aria-label="French Navy"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20Desert%20Dust.avif');" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20-%20Desert%20Dust.avif" aria-label="Desert Dust"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Sherpa%20Fleece%20Vest%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Unisex Sherpa Fleece Vest</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Cotton%20Zip%20Hoodie%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Women Cotton Zip Hoodie</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Cotton%20Zip%20Hoodie%202.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Women Cotton Zip Hoodie 2</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Heavyweight%20Recycled%20Cotton%20T-Shirt%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Women Heavyweight Recycled Cotton T-Shirt</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Midweight%20Organic%20Cotton%20T-Shirt%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Women Midweight Organic Cotton T-Shirt</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing" data-default-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Women Organic Cotton Hoodie</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Honey%20Paper.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Honey%20Paper.avif" aria-label="Honey Paper"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Black.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Black.avif" aria-label="Black"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Heritage%20Brown.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Heritage%20Brown.avif" aria-label="Heritage Brown"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Burgundy.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Burgundy.avif" aria-label="Burgundy"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Eco%20Healther.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Eco%20Healther.avif" aria-label="Eco Healther"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Anthracite.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Anthracite.avif" aria-label="Anthracite"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="clothing">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Zip%20Hoodie%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Women Organic Cotton Zip Hoodie</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Antibacterial%20Cover%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom A5 Notebook With Antibacterial Cover</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office" data-default-img="assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cork%20Cover%20.avif">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cork%20Cover%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom A5 Notebook With Hard Cork Cover</h3>
+            <div class="category-card__swatches">
+          <span role="button" tabindex="0" class="swatch is-active" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cork%20Cover%20.avif');" data-img="assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cork%20Cover%20.avif" aria-label="Default"></span>
+          <span role="button" tabindex="0" class="swatch" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cork%20Cover%20-%20White.avif');" data-img="assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cork%20Cover%20-%20White.avif" aria-label="White"></span>
+            </div>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom A5 Notebook With Hard Cover</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Antibacterial Stylus Ballpoint Pen</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20Bamboo%20Ballpoint%20Pen%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Bamboo Ballpoint Pen</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20Long%20Lasting%20Inkless%20Pen%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Long Lasting Inkless Pen</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20Push-Button%20Pen%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Push-Button Pen</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="office">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20Recycled%20Aluminium%20Ballpoint%20Pen%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Recycled Aluminium Ballpoint Pen</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="tech">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/tech/Custom%20Magnetic%20Powerbank%205000mAh%2020W%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Magnetic Powerbank 5000mAh 20W</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="tech">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/tech/Custom%20Powerbank%204000mAh%2010W%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Powerbank 4000mAh 10W</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="tech">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/tech/Custom%20Wireless%20Powerbank%208000mAh%2015W%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Wireless Powerbank 8000mAh 15W</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="travel">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Classic%20Mirrored%20Sunglasses%20UV400%20Protection.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Classic Mirrored Sunglasses UV400 Protection</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="travel">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Classic%20Sunglasses%20UV400%20Protection.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Classic Sunglasses UV400 Protection</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="travel">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Cotton%20Beach%20Towel%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Cotton Beach Towel</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="travel">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Hammam%20Towel%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Hammam Towel</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="travel">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Microfibre%20Towel%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Microfibre Towel</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="travel">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Mirrored%20Sports%20Sunglasses%20UV400%20Protection.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Mirrored Sports Sunglasses UV400 Protection</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="travel">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Sports%20Towel%20With%20Pouch%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Sports Towel With Pouch</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%2015%22%20Rolltop%20Laptop%20Backpack%20with%20Reinforced%20Base.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom 15" Rolltop Laptop Backpack with Reinforced Base</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%2015%22%20Slim%20Laptop%20Backpack.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom 15" Slim Laptop Backpack</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20Cotton%20Bag.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Cotton Bag</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20Durable%20Rolltop%20Backpack.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Durable Rolltop Backpack</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20EVA%2014%22%20Laptop%20Pouch.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom EVA 14" Laptop Pouch</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20EVA%2015%22%20Laptop%20Pouch.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom EVA 15" Laptop Pouch</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20Felt%2014%22%20Zippered%20Laptop%20Bag.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Felt 14" Zippered Laptop Bag</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="bags">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20Gym%20Bag.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Gym Bag</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="home">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Plant Based Wax Candle In Bamboo 160g</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="home">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Frosted%20Glass%20120g.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Plant Based Wax Candle In Frosted Glass 120g</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="home">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Frosted%20Glass%20280g.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Plant Based Wax Candle In Frosted Glass 280g</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="home">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Stoneware%20200g.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Plant Based Wax Candle In Stoneware 200g</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="home">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20With%20Wooden%20Wick%2080g.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Plant Based Wax Candle With Wooden Wick 80g</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Ceramic Tumbler 330ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Double%20Wall%20Glass%20Bottle%20400ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Double Wall Glass Bottle 400ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Double%20Wall%20Tumbler%20300ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Double Wall Tumbler 300ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Frosted%20Glass%20Bottle%20500ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Frosted Glass Bottle 500ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Matte%20Ceramic%20Mug%20300ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Matte Ceramic Mug 300ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Mug%20And%20Mug%20Warmer%20Set%20With%20Wireless%20Charging%20Plate%20.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Mug And Mug Warmer Set With Wireless Charging Plate</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Recycled%20Stainless%20Steel%20Double%20Wall%20Bottle%20500ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Recycled Stainless Steel Double Wall Bottle 500ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Recycled%20Stainless%20Steel%20Double%20Wall%20Tumbler%201200ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Recycled Stainless Steel Double Wall Tumbler 1200ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Recycled%20Stainless%20Steel%20Single%20Wall%20Bottle%20750ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Recycled Stainless Steel Single Wall Bottle 750ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Recycled%20Stainless%20Steel%20Single%20Wall%20Bottle%20With%20Hook%201000ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Recycled Stainless Steel Single Wall Bottle With Hook 1000ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Recycled%20Stainless%20Steel%20Single%20Wall%20Bottle%20With%20Hook%20750ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Recycled Stainless Steel Single Wall Bottle With Hook 750ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Stainless%20Steel%20Bottle%20450ml%20With%20Touch%20Thermometer.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Stainless Steel Bottle 450ml With Touch Thermometer</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Stainless%20Steel%20Double%20Wall%20Bottle%20500ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Stainless Steel Double Wall Bottle 500ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Stainless%20Steel%20Double%20Wall%20Tumbler%20510ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Stainless Steel Double Wall Tumbler 510ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Stainless%20Steel%20Single%20Wall%20Bottle%20With%20Hook%20500ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Stainless Steel Single Wall Bottle With Hook 500ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Tritan%20Bottle%20500ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Tritan Bottle 500ml</h3>
+        </div>
+      </a>
+      <a href="product.html" class="category-card" data-category="drinkware">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Tumbler%20With%20Sliding%20Closure%20Lid%20330ml.avif');"></div></div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">Custom Tumbler With Sliding Closure Lid 330ml</h3>
+        </div>
+      </a>
+  </div>
+
+<!--#include file="footer-cta.html" -->
+
+</main>
+
+<section class="font-settings" id="fontSettings" aria-label="Display settings">
+  <div class="font-settings__panel" id="fontSettingsPanel">
+    <div class="font-settings__row">
+      <span class="font-settings__label" id="fontSettingsLabel">Sans-Serif</span>
+      <label class="font-switch">
+        <input type="checkbox" id="fontSwitch" aria-labelledby="fontSettingsLabel">
+        <span class="font-switch__track"></span>
+      </label>
+    </div>
+  </div>
+  <button type="button" id="fontSettingsToggle" class="font-settings__toggle" aria-expanded="false" aria-label="Font settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+</section>
+<script src="font-toggle.js"></script>
+
+</div>
+
+<script src="carousel.js"></script>
+<script src="filters.js"></script>
+<script src="shop-filters.js"></script>
+<script src="swatches.js"></script>
+
+<script src="password-gate.js"></script>
+</body>
+</html>

@@ -1,14 +1,11 @@
 (function () {
   var ROWS_VISIBLE = 4;
-  var pills = document.querySelectorAll('.pill-filter');
-  var navCategoryLinks = document.querySelectorAll('.nav-links a[data-filter]');
-  var tiles = document.querySelectorAll('.product-tile');
+  var pills = document.querySelectorAll('.js-category-filter');
+  var tiles = document.querySelectorAll('.product-grid .product-tile, .product-grid > .category-card');
   var grid = document.querySelector('.product-grid');
   var showAllBtn = document.querySelector('.btn-show-all');
   var newinGroups = document.querySelectorAll('.newin-grid');
   var hasGridUi = pills.length && tiles.length;
-
-  var expanded = false;
 
   function getColumnCount() {
     if (!grid) return 1;
@@ -31,9 +28,9 @@
   }
 
   function applyVisibility() {
-    var activePill = document.querySelector('.pill-filter.is-active');
+    var activePill = document.querySelector('.js-category-filter.is-active');
     var filter = activePill ? activePill.dataset.filter : 'all';
-    var limit = expanded ? Infinity : getColumnCount() * ROWS_VISIBLE;
+    var limit = showAllBtn ? getColumnCount() * ROWS_VISIBLE : Infinity;
     var visibleCount = 0;
     var matchCount = 0;
 
@@ -57,6 +54,9 @@
         var categoryLabel = activePill && filter !== 'all' ? activePill.textContent.trim().toLowerCase() : '';
         labelEl.textContent = categoryLabel ? 'Show all ' + categoryLabel : 'Show all';
       }
+      if (filter !== 'all') {
+        showAllBtn.setAttribute('href', 'shop.html?category=' + filter);
+      }
     }
 
     newinGroups.forEach(function (group) {
@@ -64,32 +64,20 @@
     });
   }
 
-  function activateFilter(filterValue, scrollToGrid) {
-    var pill = document.querySelector('.pill-filter[data-filter="' + filterValue + '"]');
+  function activateFilter(filterValue) {
+    var pill = document.querySelector('.js-category-filter[data-filter="' + filterValue + '"]');
     if (!pill) return;
     pills.forEach(function (p) { p.classList.remove('is-active'); });
     pill.classList.add('is-active');
-    expanded = false;
     animateGridTo(applyVisibility);
-    if (scrollToGrid) {
-      var section = document.getElementById('freshly-uploaded');
-      if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
   }
 
   if (hasGridUi) {
     pills.forEach(function (pill) {
       pill.addEventListener('click', function () {
-        activateFilter(pill.dataset.filter, false);
+        activateFilter(pill.dataset.filter);
       });
     });
-
-    if (showAllBtn) {
-      showAllBtn.addEventListener('click', function () {
-        expanded = true;
-        animateGridTo(applyVisibility);
-      });
-    }
 
     if (grid) {
       grid.addEventListener('transitionend', function (e) {
@@ -100,25 +88,14 @@
     var resizeTimer;
     window.addEventListener('resize', function () {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        if (!expanded) applyVisibility();
-      }, 150);
+      resizeTimer = setTimeout(applyVisibility, 150);
     });
 
     var initialCategory = new URLSearchParams(location.search).get('category');
     if (initialCategory) {
-      activateFilter(initialCategory, false);
+      activateFilter(initialCategory);
     } else {
       applyVisibility();
     }
   }
-
-  navCategoryLinks.forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      if (hasGridUi) {
-        e.preventDefault();
-        activateFilter(link.dataset.filter, true);
-      }
-    });
-  });
 })();
