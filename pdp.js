@@ -31,6 +31,57 @@
     });
   });
 
+  var qty = document.getElementById('pdpQty');
+  var qtyToggle = document.getElementById('pdpQtyToggle');
+  var qtyToggleQty = qty ? qty.querySelector('.pdp__qty-toggle-qty') : null;
+  var qtyToggleTotal = qty ? qty.querySelector('.pdp__qty-toggle-total') : null;
+  var qtyTiers = Array.prototype.slice.call(document.querySelectorAll('.pdp__qty-tier'));
+
+  function closeQty() {
+    if (qty) qty.classList.remove('is-open');
+    if (qtyToggle) qtyToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (qty && qtyToggle) {
+    qtyToggle.addEventListener('click', function () {
+      var isOpen = qty.classList.toggle('is-open');
+      qtyToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!qty.contains(e.target)) closeQty();
+    });
+  }
+
+  qtyTiers.forEach(function (tier) {
+    tier.addEventListener('click', function () {
+      qtyTiers.forEach(function (t) {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tier.classList.add('is-active');
+      tier.setAttribute('aria-selected', 'true');
+      var qtyVal = tier.querySelector('.pdp__qty-tier-qty').textContent;
+      var totalVal = tier.querySelector('.pdp__qty-tier-total').textContent;
+      if (qtyToggleQty) qtyToggleQty.textContent = qtyVal + ' pieces';
+      if (qtyToggleTotal) qtyToggleTotal.textContent = totalVal;
+      closeQty();
+    });
+  });
+
+  var promoText = document.getElementById('pdpPromoText');
+  var promoToggle = document.getElementById('pdpPromoToggle');
+  if (promoText && promoToggle) {
+    var shortText = promoText.textContent;
+    var fullText = shortText + ' Ideal as a promotional item for business, advertising campaigns, or corporate events, it combines comfort with lasting impact.';
+    var expanded = false;
+    promoToggle.addEventListener('click', function () {
+      expanded = !expanded;
+      promoText.textContent = expanded ? fullText : shortText;
+      promoToggle.textContent = expanded ? 'Read less' : 'Read more';
+      promoToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  }
+
   var accordions = Array.prototype.slice.call(document.querySelectorAll('.pdp__accordion'));
   accordions.forEach(function (accordion) {
     var toggle = accordion.querySelector('.pdp__accordion-toggle');

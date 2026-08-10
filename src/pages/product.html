@@ -35,9 +35,13 @@
 
       <div class="pdp__title-row">
         <h1 class="pdp__title">Custom Women Organic Cotton Hoodie</h1>
-        <div class="pdp__price-value">From $28.00 / unit</div>
       </div>
 
+      <div class="pdp__promo">
+        <p class="pdp__promo-text"><span id="pdpPromoText">This women&rsquo;s organic cotton hoodie can be personalised with your company logo for a truly branded touch&hellip;</span> <button type="button" class="pdp__promo-toggle" id="pdpPromoToggle" aria-expanded="false">Read more</button></p>
+      </div>
+
+      <p class="pdp__field-label">Colour</p>
       <div class="pdp__swatches" id="pdpSwatches">
         <button type="button" class="swatch is-active" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Black.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Black.avif" data-color="Black" aria-label="Black"></button>
         <button type="button" class="swatch" style="background-image: url('assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Anthracite.avif');" data-img="assets/photos/shop/clothes/Custom%20Women%20Organic%20Cotton%20Hoodie%20-%20Anthracite.avif" data-color="Anthracite" aria-label="Anthracite"></button>
@@ -48,6 +52,7 @@
       </div>
       <div class="pdp__swatch-label" id="pdpSwatchLabel">Black</div>
 
+      <p class="pdp__field-label">Size</p>
       <div class="pdp__sizes">
         <button type="button" class="pdp__size" data-size="XS"><span>XS</span></button>
         <button type="button" class="pdp__size" data-size="S"><span>S</span></button>
@@ -56,61 +61,160 @@
         <button type="button" class="pdp__size" data-size="XL"><span>XL</span></button>
       </div>
 
-      <hr class="pdp__divider">
-
-      <p class="pdp__description">320 gsm brushed-back organic cotton fleece. Relaxed unisex fit. Ribbed cuffs and hem. Available for embroidery, screen print, or DTG customization. Sourced from certified, ethical manufacturers.</p>
-      <p class="pdp__fit">Fit: Relaxed, Unisex, Ribbed cuffs</p>
-
-      <hr class="pdp__divider">
-
-      <div class="pdp__delivery">
-        <div class="pdp__delivery-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8Z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          <span>Free samples before you order</span>
-        </div>
-        <div class="pdp__delivery-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-          <span>10&ndash;15 day production after approval</span>
+      <p class="pdp__field-label">Quantity</p>
+      <div class="pdp__qty" id="pdpQty">
+        <button type="button" class="pdp__qty-toggle" id="pdpQtyToggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="pdpQtyPanel">
+          <span class="pdp__qty-toggle-qty">100 pieces</span>
+          <span class="pdp__qty-toggle-total">$2,150.00</span>
+          <svg class="pdp__qty-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="pdp__qty-panel" id="pdpQtyPanel" role="listbox">
+          <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="50">
+            <span class="pdp__qty-tier-qty">50</span>
+            <span class="pdp__qty-tier-unit">$24.00/piece</span>
+            <span class="pdp__qty-tier-total">$1,200.00</span>
+          </button>
+          <button type="button" class="pdp__qty-tier is-active" role="option" aria-selected="true" data-qty="100">
+            <span class="pdp__qty-tier-qty">100</span>
+            <span class="pdp__qty-tier-unit">$21.50/piece</span>
+            <span class="pdp__qty-tier-total">$2,150.00</span>
+          </button>
+          <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="250">
+            <span class="pdp__qty-tier-qty">250</span>
+            <span class="pdp__qty-tier-unit">$18.90/piece</span>
+            <span class="pdp__qty-tier-total">$4,725.00</span>
+          </button>
+          <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="500">
+            <span class="pdp__qty-tier-qty">500</span>
+            <span class="pdp__qty-tier-unit">$16.40/piece</span>
+            <span class="pdp__qty-tier-total">$8,200.00</span>
+          </button>
         </div>
       </div>
+
+      <button type="button" class="btn btn--dark pdp__cta js-open-quote"><span>Add to list</span></button>
     </aside>
   </div>
 
   <div class="pdp__accordions">
-    <div class="pdp__accordion">
+    <div class="pdp__accordion is-open">
       <h2 class="pdp__accordion-heading"><button type="button" class="pdp__accordion-toggle">
-        <span class="pdp__accordion-label">Product details</span>
+        <span class="pdp__accordion-label">Specification</span>
         <span class="pdp__accordion-icon">+</span>
       </button></h2>
-      <div class="pdp__accordion-body">320 gsm brushed-back organic cotton fleece. Relaxed unisex fit. Ribbed cuffs and hem. Available for embroidery, screen print, or DTG customization.</div>
+      <div class="pdp__accordion-body">
+        <table class="pdp__spec-table">
+          <caption class="visually-hidden">Product specification</caption>
+          <tbody>
+            <tr class="pdp__spec-row pdp__spec-row--head">
+              <th scope="row">Data for current product configuration</th>
+              <td>Custom Women Organic Cotton Hoodie <span>M</span></td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Material colour</th>
+              <td>Black</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Grammage</th>
+              <td>320 GSM</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Material</th>
+              <td>Organic cotton</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Composition</th>
+              <td>100% Cotton &ndash; Organic Ring Spun Combed</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Print position</th>
+              <td>Left Chest</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Print Techniques</th>
+              <td>Embroidery</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Raw material</th>
+              <td>Textile</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Care instructions</th>
+              <td>Machine wash cold, inside out. Do not bleach. Tumble dry low.</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Gender</th>
+              <td>Unisex</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Print size</th>
+              <td>10 x 12 cm</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Color group</th>
+              <td>Black</td>
+            </tr>
+            <tr class="pdp__spec-row">
+              <th scope="row">Variant SKU</th>
+              <td>ph-2214-77031</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="pdp__accordion">
       <h2 class="pdp__accordion-heading"><button type="button" class="pdp__accordion-toggle">
-        <span class="pdp__accordion-label">Responsibility</span>
+        <span class="pdp__accordion-label">Size chart</span>
         <span class="pdp__accordion-icon">+</span>
       </button></h2>
-      <div class="pdp__accordion-body">GOTS-certified organic cotton. Sourced from certified, ethical manufacturers audited to ISO 9001, 14001 &amp; 27001.</div>
+      <div class="pdp__accordion-body">
+        <table class="pdp__spec-table pdp__spec-table--sizes">
+          <caption class="visually-hidden">Size chart, measurements in centimetres</caption>
+          <thead>
+            <tr class="pdp__spec-row">
+              <th scope="col">Size</th>
+              <th scope="col">Chest width</th>
+              <th scope="col">Body length</th>
+              <th scope="col">Sleeve length</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pdp__spec-row"><th scope="row">XS</th><td>54 cm</td><td>66 cm</td><td>60 cm</td></tr>
+            <tr class="pdp__spec-row"><th scope="row">S</th><td>57 cm</td><td>68 cm</td><td>62 cm</td></tr>
+            <tr class="pdp__spec-row"><th scope="row">M</th><td>60 cm</td><td>70 cm</td><td>64 cm</td></tr>
+            <tr class="pdp__spec-row"><th scope="row">L</th><td>63 cm</td><td>72 cm</td><td>66 cm</td></tr>
+            <tr class="pdp__spec-row"><th scope="row">XL</th><td>66 cm</td><td>74 cm</td><td>68 cm</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="pdp__accordion">
       <h2 class="pdp__accordion-heading"><button type="button" class="pdp__accordion-toggle">
-        <span class="pdp__accordion-label">Wash &amp; care</span>
+        <span class="pdp__accordion-label">Product description</span>
         <span class="pdp__accordion-icon">+</span>
       </button></h2>
-      <div class="pdp__accordion-body">Machine wash cold, inside out. Do not bleach. Tumble dry low. Do not iron directly on the print.</div>
-    </div>
-    <div class="pdp__accordion">
-      <h2 class="pdp__accordion-heading"><button type="button" class="pdp__accordion-toggle">
-        <span class="pdp__accordion-label">Delivery</span>
-        <span class="pdp__accordion-icon">+</span>
-      </button></h2>
-      <div class="pdp__accordion-body">Production takes 10&ndash;15 business days after design approval. Free samples available before you commit to a full order.</div>
-    </div>
-    <div class="pdp__accordion">
-      <h2 class="pdp__accordion-heading"><button type="button" class="pdp__accordion-toggle">
-        <span class="pdp__accordion-label">Payment</span>
-        <span class="pdp__accordion-icon">+</span>
-      </button></h2>
-      <div class="pdp__accordion-body">No payment is needed to request a quote or sample. Invoicing and payment terms are confirmed with your account manager before production begins.</div>
+      <div class="pdp__accordion-body">
+        <div class="pdp__desc-block">
+          <h3>A heavier, brushed-back fleece</h3>
+          <p>The Custom Women Organic Cotton Hoodie is cut from a 320 GSM brushed-back organic cotton fleece &mdash; noticeably heavier than a standard tee, with a soft inner face that holds its shape wash after wash. The relaxed unisex fit, ribbed cuffs and hem keep it comfortable for long days at the office or layered up outdoors.</p>
+        </div>
+        <div class="pdp__desc-block">
+          <h3>Built for your branding</h3>
+          <p>Add your logo via embroidery, screen print, or DTG, whichever suits the design and budget best. Left chest is the classic placement, though front and back positions work too for bolder graphics. Our team will confirm placement and sizing with a free digital mockup before anything goes into production.</p>
+        </div>
+        <div class="pdp__desc-block">
+          <h3>One hoodie, every team</h3>
+          <p>A relaxed unisex cut means one size range covers the whole team, no separate men's/women's runs to manage. It reads as premium enough for client gifting and onboarding kits, while holding up to daily wear for warehouse or event staff.</p>
+        </div>
+        <div class="pdp__desc-block">
+          <h3>Six colours to match your brand</h3>
+          <p>Choose from Black, Anthracite, Burgundy, Eco Heather, Heritage Brown, or Honey Paper &mdash; a mix of true neutrals and warmer tones so your logo has the right backdrop whether you're going high-contrast or tonal.</p>
+        </div>
+        <div class="pdp__desc-block">
+          <h3>Care that protects the print</h3>
+          <p>Machine wash cold, inside out, with similar colours. Skip the bleach and tumble dry on low. Keep the iron off the print area entirely &mdash; heat direct on the design is the most common way a custom print gets damaged early.</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -126,10 +230,6 @@
 </section>
 
 </main>
-
-<div class="pdp__sticky-cta">
-  <button type="button" class="btn btn--dark js-open-quote"><span>Add to list</span></button>
-</div>
 
 <section class="font-settings" id="fontSettings" aria-label="Display settings">
   <div class="font-settings__panel" id="fontSettingsPanel">
