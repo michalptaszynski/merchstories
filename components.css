@@ -1325,7 +1325,7 @@
 /* ---------- Product detail page ---------- */
 .pdp {
   padding-inline: var(--space-6);
-  padding-block: var(--space-8) calc(var(--space-20) * 2);
+  padding-block: var(--space-8) 0;
 }
 .pdp__hero {
   display: grid;
@@ -1551,49 +1551,70 @@
   border-top: 1px solid var(--color-border-default);
   margin-block: var(--space-6);
 }
-/* -- accordions -- */
-.pdp__accordions {
-  margin-bottom: 0;
+/* -- info tabs -- */
+.pdp__info {
+  background: var(--white);
+  display: flex;
+  padding: var(--space-10) var(--space-6);
 }
-.pdp__accordion {
-  border-top: 1px solid var(--color-border-default);
+.pdp__info-nav {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.pdp__info-tab {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.pdp__info-tab.is-active {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+.pdp__info-content {
+  flex: 0 1 60%;
+  max-width: 60%;
+  min-width: 0;
+  margin-left: auto;
+}
+.pdp__info-panel {
+  display: none;
+}
+.pdp__info-panel.is-active {
+  display: block;
+}
+.pdp__info-row {
+  display: flex;
+  gap: var(--space-10);
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--color-text-primary);
+}
+.pdp__info-panel[data-panel="specification"] .pdp__info-row {
   padding-block: var(--space-4);
 }
-.pdp__accordion:not(:has(+ .pdp__accordion)) {
-  border-bottom: 1px solid var(--color-border-default);
+.pdp__info-row:last-child {
+  border-bottom: 1px solid var(--color-text-primary);
 }
-.pdp__accordion-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0;
-}
-.pdp__accordion-label {
-  font-family: var(--font-base);
-  font-size: clamp(1.5rem, 3.4vw, var(--fs-40));
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
+.pdp__info-row-label {
+  flex: 0 0 30%;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   color: var(--color-text-primary);
 }
-.pdp__accordion-icon {
-  display: inline-block;
-  flex-shrink: 0;
-  font-size: var(--fs-24);
-  color: var(--color-text-primary);
-  transition: transform var(--duration-fast) var(--ease);
-}
-.pdp__accordion.is-open .pdp__accordion-icon { transform: rotate(45deg); }
-.pdp__accordion-body {
-  display: none;
-  margin-top: var(--space-4);
-  font-family: var(--font-base);
-  font-size: var(--fs-15);
-  line-height: 1.5;
+.pdp__info-row-text {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
   color: var(--color-text-secondary);
 }
-.pdp__accordion.is-open .pdp__accordion-body { display: block; }
 .pdp__spec-table {
   width: 100%;
   border-collapse: collapse;
@@ -1605,22 +1626,25 @@
   padding-right: var(--space-4);
   border-bottom: 1px solid var(--color-border-default);
   font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+.pdp__spec-row th {
   font-size: 13px;
+  font-weight: 500;
   color: var(--color-text-primary);
+}
+.pdp__spec-row td {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
 }
 .pdp__spec-row th {
   padding-left: 0;
-  font-weight: 400;
-}
-.pdp__spec-row td {
-  font-weight: 500;
+  width: 40%;
 }
 .pdp__spec-row:last-child th,
 .pdp__spec-row:last-child td {
   border-bottom: none;
-}
-.pdp__spec-row th {
-  width: 40%;
 }
 .pdp__spec-row--head th,
 .pdp__spec-row--head td {
@@ -1638,27 +1662,6 @@
   font-weight: 500;
   color: var(--color-text-secondary);
 }
-.pdp__desc-block {
-  margin-bottom: var(--space-6);
-}
-.pdp__desc-block:last-child {
-  margin-bottom: 0;
-}
-.pdp__desc-block h3 {
-  font-family: var(--font-mono);
-  font-size: var(--fs-13);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-2);
-}
-.pdp__desc-block p {
-  font-family: var(--font-base);
-  font-size: var(--fs-15);
-  line-height: 1.5;
-  color: var(--color-text-secondary);
-}
 
 /* -- add-to-list -- */
 .pdp__cta {
@@ -1666,6 +1669,12 @@
 }
 
 /* -- recommendation carousels -- */
+.pdp__recs {
+  padding-block: var(--space-10);
+}
+.pdp__info + .pdp__recs {
+  padding-top: 0;
+}
 .pdp__recs .section-subheading {
   white-space: nowrap;
 }

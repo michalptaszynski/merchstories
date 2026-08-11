@@ -82,11 +82,15 @@
     });
   }
 
-  var accordions = Array.prototype.slice.call(document.querySelectorAll('.pdp__accordion'));
-  accordions.forEach(function (accordion) {
-    var toggle = accordion.querySelector('.pdp__accordion-toggle');
-    toggle.addEventListener('click', function () {
-      accordion.classList.toggle('is-open');
+  var infoTabs = Array.prototype.slice.call(document.querySelectorAll('.pdp__info-tab'));
+  var infoPanels = Array.prototype.slice.call(document.querySelectorAll('.pdp__info-panel'));
+  infoTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      infoTabs.forEach(function (t) { t.classList.remove('is-active'); });
+      infoPanels.forEach(function (p) { p.classList.remove('is-active'); });
+      tab.classList.add('is-active');
+      var panel = document.querySelector('.pdp__info-panel[data-panel="' + tab.dataset.tab + '"]');
+      if (panel) panel.classList.add('is-active');
     });
   });
 })();
