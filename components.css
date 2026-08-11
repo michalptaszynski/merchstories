@@ -960,12 +960,13 @@
   gap: var(--space-4);
 }
 .showcase-item__info {
+  width: 242px;
   display: flex;
   flex-direction: column;
 }
 .showcase-tile {
-  width: 202px;
-  height: 264px;
+  width: 242px;
+  height: 317px;
   flex-shrink: 0;
 }
 .showcase-item__name {
@@ -1583,7 +1584,8 @@
   padding-block: var(--space-8);
   border-top: 1px solid var(--color-text-primary);
 }
-.pdp__info-panel[data-panel="specification"] .pdp__info-row {
+.pdp__info-panel[data-panel="specification"] .pdp__info-row,
+.pdp__info-panel[data-panel="description"] .pdp__info-row {
   padding-block: var(--space-4);
 }
 .pdp__info-row:last-child {
