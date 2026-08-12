@@ -1018,7 +1018,7 @@
 .split__sticky-inner {
   position: sticky;
   top: 56px;
-  height: 640px;
+  height: 860px;
   overflow: hidden;
   background-color: var(--gray-200);
 }
