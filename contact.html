@@ -44,13 +44,19 @@
   </div>
   <div class="nav-row">
     <nav class="nav-secondary" aria-label="Language and quote cart">
-      <button type="button" class="btn btn--stroke btn--sm btn--circle" id="langSwitchBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="countryModal">EN</button>
+      <a href="shop.html" class="nav-shop-link">Shop</a>
+      <button type="button" class="btn btn--stroke btn--sm btn--circle nav-lang-btn" id="langSwitchBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="countryModal">EN</button>
       <a href="#" class="btn btn--dark btn--sm nav-quote-btn" id="navQuoteBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="quoteDrawer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <span>Quote</span>
       </a>
     </nav>
-    <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Merch Stories" class="logo-mark"></a>
+    <div class="nav-left">
+      <button type="button" class="nav-hamburger" id="navHamburgerBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileNavDrawer" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Merch Stories" class="logo-mark"></a>
+    </div>
     <div class="nav-right">
       <nav class="nav-links" aria-label="Categories">
         <div class="nav-item">
@@ -90,6 +96,51 @@
                 </div>
                 <p class="nav-megamenu__tile-cat">Box</p>
                 <p class="nav-megamenu__tile-name">Custom Gift Mailer Box</p>
+              </a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- CATEGORY: keep new categories in sync across nav-header.html (this megamenu), shop.html (#shopCats + #shopOverview + catalog grid) and index.html (Who we are). -->
+        <div class="nav-item">
+          <a href="shop.html?category=sets" data-filter="sets">Sets</a>
+          <div class="nav-megamenu">
+            <div class="nav-megamenu__inner">
+            <div class="nav-megamenu__col">
+              <p class="nav-megamenu__title">Sets</p>
+              <a class="nav-megamenu__sublink" href="shop.html?category=sets">Onboarding Packs</a>
+              <a class="nav-megamenu__sublink" href="shop.html?category=sets">Thank-you Packs</a>
+              <a class="nav-megamenu__sublink" href="shop.html?category=sets">Event Packs</a>
+              <a class="nav-megamenu__seeall" href="shop.html?category=sets">See all &rarr;</a>
+            </div>
+            <div class="nav-megamenu__tiles">
+              <a href="product.html" class="nav-megamenu__tile">
+                <div class="nav-megamenu__tile-media">
+                  <div class="nav-megamenu__tile-img" style="background-image: url('assets/photos/bundles/Onboarding%20Essentials%20Pack.png');"></div>
+                </div>
+                <p class="nav-megamenu__tile-cat">Onboarding Packs</p>
+                <p class="nav-megamenu__tile-name">Onboarding Essentials Pack</p>
+              </a>
+              <a href="product.html" class="nav-megamenu__tile">
+                <div class="nav-megamenu__tile-media">
+                  <div class="nav-megamenu__tile-img" style="background-image: url('assets/photos/bundles/Thank-you%20Essentials%20Pack.png');"></div>
+                </div>
+                <p class="nav-megamenu__tile-cat">Thank-you Packs</p>
+                <p class="nav-megamenu__tile-name">Thank-you Essentials Pack</p>
+              </a>
+              <a href="product.html" class="nav-megamenu__tile">
+                <div class="nav-megamenu__tile-media">
+                  <div class="nav-megamenu__tile-img" style="background-image: url('assets/photos/bundles/Event%20Giveaway%20Pack.png');"></div>
+                </div>
+                <p class="nav-megamenu__tile-cat">Event Packs</p>
+                <p class="nav-megamenu__tile-name">Event Giveaway Pack</p>
+              </a>
+              <a href="product.html" class="nav-megamenu__tile">
+                <div class="nav-megamenu__tile-media">
+                  <div class="nav-megamenu__tile-img" style="background-image: url('assets/photos/bundles/Onboarding%20Remote-Friendly%20Pack.png');"></div>
+                </div>
+                <p class="nav-megamenu__tile-cat">Onboarding Packs</p>
+                <p class="nav-megamenu__tile-name">Onboarding Remote-Friendly Pack</p>
               </a>
             </div>
             </div>
@@ -363,6 +414,34 @@
     </div>
   </div>
 </header>
+
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+<aside class="mobile-nav" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-labelledby="mobileNavTitle" aria-hidden="true">
+  <div class="mobile-nav__header">
+    <p class="mobile-nav__title" id="mobileNavTitle">Menu</p>
+    <button type="button" class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav__links" aria-label="Categories">
+    <a href="shop.html">Shop all</a>
+    <a href="shop.html?category=packaging" data-filter="packaging">Packaging</a>
+    <a href="shop.html?category=sets" data-filter="sets">Sets</a>
+    <a href="shop.html?category=clothing" data-filter="clothing">Clothing</a>
+    <a href="shop.html?category=bags" data-filter="bags">Bags</a>
+    <a href="shop.html?category=drinkware" data-filter="drinkware">Drinkware</a>
+    <a href="shop.html?category=tech" data-filter="tech">Tech</a>
+    <a href="shop.html?category=office" data-filter="office">Office</a>
+    <a href="shop.html?category=travel" data-filter="travel">Travel</a>
+    <a href="shop.html?category=home" data-filter="home">Home</a>
+  </nav>
+  <div class="mobile-nav__divider"></div>
+  <nav class="mobile-nav__utility" aria-label="Utility">
+    <a href="platform.html">Platform</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="contact.html">Contact us</a>
+  </nav>
+</aside>
 
 <div class="quote-drawer-overlay" id="quoteDrawerOverlay"></div>
 <aside class="quote-drawer" id="quoteDrawer" role="dialog" aria-modal="true" aria-labelledby="quoteDrawerTitle" aria-hidden="true">
@@ -680,6 +759,7 @@
 <script src="font-toggle.js"></script>
 <script src="quote-drawer.js"></script>
 <script src="nav-megamenu.js"></script>
+<script src="mobile-nav.js"></script>
 <script src="country-modal.js"></script>
 
 </div>
