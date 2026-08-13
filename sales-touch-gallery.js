@@ -92,6 +92,28 @@
     }
   }
 
+  function restartTimer() {
+    clearInterval(timerId);
+    timerId = setInterval(tick, TICK_MS);
+  }
+
+  function goTo(index) {
+    // Keep clicks clear of the last set too, same margin tick() relies on,
+    // so the very next auto-tick never walks off the end of `cards`.
+    if (index >= SET_SIZE * (setCount - 1)) index -= SET_SIZE;
+    activeSlot = index;
+    render(activeSlot, true);
+    restartTimer();
+  }
+
+  cards.forEach(function (card, i) {
+    card.addEventListener('click', function (e) {
+      if (i === activeSlot) return;
+      e.preventDefault();
+      goTo(i);
+    });
+  });
+
   function start() {
     render(activeSlot, false);
     timerId = setInterval(tick, TICK_MS);
