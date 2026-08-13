@@ -7,7 +7,7 @@
   var newinGroups = document.querySelectorAll('.newin-grid');
   var shopOverview = document.getElementById('shopOverview');
   var shopDetail = document.getElementById('shopCategoryDetail');
-  var hasGridUi = pills.length && tiles.length;
+  var hasGridUi = pills.length && (tiles.length || newinGroups.length);
 
   function setShopMode(showDetail) {
     if (!shopOverview || !shopDetail) return;
@@ -55,8 +55,10 @@
     });
 
     if (showAllBtn) {
-      var hasMore = matchCount > visibleCount;
-      showAllBtn.style.display = hasMore ? '' : 'none';
+      if (tiles.length) {
+        var hasMore = matchCount > visibleCount;
+        showAllBtn.style.display = hasMore ? '' : 'none';
+      }
       var labelEl = showAllBtn.querySelector('span');
       if (labelEl) {
         var categoryLabel = activePill && filter !== 'all' ? activePill.textContent.trim().toLowerCase() : '';
