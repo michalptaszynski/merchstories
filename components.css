@@ -1021,9 +1021,6 @@
 .section--bundles .category-card__img {
   background-size: cover;
 }
-.section--bundles.is-lifestyle-mode .category-card__thumbs {
-  display: flex;
-}
 .bundles-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1060,28 +1057,6 @@
   opacity: 0.05;
   mix-blend-mode: overlay;
   pointer-events: none;
-}
-.category-card__thumbs {
-  display: none;
-  position: absolute;
-  left: var(--space-2);
-  bottom: var(--space-2);
-  z-index: var(--z-raised);
-  gap: 4px;
-}
-.category-card__thumb {
-  display: block;
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  box-sizing: border-box;
-  padding: 2px;
-  background-color: var(--white);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  box-shadow: var(--shadow-sm);
 }
 .category-card__body {
   padding-top: var(--space-4);

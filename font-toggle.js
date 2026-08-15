@@ -32,28 +32,3 @@
     if (!wrap.contains(e.target)) setOpen(false);
   });
 })();
-
-(function () {
-  var STORAGE_KEY = 'ph-bundles-lifestyle';
-  var section = document.querySelector('.section--bundles');
-  var checkbox = document.getElementById('bundlesLifestyleSwitch');
-  if (!section || !checkbox) return;
-
-  var imgs = Array.prototype.slice.call(section.querySelectorAll('.category-card__img[data-alt-img]'));
-
-  function applyMode(isLifestyle) {
-    section.classList.toggle('is-lifestyle-mode', isLifestyle);
-    checkbox.checked = isLifestyle;
-    imgs.forEach(function (img) {
-      var src = isLifestyle ? img.dataset.altImg : img.dataset.defaultImg;
-      img.style.backgroundImage = "url('" + src + "')";
-    });
-  }
-
-  applyMode(localStorage.getItem(STORAGE_KEY) === 'lifestyle');
-
-  checkbox.addEventListener('change', function () {
-    applyMode(checkbox.checked);
-    localStorage.setItem(STORAGE_KEY, checkbox.checked ? 'lifestyle' : 'default');
-  });
-})();
