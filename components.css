@@ -1006,16 +1006,32 @@
 .category-card:hover .category-card__img {
   transform: scale(1.05);
 }
-.section--bestsellers .category-card__media,
-.section--bundles .category-card__media {
+.section--bestsellers .category-card__media {
   box-sizing: border-box;
   padding: 15%;
 }
-.section--bestsellers .category-card__img,
-.section--bundles .category-card__img {
+.section--bestsellers .category-card__img {
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: content-box;
+}
+.section--bundles .category-card__img {
+  background-size: cover;
+}
+.section--bundles.is-lifestyle-mode .category-card__thumbs {
+  display: flex;
+}
+.bundles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  padding-inline: var(--space-6);
+}
+@media (max-width: 900px) {
+  .bundles-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .bundles-grid { grid-template-columns: repeat(2, 1fr); }
 }
 .category-card__media .ph {
   width: 100%;
@@ -1034,6 +1050,28 @@
   opacity: 0.05;
   mix-blend-mode: overlay;
   pointer-events: none;
+}
+.category-card__thumbs {
+  display: none;
+  position: absolute;
+  left: var(--space-2);
+  bottom: var(--space-2);
+  z-index: var(--z-raised);
+  gap: 4px;
+}
+.category-card__thumb {
+  display: block;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 2px;
+  background-color: var(--white);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-shadow: var(--shadow-sm);
 }
 .category-card__body {
   padding-top: var(--space-4);
@@ -1118,7 +1156,10 @@
   position: relative;
   height: 520px;
 }
-.sales-touch__carousel-track.is-jumping .carousel-card {
+.sales-touch__carousel-track.is-jumping .carousel-card,
+.sales-touch__carousel-track.is-jumping .carousel-card__media,
+.sales-touch__carousel-track.is-jumping .carousel-card__label,
+.sales-touch__carousel-track.is-jumping .carousel-card__caption {
   transition: none;
 }
 
