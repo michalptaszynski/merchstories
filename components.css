@@ -942,7 +942,7 @@
 .category-grid__track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 78%;
+  grid-auto-columns: min(78%, 320px);
   gap: 1px;
   padding-left: var(--space-6);
   padding-right: var(--space-6);
@@ -1028,10 +1028,17 @@
   padding-inline: var(--space-6);
 }
 @media (max-width: 900px) {
-  .bundles-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 560px) {
-  .bundles-grid { grid-template-columns: repeat(2, 1fr); }
+  .bundles-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(55%, 320px);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-left: var(--space-6);
+    scrollbar-width: none;
+  }
+  .bundles-grid::-webkit-scrollbar { display: none; }
+  .bundles-grid .category-card { scroll-snap-align: start; }
 }
 .category-card__media .ph {
   width: 100%;
@@ -1430,11 +1437,14 @@
 /* ---------- Filter pills ---------- */
 .filter-pills {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: var(--space-2);
   padding-inline: var(--space-6);
   margin-bottom: var(--space-6);
+  scrollbar-width: none;
 }
+.filter-pills::-webkit-scrollbar { display: none; }
 .pill-filter {
   display: inline-flex;
   align-items: center;
@@ -1666,14 +1676,21 @@
   font-weight: 500;
   letter-spacing: -0.01em;
 }
-@media (max-width: 900px) {
-  .newin-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 560px) {
-  .newin-grid { grid-template-columns: repeat(2, 1fr); }
-}
 .newin-grid.is-active {
   display: grid;
+}
+@media (max-width: 900px) {
+  .newin-grid.is-active {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(55%, 320px);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-left: var(--space-6);
+    scrollbar-width: none;
+  }
+  .newin-grid.is-active::-webkit-scrollbar { display: none; }
+  .newin-grid.is-active .newin-card { scroll-snap-align: start; }
 }
 
 /* ---------- Footer tiles ---------- */
@@ -1731,10 +1748,17 @@
   flex-shrink: 0;
 }
 @media (max-width: 900px) {
-  .testimonial-grid { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-10); }
-}
-@media (max-width: 560px) {
-  .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(78%, 320px);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-left: var(--space-6);
+    scrollbar-width: none;
+  }
+  .testimonial-grid::-webkit-scrollbar { display: none; }
+  .testimonial-card { scroll-snap-align: start; }
 }
 
 .btn-show-all {
