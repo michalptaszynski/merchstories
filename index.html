@@ -42,24 +42,24 @@
       </nav>
     </div>
   </div>
-  <div class="nav-row">
-    <nav class="nav-secondary" aria-label="Language and quote cart">
-      <a href="shop.html" class="nav-shop-link">Shop</a>
-      <button type="button" class="btn btn--stroke btn--sm btn--circle nav-lang-btn" id="langSwitchBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="countryModal">EN</button>
-      <a href="#" class="btn btn--dark btn--sm nav-quote-btn" id="navQuoteBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="quoteDrawer">
+  <div class="site-header__row">
+    <nav class="site-header__secondary" aria-label="Language and quote cart">
+      <a href="shop.html" class="site-header__shop-link">Shop</a>
+      <button type="button" class="btn btn--stroke btn--sm btn--circle site-header__lang-btn" id="langSwitchBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="countryDrawer">EN</button>
+      <a href="#" class="btn btn--dark btn--sm site-header__quote-btn" id="navQuoteBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="quoteDrawer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <span>Quote</span>
       </a>
     </nav>
-    <div class="nav-left">
-      <button type="button" class="nav-hamburger" id="navHamburgerBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileNavDrawer" aria-label="Open menu">
+    <div class="site-header__left">
+      <button type="button" class="site-header__hamburger" id="navHamburgerBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileNavDrawer" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Merch Stories" class="logo-mark"></a>
     </div>
-    <div class="nav-right">
-      <nav class="nav-links" aria-label="Categories">
-        <div class="nav-item">
+    <div class="site-header__right">
+      <nav class="site-header__links" aria-label="Categories">
+        <div class="site-header__item">
           <a href="shop.html?category=packaging" data-filter="packaging">Packaging</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -102,7 +102,7 @@
           </div>
         </div>
         <!-- CATEGORY: keep new categories in sync across nav-header.html (this megamenu), shop.html (#shopCats + #shopOverview + catalog grid) and index.html (Who we are). -->
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=sets" data-filter="sets">Sets</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -146,7 +146,7 @@
             </div>
           </div>
         </div>
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=clothing" data-filter="clothing">Clothing</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -195,7 +195,7 @@
             </div>
           </div>
         </div>
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=bags" data-filter="bags">Bags</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -240,7 +240,7 @@
             </div>
           </div>
         </div>
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=drinkware" data-filter="drinkware">Drinkware</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -280,7 +280,7 @@
             </div>
           </div>
         </div>
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=tech" data-filter="tech">Tech</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -310,7 +310,7 @@
             </div>
           </div>
         </div>
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=office" data-filter="office">Office</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -345,7 +345,7 @@
             </div>
           </div>
         </div>
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=travel" data-filter="travel">Travel</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -380,7 +380,7 @@
             </div>
           </div>
         </div>
-        <div class="nav-item">
+        <div class="site-header__item">
           <a href="shop.html?category=home" data-filter="home">Home</a>
           <div class="nav-megamenu">
             <div class="nav-megamenu__inner">
@@ -415,15 +415,15 @@
   </div>
 </header>
 
-<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-<aside class="mobile-nav" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-labelledby="mobileNavTitle" aria-hidden="true">
-  <div class="mobile-nav__header">
-    <p class="mobile-nav__title" id="mobileNavTitle">Menu</p>
-    <button type="button" class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu">
+<div class="mobile-nav-drawer-overlay" id="mobileNavOverlay"></div>
+<aside class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-labelledby="mobileNavTitle" aria-hidden="true">
+  <div class="mobile-nav-drawer__header">
+    <p class="mobile-nav-drawer__title" id="mobileNavTitle">Menu</p>
+    <button type="button" class="mobile-nav-drawer__close" id="mobileNavClose" aria-label="Close menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
   </div>
-  <nav class="mobile-nav__links" aria-label="Categories">
+  <nav class="mobile-nav-drawer__links" aria-label="Categories">
     <a href="shop.html">Shop all</a>
     <a href="shop.html?category=packaging" data-filter="packaging">Packaging</a>
     <a href="shop.html?category=sets" data-filter="sets">Sets</a>
@@ -435,8 +435,8 @@
     <a href="shop.html?category=travel" data-filter="travel">Travel</a>
     <a href="shop.html?category=home" data-filter="home">Home</a>
   </nav>
-  <div class="mobile-nav__divider"></div>
-  <nav class="mobile-nav__utility" aria-label="Utility">
+  <div class="mobile-nav-drawer__divider"></div>
+  <nav class="mobile-nav-drawer__utility" aria-label="Utility">
     <a href="platform.html">Platform</a>
     <a href="how-it-works.html">How it works</a>
     <a href="contact.html">Contact us</a>
@@ -496,157 +496,157 @@
   </div>
 </aside>
 
-<div class="country-modal-overlay" id="countryModalOverlay"></div>
-<aside class="country-modal" id="countryModal" role="dialog" aria-modal="true" aria-labelledby="countryModalTitle" aria-hidden="true">
-  <div class="country-modal__header">
-    <div class="country-modal__current">
-      <h2 class="country-modal__title" id="countryModalTitle">Choose other country</h2>
+<div class="country-drawer-overlay" id="countryDrawerOverlay"></div>
+<aside class="country-drawer" id="countryDrawer" role="dialog" aria-modal="true" aria-labelledby="countryDrawerTitle" aria-hidden="true">
+  <div class="country-drawer__header">
+    <div class="country-drawer__current">
+      <h2 class="country-drawer__title" id="countryDrawerTitle">Choose other country</h2>
     </div>
-    <button type="button" class="country-modal__close" id="countryModalClose" aria-label="Close">
+    <button type="button" class="country-drawer__close" id="countryDrawerClose" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
   </div>
-  <p class="country-modal__note">Prices, shipping times, and options may differ depending on country and destination.</p>
-  <div class="country-modal__list">
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/pl.svg" alt=""></span>
-        <span class="country-modal__name">Poland / PLN</span>
+  <p class="country-drawer__note">Prices, shipping times, and options may differ depending on country and destination.</p>
+  <div class="country-drawer__list">
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/pl.svg" alt=""></span>
+        <span class="country-drawer__name">Poland / PLN</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang is-active">EN</button>
-      </div>
-    </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/at.svg" alt=""></span>
-        <span class="country-modal__name">Austria / EUR</span>
-      </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">DE</button>
-        <button type="button" class="country-modal__lang">EN</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang is-active">EN</button>
       </div>
     </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/be.svg" alt=""></span>
-        <span class="country-modal__name">Belgium / EUR</span>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/at.svg" alt=""></span>
+        <span class="country-drawer__name">Austria / EUR</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
-        <button type="button" class="country-modal__lang">FR</button>
-      </div>
-    </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/ca.svg" alt=""></span>
-        <span class="country-modal__name">Canada / CAD</span>
-      </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
-        <button type="button" class="country-modal__lang">FR</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">DE</button>
+        <button type="button" class="country-drawer__lang">EN</button>
       </div>
     </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/dk.svg" alt=""></span>
-        <span class="country-modal__name">Denmark / DKK</span>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/be.svg" alt=""></span>
+        <span class="country-drawer__name">Belgium / EUR</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
-      </div>
-    </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/fi.svg" alt=""></span>
-        <span class="country-modal__name">Finland / EUR</span>
-      </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+        <button type="button" class="country-drawer__lang">FR</button>
       </div>
     </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/fr.svg" alt=""></span>
-        <span class="country-modal__name">France / EUR</span>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/ca.svg" alt=""></span>
+        <span class="country-drawer__name">Canada / CAD</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
-        <button type="button" class="country-modal__lang">FR</button>
-      </div>
-    </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/de.svg" alt=""></span>
-        <span class="country-modal__name">Germany / EUR</span>
-      </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">DE</button>
-        <button type="button" class="country-modal__lang">EN</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+        <button type="button" class="country-drawer__lang">FR</button>
       </div>
     </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/ie.svg" alt=""></span>
-        <span class="country-modal__name">Ireland / EUR</span>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/dk.svg" alt=""></span>
+        <span class="country-drawer__name">Denmark / DKK</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
-      </div>
-    </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/it.svg" alt=""></span>
-        <span class="country-modal__name">Italy / EUR</span>
-      </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
       </div>
     </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/jp.svg" alt=""></span>
-        <span class="country-modal__name">Japan / JPY</span>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/fi.svg" alt=""></span>
+        <span class="country-drawer__name">Finland / EUR</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">JA</button>
-      </div>
-    </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/nl.svg" alt=""></span>
-        <span class="country-modal__name">Netherlands / EUR</span>
-      </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
       </div>
     </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/no.svg" alt=""></span>
-        <span class="country-modal__name">Norway / NOK</span>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/fr.svg" alt=""></span>
+        <span class="country-drawer__name">France / EUR</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
-      </div>
-    </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/es.svg" alt=""></span>
-        <span class="country-modal__name">Spain / EUR</span>
-      </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+        <button type="button" class="country-drawer__lang">FR</button>
       </div>
     </div>
-    <div class="country-modal__row">
-      <div class="country-modal__info">
-        <span class="country-modal__flag"><img src="assets/flags/se.svg" alt=""></span>
-        <span class="country-modal__name">Sweden / SEK</span>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/de.svg" alt=""></span>
+        <span class="country-drawer__name">Germany / EUR</span>
       </div>
-      <div class="country-modal__langs">
-        <button type="button" class="country-modal__lang">EN</button>
-        <button type="button" class="country-modal__lang">SV</button>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">DE</button>
+        <button type="button" class="country-drawer__lang">EN</button>
+      </div>
+    </div>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/ie.svg" alt=""></span>
+        <span class="country-drawer__name">Ireland / EUR</span>
+      </div>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+      </div>
+    </div>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/it.svg" alt=""></span>
+        <span class="country-drawer__name">Italy / EUR</span>
+      </div>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+      </div>
+    </div>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/jp.svg" alt=""></span>
+        <span class="country-drawer__name">Japan / JPY</span>
+      </div>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">JA</button>
+      </div>
+    </div>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/nl.svg" alt=""></span>
+        <span class="country-drawer__name">Netherlands / EUR</span>
+      </div>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+      </div>
+    </div>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/no.svg" alt=""></span>
+        <span class="country-drawer__name">Norway / NOK</span>
+      </div>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+      </div>
+    </div>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/es.svg" alt=""></span>
+        <span class="country-drawer__name">Spain / EUR</span>
+      </div>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+      </div>
+    </div>
+    <div class="country-drawer__row">
+      <div class="country-drawer__info">
+        <span class="country-drawer__flag"><img src="assets/flags/se.svg" alt=""></span>
+        <span class="country-drawer__name">Sweden / SEK</span>
+      </div>
+      <div class="country-drawer__langs">
+        <button type="button" class="country-drawer__lang">EN</button>
+        <button type="button" class="country-drawer__lang">SV</button>
       </div>
     </div>
   </div>
@@ -1409,6 +1409,7 @@
     </svg>
   </button>
 </section>
+
 <script src="font-toggle.js"></script>
 
 </div>

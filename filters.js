@@ -1,7 +1,7 @@
 (function () {
   var ROWS_VISIBLE = 4;
   var pills = document.querySelectorAll('.js-category-filter');
-  var tiles = document.querySelectorAll('.product-grid .product-tile, .product-grid > .category-card');
+  var tiles = document.querySelectorAll('.product-grid > .category-card');
   var grid = document.querySelector('.product-grid');
   var showAllBtn = document.querySelector('.btn-show-all');
   var newinGroups = document.querySelectorAll('.newin-grid');

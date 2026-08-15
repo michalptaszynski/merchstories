@@ -5,9 +5,7 @@
 
 :root {
   /* ---- primitives: blue ---- */
-  --blue-100: #D6E6FF; /* Powder Blue */
   --blue-600: #2757FF; /* PH Blue — brand blue */
-  --blue-700: #0B38D5; /* Dark Blue — hover/pressed */
 
   /* ---- primitives: neutral ---- */
   --white:     #FFFFFF;
@@ -18,7 +16,6 @@
   --gray-500:  #757579; /* AA-compliant on white: 4.59:1 */
   --gray-600:  #555555;
   --rich-blue: #00061A;
-  --rich-blue-70: rgba(0, 6, 26, 0.7);
   --rich-blue-20: rgba(0, 6, 26, 0.2);
   --rich-blue-15: rgba(0, 6, 26, 0.15);
   --black: #000000;
@@ -33,12 +30,10 @@
   --color-text-primary:   var(--rich-blue);
   --color-text-secondary: var(--gray-600);
   --color-text-muted:     var(--gray-500);
-  --color-text-on-accent: var(--white);
 
   /* ---- semantic: background ---- */
   --color-bg-page:    var(--white);
   --color-bg-surface: var(--white);
-  --color-bg-muted:   var(--gray-100);
 
   /* ---- semantic: border ---- */
   --color-border-default: var(--gray-300);
@@ -46,7 +41,6 @@
 
   /* ---- semantic: accent ---- */
   --color-accent:       var(--blue-600);
-  --color-accent-hover: var(--blue-700);
   --color-accent-alt:   var(--coral-500); /* secondary accent used for hover/active states on buttons, pills & swatches */
 
   /* ---- semantic: feedback ---- */
@@ -54,15 +48,21 @@
 
   /* ---- semantic: overlay (scrims over photos/video) ---- */
   --overlay-scrim-30: var(--black-30);
+  --overlay-scrim-40: rgba(0, 0, 0, 0.4); /* slide-in drawer backdrops (mobile nav, country picker, quote drawer) */
   --overlay-scrim-50: var(--black-50);
 
   /* ---- type ---- */
   --font-base: "Lora", "ABC Favorit", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
+  --fs-11: 0.6875rem;
+  --fs-12: 0.75rem;
   --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
   --fs-15: 0.9375rem;
+  --fs-16: 1rem;
   --fs-17: 1.0625rem;
+  --fs-18: 1.125rem;
   --fs-20: 1.25rem;
   --fs-24: 1.5rem;
   --fs-32: 2rem;
@@ -91,6 +91,7 @@
   --shadow-sm: 0 1px 2px var(--rich-blue-20);
   --shadow-md: 0 2px 12px var(--rich-blue-20);
   --shadow-ring: 0 0 0 2px var(--rich-blue);
+  --shadow-drawer: 24px rgba(0, 0, 0, 0.12); /* combine with a per-side x-offset, e.g. box-shadow: 8px 0 var(--shadow-drawer); */
 
   /* ---- motion: duration ---- */
   --duration-fast: 150ms;

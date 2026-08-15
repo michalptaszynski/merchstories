@@ -1,8 +1,8 @@
 (function () {
   var openBtn = document.getElementById('langSwitchBtn');
-  var modal = document.getElementById('countryModal');
-  var overlay = document.getElementById('countryModalOverlay');
-  var closeBtn = document.getElementById('countryModalClose');
+  var modal = document.getElementById('countryDrawer');
+  var overlay = document.getElementById('countryDrawerOverlay');
+  var closeBtn = document.getElementById('countryDrawerClose');
   if (!openBtn || !modal || !overlay) return;
 
   function open() {
@@ -23,20 +23,20 @@
     openBtn.focus();
   }
 
-  var headerFlag = modal.querySelector('.country-modal__header .country-modal__flag img');
+  var headerFlag = modal.querySelector('.country-drawer__header .country-drawer__flag img');
 
   openBtn.addEventListener('click', open);
   closeBtn.addEventListener('click', close);
   overlay.addEventListener('click', close);
 
-  modal.querySelectorAll('.country-modal__row').forEach(function (row) {
-    row.querySelectorAll('.country-modal__lang').forEach(function (btn) {
+  modal.querySelectorAll('.country-drawer__row').forEach(function (row) {
+    row.querySelectorAll('.country-drawer__lang').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        modal.querySelectorAll('.country-modal__lang.is-active').forEach(function (active) {
+        modal.querySelectorAll('.country-drawer__lang.is-active').forEach(function (active) {
           active.classList.remove('is-active');
         });
         btn.classList.add('is-active');
-        var flagSrc = row.querySelector('.country-modal__flag img').src;
+        var flagSrc = row.querySelector('.country-drawer__flag img').src;
         if (headerFlag) headerFlag.src = flagSrc;
         close();
       });

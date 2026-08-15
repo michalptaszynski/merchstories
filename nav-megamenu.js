@@ -1,6 +1,6 @@
 (function () {
-  var navLinks = document.querySelector('.nav-links');
-  var items = document.querySelectorAll('.nav-item');
+  var navLinks = document.querySelector('.site-header__links');
+  var items = document.querySelectorAll('.site-header__item');
   if (!navLinks || !items.length) return;
 
   var activeMenu = null;
