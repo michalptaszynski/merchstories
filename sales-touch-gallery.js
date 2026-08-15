@@ -4,18 +4,17 @@
 
   var viewport = track.parentElement;
   var cards = Array.prototype.slice.call(track.children);
-  var SET_SIZE = 5;
-  if (!cards.length || cards.length % SET_SIZE !== 0) return;
+  var count = cards.length;
+  if (!count) return;
 
   var SLOT_WIDTH = 180;
   var ACTIVE_WIDTH = 342; // must match .carousel-card.is-active .carousel-card__media scale target
   var GAP = 48;
   var STEP = SLOT_WIDTH + GAP;
   var TICK_MS = 2500;
-  var TRANSITION_MS = 700;
 
-  var setCount = cards.length / SET_SIZE;
-  var activeSlot = SET_SIZE + 2; // start mid-pack, well clear of both ends
+  var activeIndex = 0; // card 1 (Merch Consultant) starts active
+  var direction = 1; // bounces 1-2-3-4-5-4-3-2-1-... instead of wrapping
   var timerId = null;
 
   var dotsWrap = document.getElementById('salesCarouselDots');
@@ -34,10 +33,6 @@
       if (isTarget) targetFill = fill;
     });
     if (!targetFill || !targetFill.animate) return;
-    // Web Animations API instead of a CSS transition: transitions can get
-    // coalesced/skipped on their very first trigger right after page load
-    // (jumping straight to 100% instead of animating) — .animate() doesn't
-    // have that quirk since it starts precisely when called.
     targetFill._anim = targetFill.animate(
       [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }],
       { duration: TICK_MS, easing: 'linear', fill: 'forwards' }
@@ -53,13 +48,12 @@
     return left;
   }
 
-  function render(active, animate) {
+  // Just 5 real cards, no duplicated sets — reaching the last one always
+  // slides straight back to the first, visibly, instead of faking an
+  // endless scroll with cloned content.
+  function render(active) {
     var activeLeft = slotLeft(active, active);
     var viewportOffset = (viewport.clientWidth / 2) - (activeLeft + ACTIVE_WIDTH / 2);
-
-    if (!animate) {
-      track.classList.add('is-jumping');
-    }
 
     cards.forEach(function (card, i) {
       card.classList.toggle('is-active', i === active);
@@ -72,24 +66,14 @@
       currentValue = value;
       startDotProgress(value);
     }
-
-    if (!animate) {
-      // eslint-disable-next-line no-unused-expressions
-      track.offsetWidth; // force reflow so the transition-less jump applies immediately
-      track.classList.remove('is-jumping');
-    }
   }
 
   function tick() {
-    activeSlot += 1;
-    render(activeSlot, true);
-
-    if (activeSlot >= SET_SIZE * (setCount - 1)) {
-      window.setTimeout(function () {
-        activeSlot -= SET_SIZE;
-        render(activeSlot, false);
-      }, TRANSITION_MS + 60);
+    if (activeIndex + direction >= count || activeIndex + direction < 0) {
+      direction *= -1;
     }
+    activeIndex += direction;
+    render(activeIndex);
   }
 
   function restartTimer() {
@@ -98,29 +82,26 @@
   }
 
   function goTo(index) {
-    // Keep clicks clear of the last set too, same margin tick() relies on,
-    // so the very next auto-tick never walks off the end of `cards`.
-    if (index >= SET_SIZE * (setCount - 1)) index -= SET_SIZE;
-    activeSlot = index;
-    render(activeSlot, true);
+    activeIndex = index;
+    render(activeIndex);
     restartTimer();
   }
 
   cards.forEach(function (card, i) {
     card.addEventListener('click', function (e) {
-      if (i === activeSlot) return;
+      if (i === activeIndex) return;
       e.preventDefault();
       goTo(i);
     });
   });
 
   function start() {
-    render(activeSlot, false);
+    render(activeIndex);
     timerId = setInterval(tick, TICK_MS);
   }
 
   window.addEventListener('resize', function () {
-    render(activeSlot, false);
+    render(activeIndex);
   });
 
   var imgs = track.querySelectorAll('img');

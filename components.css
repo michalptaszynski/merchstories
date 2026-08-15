@@ -1156,13 +1156,6 @@
   position: relative;
   height: 520px;
 }
-.sales-touch__carousel-track.is-jumping .carousel-card,
-.sales-touch__carousel-track.is-jumping .carousel-card__media,
-.sales-touch__carousel-track.is-jumping .carousel-card__label,
-.sales-touch__carousel-track.is-jumping .carousel-card__caption {
-  transition: none;
-}
-
 .carousel-card {
   position: absolute;
   top: 0;
