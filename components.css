@@ -2752,6 +2752,11 @@
   max-width: 80%;
   max-height: 80%;
 }
+/* Stock & warehouse tile: wider target size, still capped by the frame's own padding. */
+.platform-tools__media.platform-media-frame .platform-media-image {
+  max-width: 300px;
+  max-height: 100%;
+}
 
 /* ---------- Platform stats ---------- */
 .platform-stats {
@@ -2872,7 +2877,7 @@
 .platform-feature__qa-label {
   font-family: var(--font-mono);
   font-size: var(--fs-13);
-  color: var(--color-text-muted);
+  color: var(--color-text-primary);
 }
 .platform-feature__qa-desc {
   font-family: var(--font-mono);
