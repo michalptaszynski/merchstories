@@ -26,6 +26,9 @@
   --coral-500: #FF4458; /* interactive hover/active accent */
   --red-700:   #8A140C; /* error text */
 
+  /* ---- primitives: tan ---- */
+  --tan-200: #E1CFC1; /* platform-page placeholder background */
+
   /* ---- semantic: text ---- */
   --color-text-primary:   var(--rich-blue);
   --color-text-secondary: var(--gray-600);

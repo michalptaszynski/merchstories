@@ -16,7 +16,8 @@
     gearBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 
-  applyFont(localStorage.getItem(STORAGE_KEY) === 'sans');
+  var stored = localStorage.getItem(STORAGE_KEY);
+  applyFont(stored === null ? true : stored === 'sans');
 
   gearBtn.addEventListener('click', function (e) {
     e.stopPropagation();
