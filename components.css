@@ -2897,8 +2897,16 @@
 .platform-feature__media .ph {
   aspect-ratio: 16 / 9;
 }
+.ph.platform-feature__media--photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.platform-feature--full .platform-feature__media--photo {
+  background-size: 120%;
+}
 .platform-feature__media-image {
-  max-width: min(720px, 100%);
+  max-width: min(864px, 100%);
   max-height: 96%;
   border-radius: 8px;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
@@ -3114,6 +3122,19 @@
   font-size: var(--fs-13);
   color: var(--color-text-secondary);
   line-height: 1.4;
+}
+
+/* ---------- Platform media scroll-reveal ---------- */
+/* Applied to .ph media placeholders across hero/feature/split/tools sections;
+   toggled to .is-visible by media-reveal.js on scroll-into-view. */
+.media-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+}
+.media-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---------- Platform FAQ ---------- */
