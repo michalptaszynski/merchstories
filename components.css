@@ -2722,6 +2722,25 @@
   max-width: var(--max-w);
   margin-inline: auto;
 }
+@media (min-width: 900px) {
+  .platform-hero {
+    flex-direction: row;
+    align-items: stretch;
+    gap: var(--space-16);
+  }
+  .platform-hero__text {
+    flex: 0 0 auto;
+    width: 38%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .platform-hero__media {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
 .platform-hero__eyebrow {
   font-family: var(--font-mono);
   font-size: var(--fs-13);
@@ -2750,12 +2769,42 @@
   flex-wrap: wrap;
   gap: var(--space-2);
 }
+.platform-hero__form-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  height: 40px;
+  padding-inline: var(--space-4);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background: var(--white);
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--color-text-primary);
+  box-sizing: border-box;
+  transition: border-color var(--duration-fast) var(--ease);
+}
+.platform-hero__form-input::placeholder {
+  color: var(--color-text-muted);
+}
+.platform-hero__form-input:hover {
+  border-color: var(--color-border-hover);
+}
+.platform-hero__form-input:focus {
+  outline: none;
+  border-color: var(--rich-blue);
+}
 .platform-hero__media .ph {
   aspect-ratio: 16 / 7;
 }
-@media (min-width: 700px) {
+@media (min-width: 700px) and (max-width: 899px) {
   .platform-hero__media .ph {
     aspect-ratio: 21 / 8;
+  }
+}
+@media (min-width: 900px) {
+  .platform-hero__media .ph {
+    aspect-ratio: auto;
+    height: 680px;
   }
 }
 /* Shared "photo embedded in placeholder" treatment: image pinned to the
@@ -2954,6 +3003,13 @@
   width: auto;
   height: auto;
   display: block;
+}
+/* Plain centered image, no background photo — .ph's own flex centering does the work. */
+.platform-split__media .platform-media-image {
+  height: 418px;
+  width: auto;
+  max-width: 70%;
+  max-height: 70%;
 }
 
 /* ---------- Platform scroll-reveal text (fills in as it scrolls through view) ---------- */
