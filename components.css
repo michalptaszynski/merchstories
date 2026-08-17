@@ -2073,7 +2073,7 @@
 }
 .font-settings.is-open .font-settings__toggle svg {
   transform: rotate(75deg);
-  color: var(--color-accent);
+  color: var(--color-accent-alt);
 }
 .font-settings__panel {
   display: flex;
@@ -2142,7 +2142,7 @@
   transition: transform var(--duration-base) var(--ease);
 }
 .font-switch input:checked + .font-switch__track {
-  background: var(--color-accent);
+  background: var(--color-accent-alt);
 }
 .font-switch input:checked + .font-switch__track::before {
   transform: translateX(16px);
@@ -2896,6 +2896,12 @@
 }
 .platform-feature__media .ph {
   aspect-ratio: 16 / 9;
+}
+.platform-feature__media-image {
+  max-width: min(720px, 100%);
+  max-height: 96%;
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
 }
 @media (min-width: 900px) {
   .platform-feature__inner {
