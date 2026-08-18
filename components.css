@@ -2943,7 +2943,7 @@
   line-height: 1.5;
   margin-bottom: var(--space-8);
 }
-.platform-feature--full .platform-feature__desc { margin-bottom: 0; }
+.platform-feature--full .platform-feature__desc { margin-bottom: var(--space-4); }
 
 .platform-feature__qa {
   border-top: 1px solid var(--color-border-default);
@@ -2973,6 +2973,9 @@
   color: var(--color-text-muted);
   line-height: 1.5;
 }
+.platform-feature__qa-cta {
+  margin-top: var(--space-6);
+}
 
 /* ---------- Platform split feature (alternating 2-col) ---------- */
 .platform-split {
@@ -2983,6 +2986,12 @@
   margin-inline: auto;
   padding: var(--space-12) var(--space-6);
   align-items: start;
+}
+/* This section's text column has a bottom-pinned CTA that needs to match
+   the media column's height — the default align-items: start elsewhere
+   only stays as-is for other .platform-split sections. */
+.platform-split--reverse {
+  align-items: stretch;
 }
 /* Height = the old 4:3-derived height (based on the column's own fluid width) + 240px. */
 .platform-split__media .ph {
@@ -3000,7 +3009,7 @@
   }
 }
 .platform-split .platform-feature__title { margin-bottom: var(--space-4); }
-.platform-split .platform-feature__desc { margin-bottom: 0; max-width: 44ch; }
+.platform-split .platform-feature__desc { margin-bottom: var(--space-4); max-width: 44ch; }
 .ph.platform-split__media--photo {
   position: relative;
   overflow: hidden;
@@ -3024,6 +3033,161 @@
   width: auto;
   max-width: 70%;
   max-height: 70%;
+}
+
+/* ---------- Platform steps (Multi-brand asset — clickable "how it works" list) ---------- */
+.platform-steps {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.platform-steps__panel {
+  margin-top: auto;
+}
+.platform-steps__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+  max-width: 40ch;
+}
+.platform-steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-10);
+}
+.platform-steps__item {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-base);
+  font-size: clamp(1.375rem, 2.6vw, var(--fs-32));
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-align: left;
+  transition: color var(--duration-fast) var(--ease);
+}
+.platform-steps__item:hover {
+  color: var(--color-text-secondary);
+}
+.platform-steps__item.is-active {
+  color: var(--color-text-primary);
+}
+.platform-steps__desc {
+  font-family: var(--font-mono);
+  font-size: var(--fs-14);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-6);
+  max-width: 44ch;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 320ms var(--ease), opacity 280ms var(--ease);
+}
+.platform-steps__desc.is-leaving {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+.platform-steps__desc.is-entering {
+  transform: translateY(14px);
+  opacity: 0;
+}
+#platformStepsImage {
+  transition: opacity 200ms var(--ease);
+}
+#platformStepsImage.is-fading {
+  opacity: 0;
+}
+#platformStepsImage.platform-steps__image--cover {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.platform-steps__media-ph {
+  position: relative;
+  overflow: hidden;
+}
+.platform-quote-input {
+  position: absolute;
+  left: var(--space-10);
+  right: var(--space-10);
+  bottom: var(--space-10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  height: 56px;
+  padding-left: var(--space-6);
+  padding-right: 6px;
+  background: var(--white);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+  transition: opacity 300ms var(--ease);
+}
+.platform-quote-input.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.platform-quote-input__field {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+.platform-quote-input__text {
+  font-family: var(--font-mono);
+  font-size: var(--fs-15);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.platform-quote-input__caret {
+  display: inline-block;
+  width: 1px;
+  height: 1.1em;
+  margin-left: 2px;
+  background: var(--color-text-primary);
+  vertical-align: middle;
+  animation: platformQuoteCaretBlink 1s step-end infinite;
+}
+@keyframes platformQuoteCaretBlink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.platform-quote-input__btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--rich-blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+.platform-quote-input__btn svg {
+  width: 18px;
+  height: 18px;
+}
+.platform-quote-input__btn.is-pulsing {
+  animation: platformQuoteBtnPulse 420ms var(--ease);
+}
+@keyframes platformQuoteBtnPulse {
+  0% { transform: scale(1); }
+  35% { transform: scale(0.8); }
+  100% { transform: scale(1); }
 }
 
 /* ---------- Platform scroll-reveal text (fills in as it scrolls through view) ---------- */
