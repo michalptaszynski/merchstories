@@ -2830,38 +2830,6 @@
 }
 .platform-feature--full .platform-feature__desc { margin-bottom: var(--space-4); }
 
-.platform-feature__qa {
-  border-top: 1px solid var(--color-border-default);
-  margin-top: var(--space-2);
-}
-.platform-feature__qa-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-2);
-  padding: var(--space-6) 0;
-  border-bottom: 1px solid var(--color-border-default);
-}
-@media (min-width: 700px) {
-  .platform-feature__qa-row {
-    grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr);
-    gap: var(--space-8);
-  }
-}
-.platform-feature__qa-label {
-  font-family: var(--font-mono);
-  font-size: var(--fs-13);
-  color: var(--color-text-primary);
-}
-.platform-feature__qa-desc {
-  font-family: var(--font-mono);
-  font-size: var(--fs-14);
-  color: var(--color-text-muted);
-  line-height: 1.5;
-}
-.platform-feature__qa-cta {
-  margin-top: var(--space-6);
-}
-
 /* ---------- Platform stock cards (Stock & warehouse alt layout) ---------- */
 .platform-stock-cards {
   width: 100%;
