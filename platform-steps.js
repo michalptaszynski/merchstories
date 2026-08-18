@@ -2,6 +2,7 @@
   var items = document.querySelectorAll('.platform-steps__item');
   var desc = document.getElementById('platformStepsDesc');
   var image = document.getElementById('platformStepsImage');
+  var panel = document.getElementById('platformStepsPanel');
   var quoteInput = document.getElementById('platformQuoteInput');
   var quoteText = document.getElementById('platformQuoteInputText');
   var quoteBtn = quoteInput ? quoteInput.querySelector('.platform-quote-input__btn') : null;
@@ -74,6 +75,7 @@
         i.classList.toggle('is-active', active);
         i.setAttribute('aria-selected', active ? 'true' : 'false');
       });
+      if (panel) panel.setAttribute('aria-labelledby', item.id);
 
       desc.classList.add('is-leaving');
       window.setTimeout(function () {
@@ -90,6 +92,7 @@
         image.classList.add('is-fading');
         window.setTimeout(function () {
           image.src = item.dataset.img;
+          image.alt = item.dataset.alt || item.textContent;
           image.classList.toggle('platform-steps__image--cover', isStepOne);
           image.classList.remove('is-fading');
         }, 200);

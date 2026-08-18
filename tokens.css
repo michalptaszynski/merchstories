@@ -107,7 +107,7 @@
      1   raised   — content sitting above a local overlay/gradient (hero copy, trust strip)
      2   overlay  — content above a hover/media layer (swatches, lifestyle markers)
      50  sticky   — the site header
-     500 floating — fixed floating widgets (font settings)
+     500 floating — fixed floating widgets
      9999 modal   — full-page blocking layers (password gate) */
   --z-raised: 1;
   --z-overlay: 2;

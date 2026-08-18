@@ -661,7 +661,8 @@
     <h1 class="platform-hero__title">Run your merch program from one screen</h1>
     <p class="platform-hero__subtitle">Track stock, approve designs, and ship to every office without leaving the dashboard &mdash; built for teams managing merch across more than one team, market, or brand.</p>
     <form class="platform-hero__actions" action="contact.html">
-      <input type="email" name="email" placeholder="Work email" class="platform-hero__form-input" required>
+      <label for="platformHeroEmail" class="visually-hidden">Work email</label>
+      <input type="email" id="platformHeroEmail" name="email" placeholder="Work email" class="platform-hero__form-input" required>
       <button type="submit" class="btn btn--dark"><span>Book a Demo</span></button>
     </form>
   </div>
@@ -690,7 +691,7 @@
 <section class="platform-feature platform-feature--full">
   <div class="platform-feature__inner">
     <p class="platform-feature__tag">Design approvals</p>
-    <h3 class="platform-feature__title">Approve designs without the email thread</h3>
+    <h2 class="platform-feature__title">Approve designs without the email thread</h2>
     <p class="platform-feature__desc">Every mockup lands in one queue with side-by-side revisions, so approvals happen on the screen instead of scattered across forwarded PDFs.</p>
     <a href="contact.html" class="btn btn--stroke"><span>Get in touch</span></a>
   </div>
@@ -705,7 +706,7 @@
   <div class="platform-stock-cards">
     <div class="platform-stock-cards__head">
       <p class="platform-stock-cards__eyebrow">Why teams</p>
-      <h3 class="platform-stock-cards__title">choose the platform</h3>
+      <h2 class="platform-stock-cards__title">choose the platform</h2>
     </div>
     <div class="platform-stock-cards__grid">
       <div class="platform-stock-cards__card">
@@ -745,7 +746,7 @@
 <section class="platform-split">
   <div class="platform-split__text">
     <p class="platform-feature__tag">Shipping</p>
-    <h3 class="platform-feature__title">Ship to every office in a click</h3>
+    <h2 class="platform-feature__title">Ship to every office in a click</h2>
     <p class="platform-feature__desc">Save an address book once for every office, warehouse, and home shipment, then send a batch of orders out together instead of booking each one by hand.</p>
     <a href="contact.html" class="btn btn--stroke"><span>Get in touch</span></a>
   </div>
@@ -761,13 +762,13 @@
     <div class="platform-steps media-reveal">
       <p class="platform-steps__eyebrow">How it works</p>
       <div class="platform-steps__list" role="tablist">
-        <button type="button" class="platform-steps__item is-active" data-step="1" data-desc="Pick the products that fit your brand, set rough quantities, and send it over. No commitment, no login required." data-img="assets/photos/how-it-works/step1.jpg" role="tab" aria-selected="true">Send a quote request</button>
-        <button type="button" class="platform-steps__item" data-step="2" data-desc="Our design team turns your logo into real mockups within 24 hours, alongside pricing across a few quantity tiers." data-img="assets/photos/platform/multibrand-feature.png" role="tab" aria-selected="false">Free mockups &amp; pricing</button>
-        <button type="button" class="platform-steps__item" data-step="3" data-desc="Request changes until the mockups feel right, then give the go-ahead. Nothing goes into production before you sign off." data-img="assets/photos/how-it-works/step3.jpg" role="tab" aria-selected="false">Approve &amp; confirm</button>
-        <button type="button" class="platform-steps__item" data-step="4" data-desc="We manufacture, quality-check, and ship &mdash; to one office or to a thousand doorsteps, wherever your people are." data-img="assets/photos/how-it-works/step4.jpg" role="tab" aria-selected="false">Production &amp; delivery</button>
-        <button type="button" class="platform-steps__item" data-step="5" data-desc="Plug into our platform to track stock and automate reorders, or spin up a branded store so your team can help themselves." data-img="assets/photos/platform/multibrand-feature.png" role="tab" aria-selected="false">Platform &amp; merch store</button>
+        <button type="button" id="platformStep1" class="platform-steps__item is-active" data-step="1" data-desc="Pick the products that fit your brand, set rough quantities, and send it over. No commitment, no login required." data-img="assets/photos/how-it-works/step1.jpg" data-alt="Quote request form" role="tab" aria-selected="true" aria-controls="platformStepsPanel">Send a quote request</button>
+        <button type="button" id="platformStep2" class="platform-steps__item" data-step="2" data-desc="Our design team turns your logo into real mockups within 24 hours, alongside pricing across a few quantity tiers." data-img="assets/photos/platform/multibrand-feature.png" data-alt="Mockup and pricing preview" role="tab" aria-selected="false" aria-controls="platformStepsPanel">Free mockups &amp; pricing</button>
+        <button type="button" id="platformStep3" class="platform-steps__item" data-step="3" data-desc="Request changes until the mockups feel right, then give the go-ahead. Nothing goes into production before you sign off." data-img="assets/photos/how-it-works/step3.jpg" data-alt="Design approval screen" role="tab" aria-selected="false" aria-controls="platformStepsPanel">Approve &amp; confirm</button>
+        <button type="button" id="platformStep4" class="platform-steps__item" data-step="4" data-desc="We manufacture, quality-check, and ship &mdash; to one office or to a thousand doorsteps, wherever your people are." data-img="assets/photos/how-it-works/step4.jpg" data-alt="Production and delivery tracking" role="tab" aria-selected="false" aria-controls="platformStepsPanel">Production &amp; delivery</button>
+        <button type="button" id="platformStep5" class="platform-steps__item" data-step="5" data-desc="Plug into our platform to track stock and automate reorders, or spin up a branded store so your team can help themselves." data-img="assets/photos/platform/multibrand-feature.png" data-alt="Platform and merch store dashboard" role="tab" aria-selected="false" aria-controls="platformStepsPanel">Platform &amp; merch store</button>
       </div>
-      <div class="platform-steps__panel">
+      <div class="platform-steps__panel" id="platformStepsPanel" role="tabpanel" aria-labelledby="platformStep1">
         <p class="platform-steps__desc" id="platformStepsDesc">Pick the products that fit your brand, set rough quantities, and send it over. No commitment, no login required.</p>
         <a href="contact.html" class="btn btn--stroke"><span>Get in touch</span></a>
       </div>
@@ -775,7 +776,7 @@
   </div>
   <div class="platform-split__media">
     <div class="ph platform-steps__media-ph">
-      <img src="assets/photos/how-it-works/step1.jpg" alt="Multi-brand dashboard" class="platform-media-image media-reveal platform-steps__image--cover" id="platformStepsImage">
+      <img src="assets/photos/how-it-works/step1.jpg" alt="Quote request form" class="platform-media-image media-reveal platform-steps__image--cover" id="platformStepsImage">
       <div class="platform-quote-input" id="platformQuoteInput">
         <div class="platform-quote-input__field">
           <span class="platform-quote-input__text" id="platformQuoteInputText"></span><span class="platform-quote-input__caret"></span>
