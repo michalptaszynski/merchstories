@@ -2033,126 +2033,6 @@
   .pdp__stage { height: 480px; }
 }
 
-/* -- font settings -- */
-:root.font-sans-mode {
-  --font-mono: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-}
-.font-settings {
-  position: fixed;
-  right: var(--space-6);
-  bottom: var(--space-6);
-  z-index: var(--z-floating);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--space-2);
-}
-.font-settings__toggle {
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-md);
-  cursor: pointer;
-  transition: background var(--duration-fast) var(--ease), border-color var(--duration-fast) var(--ease);
-}
-.font-settings__toggle:hover {
-  background: var(--gray-100);
-  border-color: var(--color-border-hover);
-}
-.font-settings__toggle svg {
-  width: 24px;
-  height: 24px;
-  color: var(--color-text-secondary);
-  transition: transform var(--duration-slower) var(--ease);
-}
-.font-settings.is-open .font-settings__toggle svg {
-  transform: rotate(75deg);
-  color: var(--color-accent-alt);
-}
-.font-settings__panel {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  opacity: 0;
-  transform: translateY(8px) scale(0.96);
-  pointer-events: none;
-  transition: opacity var(--duration-fast) var(--ease), transform var(--duration-fast) var(--ease);
-}
-.font-settings.is-open .font-settings__panel {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-.font-settings__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-6);
-}
-/* [hidden] ties .font-settings__row on specificity — without this, the flex
-   rule above wins the cascade and a hidden row leaks onto every page. */
-.font-settings__row[hidden] {
-  display: none;
-}
-.font-settings__label {
-  font-family: var(--font-mono);
-  font-size: var(--fs-13);
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: var(--color-text-primary);
-  white-space: nowrap;
-}
-.font-switch {
-  position: relative;
-  display: inline-flex;
-  width: 40px;
-  height: 24px;
-  flex-shrink: 0;
-}
-.font-switch input {
-  position: absolute;
-  inset: 0;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-.font-switch__track {
-  position: absolute;
-  inset: 0;
-  background: var(--gray-300);
-  border-radius: var(--radius-full);
-  transition: background var(--duration-fast) var(--ease);
-}
-.font-switch__track::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 16px;
-  height: 16px;
-  background: var(--white);
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--duration-base) var(--ease);
-}
-.font-switch input:checked + .font-switch__track {
-  background: var(--color-accent-alt);
-}
-.font-switch input:checked + .font-switch__track::before {
-  transform: translateX(16px);
-}
-
 /* ---------- Shop page ---------- */
 .shop-hero {
   padding-inline: var(--space-6);
@@ -2983,11 +2863,6 @@
 }
 
 /* ---------- Platform stock cards (Stock & warehouse alt layout) ---------- */
-.platform-stock-cards.is-hidden,
-.platform-feature__inner.is-hidden,
-.platform-feature__media.is-hidden {
-  display: none;
-}
 .platform-stock-cards {
   width: 100%;
   margin-top: var(--space-10);
@@ -3440,16 +3315,3 @@
   color: var(--color-text-secondary);
   line-height: 1.55;
 }
-
-/* ---------- Amplify presentation mode ---------- */
-/* Hardcoded, presentation-only: toggled via the "Amplify" switch in the font-settings
-   gear. Flattens every gray section background and photo placeholder to one flat gray. */
-:root.amplify-mode {
-  --gray-100: #EBEBEB;
-  --gray-200: #EBEBEB;
-  --gray-300: #EBEBEB;
-}
-:root.amplify-mode .section--sales-touch {
-  background-color: #EBEBEB;
-}
-
