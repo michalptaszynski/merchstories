@@ -4,9 +4,6 @@
    ========================================================================== */
 
 :root {
-  /* ---- primitives: blue ---- */
-  --blue-600: #2757FF; /* PH Blue — brand blue */
-
   /* ---- primitives: neutral ---- */
   --white:     #FFFFFF;
   --gray-100:  #F8F8F8;
@@ -43,8 +40,7 @@
   --color-border-hover:   var(--gray-400);
 
   /* ---- semantic: accent ---- */
-  --color-accent:       var(--blue-600);
-  --color-accent-alt:   var(--coral-500); /* secondary accent used for hover/active states on buttons, pills & swatches */
+  --color-accent-alt:   var(--coral-500); /* the only interactive accent — hover/active/focus states on buttons, pills, swatches & form requirements */
 
   /* ---- semantic: feedback ---- */
   --color-error: var(--red-700);
