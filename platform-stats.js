@@ -1,5 +1,5 @@
 (function () {
-  var items = document.querySelectorAll('.platform-stats__value[data-count-to]');
+  var items = document.querySelectorAll('[data-count-to]');
   if (!items.length) return;
 
   function formatNumber(n, comma) {

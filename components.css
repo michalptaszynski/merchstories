@@ -2100,6 +2100,11 @@
   justify-content: space-between;
   gap: var(--space-6);
 }
+/* [hidden] ties .font-settings__row on specificity — without this, the flex
+   rule above wins the cascade and a hidden row leaks onto every page. */
+.font-settings__row[hidden] {
+  display: none;
+}
 .font-settings__label {
   font-family: var(--font-mono);
   font-size: var(--fs-13);
@@ -2977,6 +2982,83 @@
   margin-top: var(--space-6);
 }
 
+/* ---------- Platform stock cards (Stock & warehouse alt layout) ---------- */
+.platform-stock-cards.is-hidden,
+.platform-feature__inner.is-hidden,
+.platform-feature__media.is-hidden {
+  display: none;
+}
+.platform-stock-cards {
+  width: 100%;
+  margin-top: var(--space-10);
+  margin-bottom: calc(var(--space-10) + var(--space-4));
+}
+.platform-stock-cards__head {
+  margin-bottom: var(--space-8);
+}
+.platform-stock-cards__eyebrow {
+  font-size: clamp(1.5rem, 2.6vw, var(--fs-32));
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+.platform-stock-cards__title {
+  font-size: clamp(1.5rem, 2.6vw, var(--fs-32));
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+.platform-stock-cards__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+@media (min-width: 900px) {
+  .platform-stock-cards__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.platform-stock-cards__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding: var(--space-6);
+  background: var(--gray-200);
+  box-sizing: border-box;
+}
+.platform-stock-cards__card-heading {
+  font-size: var(--fs-17);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+.platform-stock-cards__card-desc {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+.platform-stock-cards__card-stat {
+  margin-top: auto;
+  text-align: right;
+}
+.platform-stock-cards__card-value {
+  font-size: clamp(2.5rem, 5vw, var(--fs-64));
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+.platform-stock-cards__card-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+}
+
 /* ---------- Platform split feature (alternating 2-col) ---------- */
 .platform-split {
   display: grid;
@@ -3357,5 +3439,17 @@
   font-size: var(--fs-14);
   color: var(--color-text-secondary);
   line-height: 1.55;
+}
+
+/* ---------- Amplify presentation mode ---------- */
+/* Hardcoded, presentation-only: toggled via the "Amplify" switch in the font-settings
+   gear. Flattens every gray section background and photo placeholder to one flat gray. */
+:root.amplify-mode {
+  --gray-100: #EBEBEB;
+  --gray-200: #EBEBEB;
+  --gray-300: #EBEBEB;
+}
+:root.amplify-mode .section--sales-touch {
+  background-color: #EBEBEB;
 }
 

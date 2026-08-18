@@ -64,12 +64,12 @@
 </section>
 
 <section class="platform-feature">
-  <div class="platform-feature__media">
+  <div class="platform-feature__media" id="stockDefaultMedia">
     <div class="ph platform-color-2">
       <img src="assets/photos/platform/stock-warehouse.png" alt="Stock &amp; warehouse orders dashboard" class="platform-media-image platform-feature__media-image media-reveal">
     </div>
   </div>
-  <div class="platform-feature__inner">
+  <div class="platform-feature__inner" id="stockDefaultContent">
     <p class="platform-feature__tag">Stock &amp; warehouse</p>
     <h3 class="platform-feature__title">Stock levels you don&rsquo;t have to ask for</h3>
     <p class="platform-feature__desc">Every unit in your warehouse shows up the moment it&rsquo;s counted in, so you&rsquo;re never placing a reorder based on a guess.</p>
@@ -88,6 +88,44 @@
       </div>
     </div>
     <a href="contact.html" class="btn btn--stroke platform-feature__qa-cta"><span>Get in touch</span></a>
+  </div>
+  <div class="platform-stock-cards is-hidden" id="stockAltContent">
+    <div class="platform-stock-cards__head">
+      <p class="platform-stock-cards__eyebrow">Why teams</p>
+      <h3 class="platform-stock-cards__title">choose the platform</h3>
+    </div>
+    <div class="platform-stock-cards__grid">
+      <div class="platform-stock-cards__card">
+        <div class="platform-stock-cards__card-top">
+          <p class="platform-stock-cards__card-heading">Watch inventory update in real time</p>
+          <p class="platform-stock-cards__card-desc">Every count updates the moment stock is checked in or shipped out &mdash; no manual refresh, no end-of-day report.</p>
+        </div>
+        <div class="platform-stock-cards__card-stat">
+          <p class="platform-stock-cards__card-value" data-count-from="0" data-count-to="100" data-count-suffix="%">100%</p>
+          <p class="platform-stock-cards__card-label">Inventory accuracy, always current</p>
+        </div>
+      </div>
+      <div class="platform-stock-cards__card">
+        <div class="platform-stock-cards__card-top">
+          <p class="platform-stock-cards__card-heading">Get flagged before anything runs low</p>
+          <p class="platform-stock-cards__card-desc">Set a threshold once and get pinged automatically before a size or SKU actually runs out.</p>
+        </div>
+        <div class="platform-stock-cards__card-stat">
+          <p class="platform-stock-cards__card-value" data-count-from="0" data-count-to="48" data-count-suffix=" hrs">48 hrs</p>
+          <p class="platform-stock-cards__card-label">Average warning before a stockout</p>
+        </div>
+      </div>
+      <div class="platform-stock-cards__card">
+        <div class="platform-stock-cards__card-top">
+          <p class="platform-stock-cards__card-heading">Ship out or re-stock in a click</p>
+          <p class="platform-stock-cards__card-desc">Trigger a shipment or a top-up order straight from the same screen you&rsquo;re already looking at.</p>
+        </div>
+        <div class="platform-stock-cards__card-stat">
+          <p class="platform-stock-cards__card-value" data-count-from="0" data-count-to="1" data-count-suffix=" click">1 click</p>
+          <p class="platform-stock-cards__card-label">From alert to shipment</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -238,6 +276,7 @@
 
 <!--#include file="font-settings.html" -->
 <script src="font-toggle.js"></script>
+<script src="stock-layout-toggle.js"></script>
 <script src="platform-steps.js"></script>
 <script src="quote-drawer.js"></script>
 <script src="nav-megamenu.js"></script>
