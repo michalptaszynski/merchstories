@@ -1194,6 +1194,21 @@
   from { transform: scale(1); }
   to { transform: scale(1.07); }
 }
+.carousel-card__label {
+  position: absolute;
+  top: calc(228px + var(--space-2));
+  left: 0;
+  width: 180px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-11);
+  letter-spacing: -0.01em;
+  color: var(--color-text-muted);
+  transition: opacity var(--duration-slow) var(--ease);
+}
+.carousel-card.is-active .carousel-card__label {
+  opacity: 0;
+  pointer-events: none;
+}
 .carousel-card__caption {
   width: 342px;
   margin-top: calc(431px - 228px + var(--space-4));
@@ -1220,18 +1235,6 @@
   color: var(--color-text-secondary);
   margin-top: var(--space-1);
 }
-.carousel-card__more {
-  display: inline-block;
-  margin-top: var(--space-2);
-  font-family: var(--font-mono);
-  font-size: var(--fs-12);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: var(--color-text-primary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
 .sales-touch__dots {
   display: flex;
   align-items: center;
@@ -1276,7 +1279,7 @@
   --services-fill: #F6F6F6;
   position: relative;
   display: grid;
-  grid-template-columns: 25% 40% 1fr;
+  grid-template-columns: 25% 40% minmax(64px, 1fr);
   align-items: center;
   column-gap: var(--space-6);
   min-height: 128px;
@@ -1333,7 +1336,6 @@
 .industries__service-thumb {
   width: 76px;
   aspect-ratio: 4 / 5;
-  border-radius: 2px;
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
@@ -1351,8 +1353,8 @@
 }
 .industries__service-arrow {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: var(--space-12);
+  height: var(--space-12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1377,7 +1379,7 @@
     transition: opacity 400ms ease;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .industries__service {
     grid-template-columns: 1fr auto;
     column-gap: var(--space-4);
@@ -1387,7 +1389,7 @@
   .industries__service-title {
     grid-column: 1;
     grid-row: 1;
-    font-size: 1.5rem;
+    font-size: var(--fs-24);
   }
   .industries__service-desc {
     grid-column: 1;
@@ -1456,13 +1458,13 @@
   color: var(--bs-muted);
 }
 .brief-steps__title {
-  font-size: 19px;
+  font-size: var(--fs-18);
   font-weight: 500;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-2);
 }
 .brief-steps__desc {
-  font-size: 15px;
+  font-size: var(--fs-15);
   font-weight: 400;
   color: var(--bs-muted);
   line-height: 1.6;
