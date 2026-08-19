@@ -233,13 +233,31 @@
     <div class="platform-split platform-split--reverse industries__steps-layout" id="industriesStepsLayout" style="display: none;">
       <div class="platform-split__text">
         <div class="platform-steps">
-          <div class="platform-steps__list" role="tablist">
-            <button type="button" id="industriesStep0" class="platform-steps__item is-active" data-step="0" data-desc="Make day one feel like something. Welcome new people with thoughtful merchandise that makes joining the team feel special from the very first box." data-img="assets/photos/for-who/onbaordingkits.jpg" data-alt="Onboarding kits" role="tab" aria-selected="true" aria-controls="industriesStepsPanel">Onboarding kits</button>
-            <button type="button" id="industriesStep1" class="platform-steps__item" data-step="1" data-desc="One brand. Wherever your team is. Consistent, scalable merch for global teams, managed end to end." data-img="assets/photos/how-it-works/step4.jpg" data-alt="Enterprise merch programs" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Enterprise merch programs</button>
-            <button type="button" id="industriesStep2" class="platform-steps__item" data-step="2" data-desc="For teams building what&rsquo;s next. Fast-moving brands need merch that ships as quickly as they do." data-img="assets/photos/for-who/startupswag.jpg" data-alt="Tech &amp; startup swag" data-cover="true" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Tech &amp; startup swag</button>
-            <button type="button" id="industriesStep3" class="platform-steps__item" data-step="3" data-desc="Make the moment travel further. Objects people actually keep long after the event is over." data-img="assets/photos/for-who/events.jpg" data-alt="Events &amp; PR campaigns" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Events &amp; PR campaigns</button>
-            <button type="button" id="industriesStep4" class="platform-steps__item" data-step="4" data-desc="Your brand, on every shift. Uniforms, packaging and details that extend the hospitality beyond the table." data-img="assets/photos/for-who/restarurants.jpeg" data-alt="Restaurants" data-cover="true" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Restaurants</button>
-            <button type="button" id="industriesStep5" class="platform-steps__item" data-step="5" data-desc="Give people something to belong to. Merch for running crews, sports clubs, creative communities and anyone bringing people together around something they care about." data-img="assets/photos/industries/events-pr-campaigns.jpg" data-alt="Communities" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Communities</button>
+          <div class="platform-steps__list industries__steps-list" role="tablist">
+            <button type="button" id="industriesStep0" class="platform-steps__item is-active" data-step="0" data-img="assets/photos/for-who/onbaordingkits.jpg" data-alt="Onboarding kits" role="tab" aria-selected="true" aria-controls="industriesStepsPanel">
+              <span class="platform-steps__item-title">Onboarding kits</span>
+              <span class="platform-steps__item-desc">Make day one feel like something. Welcome new people with thoughtful merchandise that makes joining the team feel special from the very first box.</span>
+            </button>
+            <button type="button" id="industriesStep1" class="platform-steps__item" data-step="1" data-img="assets/photos/how-it-works/step4.jpg" data-alt="Enterprise merch programs" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">
+              <span class="platform-steps__item-title">Enterprise merch programs</span>
+              <span class="platform-steps__item-desc">One brand. Wherever your team is. Consistent, scalable merch for global teams, managed end to end.</span>
+            </button>
+            <button type="button" id="industriesStep2" class="platform-steps__item" data-step="2" data-img="assets/photos/for-who/startupswag.jpg" data-alt="Tech &amp; startup swag" data-cover="true" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">
+              <span class="platform-steps__item-title">Tech &amp; startup swag</span>
+              <span class="platform-steps__item-desc">For teams building what&rsquo;s next. Fast-moving brands need merch that ships as quickly as they do.</span>
+            </button>
+            <button type="button" id="industriesStep3" class="platform-steps__item" data-step="3" data-img="assets/photos/for-who/events.jpg" data-alt="Events &amp; PR campaigns" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">
+              <span class="platform-steps__item-title">Events &amp; PR campaigns</span>
+              <span class="platform-steps__item-desc">Make the moment travel further. Objects people actually keep long after the event is over.</span>
+            </button>
+            <button type="button" id="industriesStep4" class="platform-steps__item" data-step="4" data-img="assets/photos/for-who/restarurants.jpeg" data-alt="Restaurants" data-cover="true" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">
+              <span class="platform-steps__item-title">Restaurants</span>
+              <span class="platform-steps__item-desc">Your brand, on every shift. Uniforms, packaging and details that extend the hospitality beyond the table.</span>
+            </button>
+            <button type="button" id="industriesStep5" class="platform-steps__item" data-step="5" data-img="assets/photos/industries/events-pr-campaigns.jpg" data-alt="Communities" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">
+              <span class="platform-steps__item-title">Communities</span>
+              <span class="platform-steps__item-desc">Give people something to belong to. Merch for running crews, sports clubs, creative communities and anyone bringing people together around something they care about.</span>
+            </button>
           </div>
           <div class="platform-steps__panel" id="industriesStepsPanel" role="tabpanel" aria-labelledby="industriesStep0">
             <p class="platform-steps__desc" id="industriesStepsDesc">Make day one feel like something. Welcome new people with thoughtful merchandise that makes joining the team feel special from the very first box.</p>
@@ -279,6 +297,29 @@
       <span class="sales-touch__dot" data-value="4"><span class="sales-touch__dot-fill"></span></span>
       <span class="sales-touch__dot" data-value="3"><span class="sales-touch__dot-fill"></span></span>
       <span class="sales-touch__dot" data-value="5"><span class="sales-touch__dot-fill"></span></span>
+    </div>
+    <div class="why-us-grid" id="whyUsGrid" style="display: none;">
+      <div class="ph why-us-grid__photo" style="background-image: url('assets/photos/sales-touch/global-logistics.jpg');"></div>
+      <div class="why-us-grid__item" data-preview="assets/photos/bundles/bundle.webp">
+        <p class="why-us-grid__item-head">300+ merch &amp; packaging products</p>
+        <p class="why-us-grid__desc">Build the whole experience without building a supplier list.</p>
+      </div>
+      <div class="why-us-grid__item" data-preview="assets/photos/how-it-works/step1.jpg">
+        <p class="why-us-grid__item-head">End to end. Really.</p>
+        <p class="why-us-grid__desc">Product selection, design, production, packing, warehousing, fulfillment and shipping.</p>
+      </div>
+      <div class="why-us-grid__item" data-preview="assets/photos/how-it-works/step3.jpg">
+        <p class="why-us-grid__item-head">A merch expert on your side</p>
+        <p class="why-us-grid__desc">Not sure what fabric or setup makes sense? Our specialists help you choose based on your brand and budget.</p>
+      </div>
+      <div class="why-us-grid__item" data-preview="assets/photos/socialproof/socialproof02.png">
+        <p class="why-us-grid__item-head">More merch for your budget</p>
+        <p class="why-us-grid__desc">By combining merchandise and packaging and optimizing production across your range, we bring the cost per unit down without compromising the result.</p>
+      </div>
+      <div class="why-us-grid__item" data-preview="assets/photos/sales-touch/global-logistics.jpg">
+        <p class="why-us-grid__item-head">Global logistics</p>
+        <p class="why-us-grid__desc">Individual packages shipped to employees, offices or customers in different countries? Consider it handled.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -887,6 +928,7 @@
 <script src="lifestyle.js"></script>
 <script src="sales-touch.js"></script>
 <script src="sales-touch-gallery.js"></script>
+<script src="why-us-hover-preview.js"></script>
 <script src="industries-services.js"></script>
 <script src="industries-steps.js"></script>
 <script src="quote-drawer.js"></script>
