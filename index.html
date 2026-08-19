@@ -694,11 +694,11 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section section--who-we-are">
   <div class="section-head">
     <div class="section-head__text">
       <h2 class="section-heading">Everything merch. In one place.</h2>
-      <p class="section-subheading">Choose from hundreds of custom merchandise products and packaging, all brought together in one place. With support at every step, from choosing the right products to getting everything into people&rsquo;s hands.</p>
+      <p class="section-subheading" data-short="Hundreds of custom merch and packaging products in one place, with support from first choice to final delivery." data-long="Choose from hundreds of custom merchandise products and packaging, all brought together in one place. With support at every step, from choosing the right products to getting everything into people&rsquo;s hands.">Hundreds of custom merch and packaging products in one place, with support from first choice to final delivery.</p>
       <a href="shop.html" class="btn btn--stroke"><span>Browse the catalog</span></a>
     </div>
   </div>
@@ -923,7 +923,7 @@
 </div>
 <div class="carousel-card" data-value="3">
   <div class="carousel-card__media">
-    <img src="assets/photos/socialproof/socialproof01.png" alt="" loading="eager" decoding="sync">
+    <img src="assets/photos/sales-touch/global-logistics.jpg" alt="" loading="eager" decoding="sync">
   </div>
   <div class="carousel-card__caption">
     <p class="carousel-card__title">Global logistics</p>
@@ -957,7 +957,7 @@
   <div class="section-head">
     <div class="section-head__text">
       <h2 class="section-heading">Short on time? Good merch doesn&rsquo;t have to start from scratch.</h2>
-      <p class="section-subheading">We&rsquo;ve got enough stories to know what works. So we&rsquo;ve turned some of the most useful combinations into ready-made bundles. Pick a setup. Make it yours. Move faster.</p>
+      <p class="section-subheading" data-short="The combinations that work best, packed into ready-made bundles. Pick one, make it yours, move faster." data-long="We&rsquo;ve got enough stories to know what works. So we&rsquo;ve turned some of the most useful combinations into ready-made bundles. Pick a setup. Make it yours. Move faster.">The combinations that work best, packed into ready-made bundles. Pick one, make it yours, move faster.</p>
       <a href="shop.html" class="btn btn--stroke"><span>Explore all bundles</span></a>
     </div>
   </div>
@@ -1010,7 +1010,7 @@
   <div class="section-head">
     <div class="section-head__text">
       <h2 class="section-heading">The products brands keep coming back for.</h2>
-      <p class="section-subheading">Explore the merchandise our customers choose most often. Proven favorites across clothing, packaging, office, travel, tech and drinkware.</p>
+      <p class="section-subheading">Customer favorites across clothing, packaging, office, travel, tech and drinkware.</p>
       <a href="shop.html" class="btn btn--stroke"><span>Shop best sellers</span></a>
     </div>
   </div>
@@ -1138,7 +1138,7 @@
   <div class="section-head">
     <div class="section-head__text">
       <h2 class="section-heading">The products brands keep coming back for.</h2>
-      <p class="section-subheading">Explore the merchandise our customers choose most often. Proven favorites across clothing, packaging, office, travel, tech and drinkware.</p>
+      <p class="section-subheading" data-short="Customer favorites across clothing, packaging, office, travel, tech and drinkware." data-long="Explore the merchandise our customers choose most often. Proven favorites across clothing, packaging, office, travel, tech and drinkware.">Customer favorites across clothing, packaging, office, travel, tech and drinkware.</p>
     </div>
   </div>
   <div class="filter-pills">
@@ -1441,7 +1441,7 @@
   <div class="section-head">
     <div class="section-head__text">
       <h2 class="section-heading">100,000+ companies. A lot of good stories.</h2>
-      <p class="section-subheading">Great merch matters. So does good advice, quick answers, reliable delivery and making the whole process easier than expected.</p>
+      <p class="section-subheading" data-short="Great merch matters. So does good advice, quick answers and reliable delivery." data-long="Great merch matters. So does good advice, quick answers, reliable delivery and making the whole process easier than expected. That&rsquo;s why companies around the world trust us with their brand.">Great merch matters. So does good advice, quick answers and reliable delivery.</p>
     </div>
   </div>
   <div class="testimonial-rotator">
@@ -1524,7 +1524,7 @@
   <div class="section-head">
     <div class="section-head__text">
       <h2 class="section-heading">Enough scrolling. Let&rsquo;s make a good story.</h2>
-      <p class="section-subheading">Tell us what you have in mind. We&rsquo;ll help you turn it into merch people actually want.</p>
+      <p class="section-subheading" data-short="Tell us what you have in mind. We&rsquo;ll help you turn it into merch people actually want." data-long="Tell us what you have in mind. We&rsquo;ll help you turn it into merch people actually want.">Tell us what you have in mind. We&rsquo;ll help you turn it into merch people actually want.</p>
       <a href="contact.html" class="btn btn--stroke"><span>Send us your brief</span></a>
     </div>
     <div class="section-head__logo">
@@ -1550,6 +1550,24 @@
 <script src="country-modal.js"></script>
 <script src="testimonial-rotator.js"></script>
 
+<section class="copy-settings" id="copySettings" aria-label="Display settings">
+  <div class="copy-settings__panel" id="copySettingsPanel">
+    <div class="copy-settings__row">
+      <span class="copy-settings__label" id="copySettingsLabel">Longer copy</span>
+      <label class="copy-switch">
+        <input type="checkbox" id="copySwitch" aria-labelledby="copySettingsLabel">
+        <span class="copy-switch__track"></span>
+      </label>
+    </div>
+  </div>
+  <button type="button" id="copySettingsToggle" class="copy-settings__toggle" aria-expanded="false" aria-label="Copy length settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+</section>
+
+<script src="copy-toggle.js"></script>
 
 </div>
 
