@@ -788,7 +788,7 @@
         </div>
       </div>
     </div>
-    <div class="industries__services">
+    <div class="industries__services" id="industriesServicesLayout">
       <a href="shop.html" class="industries__service" data-index="0">
         <span class="industries__service-fill" aria-hidden="true"></span>
         <span class="industries__service-title">Onboarding kits</span>
@@ -867,6 +867,28 @@
           </span>
         </span>
       </a>
+    </div>
+    <div class="platform-split platform-split--reverse industries__steps-layout" id="industriesStepsLayout" style="display: none;">
+      <div class="platform-split__text">
+        <div class="platform-steps">
+          <div class="platform-steps__list" role="tablist">
+            <button type="button" id="industriesStep0" class="platform-steps__item is-active" data-step="0" data-desc="Make day one feel like something. Welcome new people with thoughtful merchandise that makes joining the team feel special from the very first box." data-img="assets/photos/industries/onboarding-kits.jpg" data-alt="Onboarding kits" role="tab" aria-selected="true" aria-controls="industriesStepsPanel">Onboarding kits</button>
+            <button type="button" id="industriesStep1" class="platform-steps__item" data-step="1" data-desc="One brand. Wherever your team is. Consistent, scalable merch for global teams, managed end to end." data-img="assets/photos/how-it-works/step4.jpg" data-alt="Enterprise merch programs" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Enterprise merch programs</button>
+            <button type="button" id="industriesStep2" class="platform-steps__item" data-step="2" data-desc="For teams building what&rsquo;s next. Fast-moving brands need merch that ships as quickly as they do." data-img="assets/photos/industries/tech-startup-swag.jpg" data-alt="Tech &amp; startup swag" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Tech &amp; startup swag</button>
+            <button type="button" id="industriesStep3" class="platform-steps__item" data-step="3" data-desc="Make the moment travel further. Objects people actually keep long after the event is over." data-img="assets/photos/industries/events-pr-campaigns.jpg" data-alt="Events &amp; PR campaigns" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Events &amp; PR campaigns</button>
+            <button type="button" id="industriesStep4" class="platform-steps__item" data-step="4" data-desc="Your brand, on every shift. Uniforms, packaging and details that extend the hospitality beyond the table." data-img="assets/photos/industries/restaurants.jpg" data-alt="Restaurants" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Restaurants</button>
+            <button type="button" id="industriesStep5" class="platform-steps__item" data-step="5" data-desc="Give people something to belong to. Merch for running crews, sports clubs, creative communities and anyone bringing people together around something they care about." data-img="assets/photos/industries/events-pr-campaigns.jpg" data-alt="Communities" role="tab" aria-selected="false" aria-controls="industriesStepsPanel">Communities</button>
+          </div>
+          <div class="platform-steps__panel" id="industriesStepsPanel" role="tabpanel" aria-labelledby="industriesStep0">
+            <p class="platform-steps__desc" id="industriesStepsDesc">Make day one feel like something. Welcome new people with thoughtful merchandise that makes joining the team feel special from the very first box.</p>
+          </div>
+        </div>
+      </div>
+      <div class="platform-split__media">
+        <div class="ph platform-steps__media-ph">
+          <img src="assets/photos/industries/onboarding-kits.jpg" alt="Onboarding kits" class="platform-media-image platform-steps__image--cover" id="industriesStepsImage">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1544,6 +1566,7 @@
 <script src="sales-touch.js"></script>
 <script src="sales-touch-gallery.js"></script>
 <script src="industries-services.js"></script>
+<script src="industries-steps.js"></script>
 <script src="quote-drawer.js"></script>
 <script src="nav-megamenu.js"></script>
 <script src="mobile-nav.js"></script>
@@ -1556,6 +1579,13 @@
       <span class="copy-settings__label" id="copySettingsLabel">Longer copy</span>
       <label class="copy-switch">
         <input type="checkbox" id="copySwitch" aria-labelledby="copySettingsLabel">
+        <span class="copy-switch__track"></span>
+      </label>
+    </div>
+    <div class="copy-settings__row">
+      <span class="copy-settings__label" id="forWhoLayoutSettingsLabel">For who layout</span>
+      <label class="copy-switch">
+        <input type="checkbox" id="forWhoLayoutSwitch" aria-labelledby="forWhoLayoutSettingsLabel">
         <span class="copy-switch__track"></span>
       </label>
     </div>

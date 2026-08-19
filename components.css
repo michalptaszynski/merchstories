@@ -3295,18 +3295,21 @@
   transform: translateY(14px);
   opacity: 0;
 }
-#platformStepsImage {
+.platform-steps__image--cover {
   transition: opacity 200ms var(--ease);
 }
-#platformStepsImage.is-fading {
-  opacity: 0;
-}
-#platformStepsImage.platform-steps__image--cover {
+/* Beats .platform-split__media .platform-media-image's equal-specificity
+   width:auto/max-width:70% rule (same 2-class weight, so cascade order alone
+   won't do it — this needs the matching .platform-split__media prefix too). */
+.platform-split__media .platform-steps__image--cover {
   width: 100%;
   height: 100%;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+.platform-steps__image--cover.is-fading {
+  opacity: 0;
 }
 .platform-steps__media-ph {
   position: relative;
