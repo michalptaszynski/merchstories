@@ -1303,9 +1303,9 @@
   aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   padding: var(--space-8) var(--space-6);
   background-color: var(--white);
   border-right: 1px solid var(--gray-300);
