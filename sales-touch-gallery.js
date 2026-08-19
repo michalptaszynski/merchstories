@@ -48,7 +48,7 @@
     return left;
   }
 
-  // Just 5 real cards, no duplicated sets — reaching the last one always
+  // Just the real cards, no duplicated sets — reaching the last one always
   // slides straight back to the first, visibly, instead of faking an
   // endless scroll with cloned content.
   function render(active) {
