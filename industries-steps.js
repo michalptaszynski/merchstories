@@ -30,6 +30,7 @@
         window.setTimeout(function () {
           image.src = item.dataset.img;
           image.alt = item.dataset.alt || item.textContent;
+          image.classList.toggle('platform-steps__image--cover', item.dataset.cover === 'true');
           image.classList.remove('is-fading');
         }, 200);
       }
