@@ -3020,10 +3020,11 @@
 .phone-input__panel[hidden] { display: none; }
 .phone-input__panel .phone-input__search {
   display: block;
-  width: auto;
-  height: 36px;
-  margin: var(--space-2);
-  padding: 0 var(--space-2);
+  width: calc(100% - 2 * var(--space-1));
+  height: 40px;
+  margin: var(--space-1);
+  padding: 0 var(--space-4);
+  box-sizing: border-box;
   appearance: none;
   -webkit-appearance: none;
   border: 1px solid var(--color-border-default);
@@ -3036,7 +3037,6 @@
 .phone-input__panel .phone-input__search:focus { outline: none; border-color: var(--rich-blue); }
 .phone-input__panel .phone-input__search::placeholder { color: var(--color-text-muted); }
 .phone-input__list {
-  border-top: 1px solid var(--color-border-default);
   max-height: 260px;
   overflow-y: auto;
 }
@@ -3310,19 +3310,19 @@
   grid-template-columns: minmax(0, 480px) 1fr;
 }
 .quote-review__close {
-  position: fixed;
-  top: 8px;
+  position: absolute;
+  top: 50%;
   right: var(--space-6);
-  z-index: 3;
+  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-text-primary);
-  background: var(--white);
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-md);
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 .quote-review__close svg {
   width: 20px;
