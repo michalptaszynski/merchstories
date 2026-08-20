@@ -106,4 +106,26 @@
       localStorage.setItem(STORAGE_KEY, checkbox.checked ? 'grid' : 'carousel');
     });
   })();
+
+  // -- Side nav (homepage sticky section menu) --
+  (function () {
+    var STORAGE_KEY = 'ph-side-nav';
+    var checkbox = document.getElementById('sideNavSwitch');
+    var nav = document.getElementById('sideNav');
+    var pageBody = document.querySelector('.page-body');
+    if (!checkbox || !nav) return;
+
+    function applyVisibility(isOn) {
+      nav.style.display = isOn ? '' : 'none';
+      if (pageBody) pageBody.classList.toggle('side-nav-active', isOn);
+      checkbox.checked = isOn;
+    }
+
+    applyVisibility(localStorage.getItem(STORAGE_KEY) === 'on');
+
+    checkbox.addEventListener('change', function () {
+      applyVisibility(checkbox.checked);
+      localStorage.setItem(STORAGE_KEY, checkbox.checked ? 'on' : 'off');
+    });
+  })();
 })();

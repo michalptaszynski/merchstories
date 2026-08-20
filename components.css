@@ -694,6 +694,79 @@
   padding-inline: 0;
 }
 
+/* ---------- Side nav (homepage) ---------- */
+.page-body {
+  display: flex;
+  align-items: flex-start;
+  --side-nav-w: 168px;
+}
+.page-body__content {
+  flex: 1;
+  min-width: 0;
+}
+.side-nav {
+  flex-shrink: 0;
+  width: var(--side-nav-w);
+  position: sticky;
+  top: calc(56px + var(--space-10));
+  z-index: var(--z-floating);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-4) var(--space-8) var(--space-6);
+}
+/* When the side nav is on, these carousels are the one thing allowed to bleed
+   under it and reach the browser edge. The scroll container itself always
+   spans the full bleed width (so its right edge stays flush with the
+   viewport edge and cards never resize) — extra left padding just holds the
+   first card level with the section heading at rest. Scrolling right slides
+   that padding out of view, naturally revealing cards under the nav. The
+   nav itself keeps a higher z-index so it stays the top layer when they
+   overlap. */
+@media (min-width: 1180px) {
+  .page-body.side-nav-active .category-grid,
+  .page-body.side-nav-active .lifestyle__tiles {
+    margin-left: calc(-1 * var(--side-nav-w));
+  }
+  .page-body.side-nav-active .category-grid {
+    scroll-padding-left: calc(var(--side-nav-w) + var(--space-6));
+  }
+  .page-body.side-nav-active .category-grid__track {
+    padding-left: calc(var(--side-nav-w) + var(--space-6));
+  }
+  .page-body.side-nav-active .lifestyle__tiles {
+    padding-left: calc(var(--side-nav-w) + var(--space-6));
+    scroll-padding-left: calc(var(--side-nav-w) + var(--space-6));
+  }
+}
+.side-nav__link {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  transition: color 0.15s ease;
+}
+.side-nav__link:hover {
+  color: var(--color-text-primary);
+}
+.side-nav__link.is-active {
+  color: var(--color-text-primary);
+}
+@media (max-width: 1180px) {
+  .page-body {
+    display: block;
+  }
+  .side-nav {
+    display: none;
+  }
+}
+#offer, #for-who, #why-us, #bundles, #how-it-works, #consultation, #freshly-uploaded, #testimonials {
+  scroll-margin-top: 80px;
+}
+
 /* ---------- Section heading ---------- */
 .section-head {
   padding-inline: var(--space-6);
@@ -3031,6 +3104,140 @@
 .quote-drawer__note {
   font-size: var(--fs-13);
   color: var(--color-text-secondary);
+}
+
+/* ---------- Quote review ---------- */
+.quote-review-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: var(--overlay-scrim-40);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-base) var(--ease), visibility var(--duration-base);
+}
+.quote-review-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.quote-review {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-modal) + 1);
+  display: grid;
+  grid-template-columns: minmax(0, 480px) 1fr;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity var(--duration-slow) var(--ease), transform var(--duration-slow) var(--ease), visibility var(--duration-slow);
+  overflow-y: auto;
+}
+.quote-review.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.quote-review__close {
+  position: fixed;
+  top: var(--space-6);
+  right: var(--space-6);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  background: var(--white);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+}
+.quote-review__close svg {
+  width: 20px;
+  height: 20px;
+}
+.quote-review__col {
+  padding: var(--space-12) var(--space-10);
+}
+.quote-review__col--overview {
+  background: var(--white);
+}
+.quote-review__col--form {
+  background: var(--gray-100);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.quote-review__title {
+  font-size: var(--fs-40);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-8);
+}
+.quote-review__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border-default);
+}
+.quote-review__item-meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+}
+.quote-review__summary {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.quote-review__form-wrap {
+  width: 100%;
+  max-width: 560px;
+}
+.quote-review__form-title {
+  font-size: var(--fs-40);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+.quote-review__form-card {
+  background: var(--white);
+  border-radius: 0;
+  padding: var(--space-8);
+}
+.quote-review__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+.quote-review__trust {
+  margin-top: var(--space-6);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+}
+@media (max-width: 900px) {
+  .quote-review {
+    grid-template-columns: 1fr;
+  }
+  .quote-review__col {
+    padding: var(--space-8) var(--space-6);
+  }
+  .quote-review__col--form {
+    padding-top: var(--space-10);
+  }
+}
+@media (max-width: 560px) {
+  .quote-review__form-row {
+    grid-template-columns: 1fr;
+  }
+  .quote-review__form-card {
+    padding: var(--space-6);
+  }
 }
 
 /* ---------- Platform page ---------- */
