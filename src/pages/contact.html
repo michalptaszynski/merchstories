@@ -36,7 +36,19 @@
 
     <div class="contact-form__field">
       <label for="cfPhone">Phone number</label>
-      <input id="cfPhone" name="phone" type="tel" placeholder="Phone number">
+      <div class="phone-input">
+        <button type="button" class="phone-input__trigger" aria-haspopup="listbox" aria-expanded="false">
+          <span class="phone-input__flag"><img src="assets/flags/pl.svg" alt=""></span>
+          <span class="phone-input__dial">+48</span>
+          <svg class="phone-input__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <input id="cfPhone" name="phone" type="tel" class="phone-input__number" placeholder="6 12 34 56 78">
+        <input type="hidden" name="phone_country_code" class="phone-input__dial-code" value="+48">
+        <div class="phone-input__panel" hidden>
+          <input type="text" class="phone-input__search" placeholder="Search country&hellip;">
+          <div class="phone-input__list"></div>
+        </div>
+      </div>
     </div>
 
     <div class="contact-form__field">
@@ -90,6 +102,7 @@
 </main>
 
 <script src="quote-drawer.js"></script>
+<script src="phone-input.js"></script>
 <script src="nav-megamenu.js"></script>
 <script src="mobile-nav.js"></script>
 <script src="country-modal.js"></script>

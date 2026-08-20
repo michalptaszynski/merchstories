@@ -501,6 +501,10 @@
   <button type="button" class="quote-review__close" id="quoteReviewClose" aria-label="Close quote review">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
   </button>
+  <div class="quote-review__topbar">
+    <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Merch Stories" class="logo-mark"></a>
+  </div>
+  <div class="quote-review__body">
   <div class="quote-review__col quote-review__col--overview">
     <h2 class="quote-review__title" id="quoteReviewTitle">Overview</h2>
     <div class="quote-review__items" id="quoteReviewItems"></div>
@@ -544,13 +548,26 @@
           </div>
           <div class="contact-form__field">
             <label for="qrPhone">Phone number</label>
-            <input id="qrPhone" name="phone" type="tel" placeholder="Phone number">
+            <div class="phone-input">
+              <button type="button" class="phone-input__trigger" aria-haspopup="listbox" aria-expanded="false">
+                <span class="phone-input__flag"><img src="assets/flags/pl.svg" alt=""></span>
+                <span class="phone-input__dial">+48</span>
+                <svg class="phone-input__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <input id="qrPhone" name="phone" type="tel" class="phone-input__number" placeholder="6 12 34 56 78">
+              <input type="hidden" name="phone_country_code" class="phone-input__dial-code" value="+48">
+              <div class="phone-input__panel" hidden>
+                <input type="text" class="phone-input__search" placeholder="Search country&hellip;">
+                <div class="phone-input__list"></div>
+              </div>
+            </div>
           </div>
           <button type="submit" class="contact-form__submit">Request free designs &amp; quote</button>
         </form>
       </div>
       <p class="quote-review__trust">Free designs &amp; quote in 24 hours &middot; Rated on Trustpilot</p>
     </div>
+  </div>
   </div>
 </div>
 
@@ -768,6 +785,7 @@
 </main>
 
 <script src="quote-drawer.js"></script>
+<script src="phone-input.js"></script>
 <script src="nav-megamenu.js"></script>
 <script src="mobile-nav.js"></script>
 <script src="country-modal.js"></script>
