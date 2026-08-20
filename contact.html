@@ -770,6 +770,21 @@
     </div>
 
     <div class="contact-form__field">
+      <label for="cfCountry">Country/region</label>
+      <div class="region-input">
+        <button type="button" id="cfCountry" class="region-input__trigger" aria-haspopup="listbox" aria-expanded="false">
+          <span class="region-input__value">Select&hellip;</span>
+          <svg class="region-input__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <input type="hidden" name="country">
+        <div class="region-input__panel" hidden>
+          <input type="text" class="region-input__search" placeholder="Search country&hellip;">
+          <div class="region-input__list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form__field">
       <label for="cfProjectType">Project type</label>
       <select id="cfProjectType" name="project_type">
         <option value="" disabled selected>Select&hellip;</option>
@@ -793,6 +808,11 @@
     </div>
 
     <div class="contact-form__field">
+      <label for="cfEventDate">When do you need this by? <span class="contact-form__required">*</span></label>
+      <input id="cfEventDate" name="event_date" type="date" required>
+    </div>
+
+    <div class="contact-form__field">
       <label for="cfMessage">What can we help you with?</label>
       <textarea id="cfMessage" name="message" rows="5" placeholder="Let us know what we can do for you."></textarea>
     </div>
@@ -800,10 +820,11 @@
     <div class="contact-form__field">
       <label for="cfFile">File upload</label>
       <label class="contact-form__upload" for="cfFile">
-        <input id="cfFile" name="file" type="file" class="visually-hidden">
+        <input id="cfFile" name="file" type="file" class="visually-hidden" multiple>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
         <span>Click to upload or drag and drop. Max 25&nbsp;MB.</span>
       </label>
+      <ul class="contact-form__files" id="cfFilesList" hidden></ul>
     </div>
 
     <button type="submit" class="contact-form__submit">Submit</button>
@@ -829,6 +850,8 @@
 
 <script src="quote-drawer.js"></script>
 <script src="phone-input.js"></script>
+<script src="region-input.js"></script>
+<script src="file-upload.js"></script>
 <script src="nav-megamenu.js"></script>
 <script src="mobile-nav.js"></script>
 <script src="country-modal.js"></script>
