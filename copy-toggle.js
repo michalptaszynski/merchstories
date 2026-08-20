@@ -81,29 +81,40 @@
     });
   })();
 
-  // -- Why us layout (carousel vs. numbered grid) --
+  // -- Why us layout (carousel vs. numbered grid, with a wide 4-col grid variant) --
   (function () {
-    var STORAGE_KEY = 'ph-why-us-layout';
-    var checkbox = document.getElementById('whyUsLayoutSwitch');
+    var LAYOUT_KEY = 'ph-why-us-layout';
+    var WIDE_KEY = 'ph-why-us-grid-wide';
+    var layoutCheckbox = document.getElementById('whyUsLayoutSwitch');
+    var wideCheckbox = document.getElementById('whyUsWideSwitch');
     var section = document.querySelector('.section--sales-touch');
     var carousel = document.querySelector('.sales-touch__carousel');
     var dots = document.getElementById('salesCarouselDots');
     var grid = document.getElementById('whyUsGrid');
-    if (!checkbox || !section || !carousel || !dots || !grid) return;
+    var gridWide = document.getElementById('whyUsGridWide');
+    if (!layoutCheckbox || !wideCheckbox || !section || !carousel || !dots || !grid || !gridWide) return;
 
-    function applyLayout(isGrid) {
+    function apply() {
+      var isGrid = layoutCheckbox.checked;
+      var isWide = wideCheckbox.checked;
       section.classList.toggle('is-grid-mode', isGrid);
       carousel.style.display = isGrid ? 'none' : '';
       dots.style.display = isGrid ? 'none' : '';
-      grid.style.display = isGrid ? '' : 'none';
-      checkbox.checked = isGrid;
+      grid.style.display = isGrid && !isWide ? '' : 'none';
+      gridWide.style.display = isGrid && isWide ? '' : 'none';
     }
 
-    applyLayout(localStorage.getItem(STORAGE_KEY) !== 'carousel');
+    layoutCheckbox.checked = localStorage.getItem(LAYOUT_KEY) !== 'carousel';
+    wideCheckbox.checked = localStorage.getItem(WIDE_KEY) !== 'narrow';
+    apply();
 
-    checkbox.addEventListener('change', function () {
-      applyLayout(checkbox.checked);
-      localStorage.setItem(STORAGE_KEY, checkbox.checked ? 'grid' : 'carousel');
+    layoutCheckbox.addEventListener('change', function () {
+      localStorage.setItem(LAYOUT_KEY, layoutCheckbox.checked ? 'grid' : 'carousel');
+      apply();
+    });
+    wideCheckbox.addEventListener('change', function () {
+      localStorage.setItem(WIDE_KEY, wideCheckbox.checked ? 'wide' : 'narrow');
+      apply();
     });
   })();
 
