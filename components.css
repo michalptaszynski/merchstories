@@ -1420,13 +1420,6 @@
 .why-us-grid--wide .why-us-grid__desc {
   margin-top: auto;
 }
-.why-us-grid__item-num {
-  font-family: var(--font-mono);
-  font-size: var(--fs-12);
-  letter-spacing: -0.01em;
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-2);
-}
 @media (max-width: 900px) {
   .why-us-grid {
     grid-template-columns: 1fr;
