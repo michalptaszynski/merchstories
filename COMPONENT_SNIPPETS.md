@@ -258,6 +258,61 @@ lista trzech/czterech miejsc do synchronizacji.
 `.js-open-quote` na dowolnym przycisku otwiera globalny quote-drawer
 (`quote-drawer.js`) — użyj tej klasy zamiast pisać własny handler.
 
+### PDP — bundle variant (`.pdp-bundle-list`, wzorzec: `bundle-day-one-kit.html`)
+
+Dla Bundle/Sets produktów zamień blok Colour/Size/Quantity (pkt wyżej) na
+listę zawartości zestawu — zachowaj breadcrumb/H1/promo/CTA bez zmian:
+```html
+<p class="pdp__field-label">What&rsquo;s inside</p>
+<div class="pdp-bundle-list">
+  <div class="pdp-bundle-item">
+    <div class="pdp-bundle-item__thumb" style="background-image: url('assets/photos/shop/tech/Product.avif');"></div>
+    <div class="pdp-bundle-item__body">
+      <p class="pdp-bundle-item__name">Custom Magnetic Powerbank 5000mAh 20W</p>
+      <p class="pdp-bundle-item__meta">6.3 x 1.4 x 9.3 cm</p>
+      <p class="pdp-bundle-item__meta">5 pieces</p>
+    </div>
+    <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+  </div>
+  <!-- kolejne pozycje zestawu -->
+</div>
+<button type="button" class="btn btn--dark pdp__cta js-open-quote"><span>Add to list</span></button>
+```
+Nie dodawaj przy tym `.pdp__qty` (progi cenowe per sztuka nie mają sensu przy
+mieszanych ilościach na pozycję) — jeśli produkt naprawdę potrzebuje jednej
+wspólnej ceny/ilości na cały bundle, to osobna decyzja, dopytaj zanim
+wymyślisz liczby. Trzecią zakładkę info-tabs (domyślnie "Size chart") zamień
+na "What's inside" z tą samą tabelą `.pdp__spec-table` (kolumny
+Product/Dimensions/Quantity) — patrz PDP info tabs niżej.
+
+### Bundle item "Edit" drawer (`item-edit-drawer.html` + `item-edit-drawer.js`, wzorzec: dowolna strona `bundle-*.html`)
+
+Klik `.pdp-bundle-item__edit` otwiera drawer (ten sam shell co
+`.quote-drawer`/`.quote-drawer-overlay` — nowe ID `itemEditDrawer`/
+`itemEditOverlay`, nie kolidują z globalnym quote-drawerem z nav-header) z
+polami **złożonymi wyłącznie z komponentów PDP**: `.pdp__title`,
+`.pdp__promo-text` (opis), `.pdp__qty`/`.pdp__qty-tier` (ilość + cena/szt.,
+ten sam mechanizm co na PDP), oraz albo `.pdp__qty-toggle`-wygląd jako
+statyczny odczyt "Size (external)" (wymiary w cm), albo — dla apparel —
+prawdziwy `.pdp__sizes` (XS–XL) + `.pdp__swatches`/`.pdp__swatch-label`
+(kolor), **tylko gdy dany produkt ma realne, sfotografowane warianty
+kolorystyczne** (np. `Custom Unisex Oversized Organic Cotton Sweatshirt`) —
+real-data-only, nigdy nie zmyślaj swatchy dla produktu z jednym zdjęciem.
+
+Dane per pozycja siedzą jako `data-*` na `.pdp-bundle-item` (patrz pkt "PDP
+— bundle variant" wyżej): `data-desc` (string), `data-tiers` (JSON
+`[{"qty":N,"unit":X.XX,"total":Y.YY}, …]`), opcjonalnie `data-colors` (JSON
+`[{"name":"…","img":"…"}, …]`) — apparel bez `data-colors` dostaje mimo to
+`.pdp__sizes` (wykrywane po tym, że pierwsza linia `.pdp-bundle-item__meta`
+zaczyna się od "Unisex", nie po osobnym atrybucie). `item-edit-drawer.js`
+czyta te atrybuty przy każdym kliknięciu Edit i renderuje pola od zera —
+jedna instancja drawera na stronę, nie per-item.
+
+Include `<!--#include file="item-edit-drawer.html" -->` zaraz po
+`nav-header.html` i `<script src="item-edit-drawer.js"></script>` obok
+`pdp.js` — tylko na stronach `bundle-*.html`, nie na `product.html`/innych
+(tam nie ma `.pdp-bundle-item__edit` do podpięcia).
+
 ### PDP info tabs
 ```html
 <section class="pdp__info">

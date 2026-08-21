@@ -430,6 +430,24 @@ przycisk rozwijający pełną wersję (`pdp.js`, tekst doklejany na końcu, nie
 osobny ukryty element). Używaj do jednozdaniowego opisu marketingowego tuż
 pod H1, zanim użytkownik dojdzie do zakładek.
 
+**Bundle PDP (8 stron, wzorzec: `bundle-day-one-kit.html`)** — jedna strona
+`src/pages/bundle-<slug>.html` na każdy bundle/set (`bundle-day-one-kit`,
+`bundle-global-crew`, `bundle-startup-uniform`, `bundle-launch-day-kit` z
+homepage `#bundles`; `bundle-onboarding-essentials-pack`,
+`bundle-thank-you-essentials-pack`, `bundle-event-giveaway-pack`,
+`bundle-onboarding-remote-friendly-pack` z shop.html Sets/nav-megamenu) —
+osobny szablon strony (nie wariant JS istniejącego `product.html`) dla
+produktów typu Sets/Bundles. Ten sam
+`.pdp__hero`/`.pdp__info`/`.pdp__recs` szkielet, ale w `.pdp__buy` blok
+Colour/Size/Quantity zastąpiony listą zawartości zestawu
+(`.pdp-bundle-list`/`.pdp-bundle-item` — miniatura, nazwa, wymiary, ilość,
+przycisk "Edit"), a `.pdp__stage` ma jedno zdjęcie lifestyle bez
+prev/next strzałek (`pdp.js` bezpiecznie no-opuje brakujące elementy
+swatches/size/qty/arrows, nic dodatkowo nie trzeba wyłączać w JS). Trzecia
+zakładka info-tabs to "What's inside" (tabela `.pdp__spec-table`,
+Product/Dimensions/Quantity) zamiast "Size chart". Patrz
+`COMPONENT_SNIPPETS.md` pkt "PDP — bundle variant" po gotowy markup.
+
 ### 5.5 Strona produktowa typu "platform" (wzorzec: `platform.html`)
 
 Odrębny, "cięższy" marketingowo wzorzec — mieszanka SaaS-landing-page i

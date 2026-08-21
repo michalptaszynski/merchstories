@@ -1,12 +1,12 @@
 <!-- GENERATED FILE — do not edit directly.
-     Source: src/pages/contact.html (+ src/partials/). Run `node build.js` after editing. -->
+     Source: src/pages/bundle-shift.html (+ src/partials/). Run `node build.js` after editing. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact &mdash; Merch Stories</title>
-<meta name="description" content="Tell us about your project. Free designs and a full quote within 24 hours.">
+<title>The Shift — Merch Stories</title>
+<meta name="description" content="The Shift — a restaurant staff bundle: t-shirt, cap, tote and tumbler, boxed and branded to match. Swap any item before you order.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -730,109 +730,358 @@
   </div>
 </aside>
 
+<div class="quote-drawer-overlay" id="itemEditOverlay"></div>
+<aside class="quote-drawer" id="itemEditDrawer" role="dialog" aria-modal="true" aria-labelledby="itemEditHeaderTitle" aria-hidden="true">
+  <div class="quote-drawer__header">
+    <h2 class="quote-drawer__title" id="itemEditHeaderTitle">Edit item</h2>
+    <button type="button" class="quote-drawer__close" id="itemEditClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="item-edit-drawer__body">
+    <h1 class="pdp__title" id="itemEditTitle"></h1>
+    <div class="pdp__promo">
+      <p class="pdp__promo-text" id="itemEditDesc"></p>
+    </div>
+
+    <div class="item-edit-drawer__photo" id="itemEditPhoto"></div>
+
+    <div class="item-edit-drawer__section" id="itemEditColorRow" hidden>
+      <p class="pdp__field-label">Material colour</p>
+      <div class="pdp__swatches" id="itemEditSwatches"></div>
+      <div class="pdp__swatch-label" id="itemEditSwatchLabel"></div>
+    </div>
+
+    <div class="item-edit-drawer__section">
+      <p class="pdp__field-label">Quantity</p>
+      <div class="pdp__qty" id="itemEditQty">
+        <button type="button" class="pdp__qty-toggle" id="itemEditQtyToggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="itemEditQtyPanel">
+          <span class="pdp__qty-toggle-qty"></span>
+          <span class="pdp__qty-toggle-total"></span>
+          <svg class="pdp__qty-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="pdp__qty-panel" id="itemEditQtyPanel" role="listbox"></div>
+      </div>
+    </div>
+
+    <div class="item-edit-drawer__section" id="itemEditSizeRow" hidden>
+      <p class="pdp__field-label">Size (external)</p>
+      <div class="pdp__qty-toggle pdp__qty-toggle--static" id="itemEditSizeBox">
+        <span id="itemEditSizeText"></span>
+      </div>
+    </div>
+
+    <div class="item-edit-drawer__section" id="itemEditSizesRow" hidden>
+      <p class="pdp__field-label">Size</p>
+      <div class="pdp__sizes" id="itemEditSizes"></div>
+    </div>
+  </div>
+  <div class="item-edit-drawer__footer">
+    <button type="button" class="btn btn--dark pdp__cta" id="itemEditSave"><span>Save</span></button>
+  </div>
+</aside>
+
 
 <main>
 
-<div class="contact-form-page">
-  <div class="contact-form-page__head">
-    <h1 class="contact-form-page__title">Get in touch</h1>
-    <p class="contact-form-page__subtitle">Tell us about your project. Free designs and a full quote within 24 hours.</p>
+<section class="pdp">
+
+  <div class="pdp__hero">
+    <div class="pdp__stage">
+      <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia"></div>
+    </div>
+
+    <aside class="pdp__buy">
+      <p class="pdp__breadcrumb"><a href="shop.html?category=sets">Sets</a> / <span>For restaurants</span></p>
+
+      <div class="pdp__title-row">
+        <h1 class="pdp__title">The Shift</h1>
+      </div>
+
+      <div class="pdp__promo">
+        <p class="pdp__promo-text"><span id="pdpPromoText">The gear a shift actually needs &mdash; shirt, cap, tote and tumbler, all logo-matched&hellip;</span> <button type="button" class="pdp__promo-toggle" id="pdpPromoToggle" aria-expanded="false">Read more</button></p>
+      </div>
+
+      <p class="pdp__field-label">What&rsquo;s inside</p>
+      <div class="pdp-bundle-list">
+        <div class="pdp-bundle-item" data-desc="A heavyweight cotton t-shirt with a clean fit, built to survive a real shift, not just a photo." data-tiers='[{"qty":15,"unit":9.50,"total":142.50},{"qty":30,"unit":8.55,"total":256.50},{"qty":60,"unit":7.60,"total":456.00}]'>
+          <div class="pdp-bundle-item__thumb" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></div>
+          <div class="pdp-bundle-item__body">
+            <p class="pdp-bundle-item__name">Custom Unisex Heavyweight Cotton T-Shirt</p>
+            <p class="pdp-bundle-item__meta">Unisex, S&ndash;XL</p>
+            <p class="pdp-bundle-item__meta">15 pieces</p>
+          </div>
+          <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+        </div>
+        <div class="pdp-bundle-item" data-desc="A 5-panel brushed cotton cap with an adjustable strap, available in five colours." data-tiers='[{"qty":15,"unit":12.00,"total":180.00},{"qty":30,"unit":10.80,"total":324.00},{"qty":60,"unit":9.60,"total":576.00}]' data-colors='[{"name":"Blue","img":"assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Blue.avif"},{"name":"Green","img":"assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Green.avif"},{"name":"Orange","img":"assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Orange.avif"},{"name":"Red","img":"assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20Red.avif"},{"name":"White","img":"assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap%20-%20White.avif"}]'>
+          <div class="pdp-bundle-item__thumb" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');"></div>
+          <div class="pdp-bundle-item__body">
+            <p class="pdp-bundle-item__name">Custom 5-Panel Heavy Brushed Cotton Baseball Cap</p>
+            <p class="pdp-bundle-item__meta">One size, adjustable</p>
+            <p class="pdp-bundle-item__meta">15 pieces</p>
+          </div>
+          <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+        </div>
+        <div class="pdp-bundle-item" data-desc="A sturdy cotton tote sized for takeout, groceries, or whatever a shift hands out." data-tiers='[{"qty":15,"unit":6.50,"total":97.50},{"qty":30,"unit":5.85,"total":175.50},{"qty":60,"unit":5.20,"total":312.00}]'>
+          <div class="pdp-bundle-item__thumb" style="background-image: url('assets/photos/shop/bags/Custom%20Cotton%20Bag.avif');"></div>
+          <div class="pdp-bundle-item__body">
+            <p class="pdp-bundle-item__name">Custom Cotton Bag</p>
+            <p class="pdp-bundle-item__meta">38 x 42 cm</p>
+            <p class="pdp-bundle-item__meta">15 pieces</p>
+          </div>
+          <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+        </div>
+        <div class="pdp-bundle-item" data-desc="A ceramic tumbler with a silicone lid, sized for a proper coffee rather than a sample-size pour." data-tiers='[{"qty":15,"unit":7.80,"total":117.00},{"qty":30,"unit":7.02,"total":210.60},{"qty":60,"unit":6.24,"total":374.40}]'>
+          <div class="pdp-bundle-item__thumb" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></div>
+          <div class="pdp-bundle-item__body">
+            <p class="pdp-bundle-item__name">Custom Ceramic Tumbler 330ml</p>
+            <p class="pdp-bundle-item__meta">7.5 x 16 cm</p>
+            <p class="pdp-bundle-item__meta">15 pieces</p>
+          </div>
+          <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+        </div>
+        <div class="pdp-bundle-item" data-desc="A one-colour mailer box that keeps packaging costs down without losing the branded unboxing moment." data-tiers='[{"qty":15,"unit":3.20,"total":48.00},{"qty":30,"unit":2.88,"total":86.40},{"qty":60,"unit":2.56,"total":153.60}]'>
+          <div class="pdp-bundle-item__thumb" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></div>
+          <div class="pdp-bundle-item__body">
+            <p class="pdp-bundle-item__name">Custom Gift Mailer Box</p>
+            <p class="pdp-bundle-item__meta">F52 (30 x 20 x 8 cm)</p>
+            <p class="pdp-bundle-item__meta">15 pieces</p>
+          </div>
+          <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn--dark pdp__cta js-open-quote"><span>Add to list</span></button>
+    </aside>
   </div>
 
-  <form class="contact-form" id="contactForm">
-    <div class="contact-form__field">
-      <label for="cfName">Name <span class="contact-form__required">*</span></label>
-      <input id="cfName" name="name" type="text" placeholder="Name" required>
-    </div>
 
-    <div class="contact-form__field">
-      <label for="cfEmail">Work email <span class="contact-form__required">*</span></label>
-      <input id="cfEmail" name="email" type="email" placeholder="name@work.com" required>
-    </div>
+</section>
 
-    <div class="contact-form__field">
-      <label for="cfPhone">Phone number</label>
-      <div class="phone-input">
-        <button type="button" class="phone-input__trigger" aria-haspopup="listbox" aria-expanded="false">
-          <span class="phone-input__flag"><img src="assets/flags/pl.svg" alt=""></span>
-          <span class="phone-input__dial">+48</span>
-          <svg class="phone-input__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <input id="cfPhone" name="phone" type="tel" class="phone-input__number" placeholder="6 12 34 56 78">
-        <input type="hidden" name="phone_country_code" class="phone-input__dial-code" value="+48">
-        <div class="phone-input__panel" hidden>
-          <input type="text" class="phone-input__search" placeholder="Search country&hellip;">
-          <div class="phone-input__list"></div>
-        </div>
+<section class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">What&rsquo;s inside</button>
+  </div>
+  <div class="pdp__info-content">
+    <div class="pdp__info-panel is-active" data-panel="specification">
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Data for current product configuration</div>
+        <div class="pdp__info-row-text">The Shift</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Products in this kit</div>
+        <div class="pdp__info-row-text">5</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Total pieces</div>
+        <div class="pdp__info-row-text">75</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Recommended for</div>
+        <div class="pdp__info-row-text">Restaurant and hospitality shift teams</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Box</div>
+        <div class="pdp__info-row-text">Custom Gift Mailer Box included</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Branding</div>
+        <div class="pdp__info-row-text">Logo applied to every item, one placement style across the kit</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Packing</div>
+        <div class="pdp__info-row-text">Individually packed, ready for a staff room or a locker</div>
       </div>
     </div>
-
-    <div class="contact-form__field">
-      <label for="cfCompany">Company</label>
-      <input id="cfCompany" name="company" type="text" placeholder="Company">
-    </div>
-
-    <div class="contact-form__field">
-      <label for="cfCountry">Country/region</label>
-      <div class="region-input">
-        <button type="button" id="cfCountry" class="region-input__trigger" aria-haspopup="listbox" aria-expanded="false">
-          <span class="region-input__value">Select&hellip;</span>
-          <svg class="region-input__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <input type="hidden" name="country">
-        <div class="region-input__panel" hidden>
-          <input type="text" class="region-input__search" placeholder="Search country&hellip;">
-          <div class="region-input__list"></div>
-        </div>
+    <div class="pdp__info-panel" data-panel="description">
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Built for the floor, not the photo shoot</div>
+        <div class="pdp__info-row-text">The Shift bundles the pieces a restaurant team actually wears and carries &mdash; a t-shirt and cap for front of house, a tote for takeout, a tumbler for the staff drink that gets three sips before the next order comes in.</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Sized for a real roster</div>
+        <div class="pdp__info-row-text">Defaults to 15 of each item, sized for a single-location team. Adjust any line with the Edit button before you order &mdash; useful when front and back of house need different counts.</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Consistent branding across every piece</div>
+        <div class="pdp__info-row-text">Your logo is applied the same way across the t-shirt, cap, tote and tumbler, so the kit reads as one uniform instead of four separate giveaways. Our team confirms placement and sizing with a free digital mockup before production.</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Ready to ship, ready to open</div>
+        <div class="pdp__info-row-text">Every item is individually packed inside the Custom Gift Mailer Box, so a new starter&rsquo;s kit arrives as one package, not four separate deliveries to sort through.</div>
+      </div>
+      <div class="pdp__info-row">
+        <div class="pdp__info-row-label">Swap anything before you order</div>
+        <div class="pdp__info-row-text">Not quite the right mix for your team? Use Edit on any line to change the product, quantity, or colour for that item without rebuilding the whole kit from scratch.</div>
       </div>
     </div>
-
-    <div class="contact-form__field">
-      <label for="cfProjectType">Project type</label>
-      <select id="cfProjectType" name="project_type">
-        <option value="" disabled selected>Select&hellip;</option>
-        <option>New merch drop</option>
-        <option>Company store</option>
-        <option>Custom packaging</option>
-        <option>Reorder</option>
-        <option>Other</option>
-      </select>
+    <div class="pdp__info-panel" data-panel="sizechart">
+      <table class="pdp__spec-table pdp__spec-table--sizes">
+        <caption class="visually-hidden">What's inside The Shift, dimensions and quantities</caption>
+        <thead>
+          <tr class="pdp__spec-row">
+            <th scope="col">Product</th>
+            <th scope="col">Dimensions</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="pdp__spec-row"><th scope="row">Custom Unisex Heavyweight Cotton T-Shirt</th><td>Unisex, S&ndash;XL</td><td>15 pieces</td></tr>
+          <tr class="pdp__spec-row"><th scope="row">Custom 5-Panel Heavy Brushed Cotton Baseball Cap</th><td>One size, adjustable</td><td>15 pieces</td></tr>
+          <tr class="pdp__spec-row"><th scope="row">Custom Cotton Bag</th><td>38 x 42 cm</td><td>15 pieces</td></tr>
+          <tr class="pdp__spec-row"><th scope="row">Custom Ceramic Tumbler 330ml</th><td>7.5 x 16 cm</td><td>15 pieces</td></tr>
+          <tr class="pdp__spec-row"><th scope="row">Custom Gift Mailer Box</th><td>F52 (30 x 20 x 8 cm)</td><td>15 pieces</td></tr>
+        </tbody>
+      </table>
     </div>
+  </div>
+</section>
 
-    <div class="contact-form__field">
-      <label for="cfBudget">Budget</label>
-      <select id="cfBudget" name="budget">
-        <option value="" disabled selected>Select&hellip;</option>
-        <option>Under $2,000</option>
-        <option>$2,000&ndash;$10,000</option>
-        <option>$10,000&ndash;$50,000</option>
-        <option>$50,000+</option>
-      </select>
+<section class="section pdp__recs pdp__recs--bundles">
+  <div class="section-head">
+    <div class="section-head__text">
+      <h2 class="section-heading">Not quite right?</h2>
+      <p class="section-subheading">See other sets</p>
     </div>
-
-    <div class="contact-form__field">
-      <label for="cfEventDate">When do you need this by? <span class="contact-form__required">*</span></label>
-      <input id="cfEventDate" name="event_date" type="date" required>
+  </div>
+  <div class="category-grid">
+    <div class="category-grid__track">
+      <a href="bundle-day-one-kit.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/kits/The%20Day%20One%20Kit.jpg');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">The Day One Kit</h3></div>
+      </a>
+      <a href="bundle-global-crew.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/kits/The%20Global%20Crew.jpg');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">The Global Crew</h3></div>
+      </a>
+      <a href="bundle-startup-uniform.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/kits/The%20Startup%20Uniform.jpg');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">The Startup Uniform</h3></div>
+      </a>
+      <a href="bundle-launch-day-kit.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/kits/The%20Launch%20Day%20Kit.jpg');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">The Launch Day Kit</h3></div>
+      </a>
+      <a href="bundle-clubhouse.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">The Clubhouse</h3></div>
+      </a>
     </div>
-
-    <div class="contact-form__field">
-      <label for="cfMessage">What can we help you with?</label>
-      <textarea id="cfMessage" name="message" rows="5" placeholder="Let us know what we can do for you."></textarea>
+  </div>
+  <div class="carousel-progress">
+    <div class="carousel-progress__arrows">
+      <button type="button" class="carousel-arrow" data-dir="-1" aria-label="Previous sets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button type="button" class="carousel-arrow" data-dir="1" aria-label="Next sets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
+    <div class="carousel-progress__track"><div class="carousel-progress__bar"></div></div>
+  </div>
+</section>
 
-    <div class="contact-form__field">
-      <label for="cfFile">File upload</label>
-      <label class="contact-form__upload" for="cfFile">
-        <input id="cfFile" name="file" type="file" class="visually-hidden" multiple>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
-        <span>Click to upload or drag and drop. Max 25&nbsp;MB.</span>
-      </label>
-      <ul class="contact-form__files" id="cfFilesList" hidden></ul>
+<section class="section pdp__recs">
+  <div class="section-head">
+    <div class="section-head__text">
+      <h2 class="section-heading">Complete the set</h2>
+      <p class="section-subheading">Related products</p>
     </div>
+  </div>
+  <div class="category-grid">
+    <div class="category-grid__track">
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Unisex Heavyweight Cotton T-Shirt</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%2015%22%20Rolltop%20Laptop%20Backpack%20with%20Reinforced%20Base.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom 15" Rolltop Laptop Backpack with Reinforced Base</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20EVA%2014%22%20Laptop%20Pouch.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom EVA 14" Laptop Pouch</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Ceramic Tumbler 330ml</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Antibacterial Stylus Ballpoint Pen</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Antibacterial%20Cover%20.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom A5 Notebook With Antibacterial Cover</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Classic%20Mirrored%20Sunglasses%20UV400%20Protection.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Classic Mirrored Sunglasses UV400 Protection</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Plant Based Wax Candle In Bamboo 160g</h3></div>
+      </a>
+    </div>
+  </div>
+  <div class="carousel-progress">
+    <div class="carousel-progress__arrows">
+      <button type="button" class="carousel-arrow" data-dir="-1" aria-label="Previous related products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button type="button" class="carousel-arrow" data-dir="1" aria-label="Next related products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="carousel-progress__track"><div class="carousel-progress__bar"></div></div>
+  </div>
+</section>
 
-    <button type="submit" class="contact-form__submit">Submit</button>
-  </form>
-</div>
+<section class="section pdp__recs">
+  <div class="section-head">
+    <div class="section-head__text">
+      <h2 class="section-heading">Frequently paired</h2>
+      <p class="section-subheading">Others also bought</p>
+    </div>
+  </div>
+  <div class="category-grid">
+    <div class="category-grid__track">
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/bags/Custom%20Gym%20Bag.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Gym Bag</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/drinkware/Custom%20Matte%20Ceramic%20Mug%20300ml.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Matte Ceramic Mug 300ml</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/travel/Custom%20Cotton%20Beach%20Towel%20.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Cotton Beach Towel</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/tech/Custom%20Wireless%20Powerbank%208000mAh%2015W%20.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Wireless Powerbank 8000mAh 15W</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/tech/Custom%20Powerbank%204000mAh%2010W%20.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Powerbank 4000mAh 10W</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Cotton%20Hoodie.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Unisex Cotton Hoodie</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom 5-Panel Heavy Brushed Cotton Baseball Cap</h3></div>
+      </a>
+      <a href="product.html" class="category-card">
+        <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Anorak%20Jacket%20.avif');"></div></div>
+        <div class="category-card__body"><h3 class="category-card__title">Custom Unisex Anorak Jacket</h3></div>
+      </a>
+    </div>
+  </div>
+  <div class="carousel-progress">
+    <div class="carousel-progress__arrows">
+      <button type="button" class="carousel-arrow" data-dir="-1" aria-label="Previous also bought"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button type="button" class="carousel-arrow" data-dir="1" aria-label="Next also bought"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="carousel-progress__track"><div class="carousel-progress__bar"></div></div>
+  </div>
+</section>
 
 <section class="section section--cta">
   <div class="section-head">
@@ -853,13 +1102,15 @@
 
 <script src="quote-drawer.js"></script>
 <script src="phone-input.js"></script>
-<script src="region-input.js"></script>
-<script src="file-upload.js"></script>
 <script src="nav-megamenu.js"></script>
 <script src="mobile-nav.js"></script>
 <script src="country-modal.js"></script>
+<script src="carousel.js"></script>
 
 </div>
+
+<script src="pdp.js"></script>
+<script src="item-edit-drawer.js"></script>
 
 <script src="password-gate.js"></script>
 </body>
