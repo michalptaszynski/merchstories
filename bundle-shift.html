@@ -787,8 +787,31 @@
 <section class="pdp">
 
   <div class="pdp__hero">
-    <div class="pdp__stage">
-      <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia"></div>
+    <div class="pdp__stage-wrap">
+      <div class="pdp__stage pdp__stage--gallery">
+        <div class="pdp__stage-collage pdp__stage-collage--tall-first" id="pdpStageCollage">
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/bags/Custom%20Cotton%20Bag.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></div>
+        </div>
+        <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia" style="display: none; background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></div>
+      </div>
+      <div class="pdp__gallery" id="pdpGallery">
+        <button type="button" class="pdp__gallery-thumb pdp__gallery-thumb--collage pdp__gallery-thumb--tall-first is-active" aria-label="All products">
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/bags/Custom%20Cotton%20Bag.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></span>
+        </button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');" aria-label="Custom Unisex Heavyweight Cotton T-Shirt"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');" aria-label="Custom 5-Panel Heavy Brushed Cotton Baseball Cap"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/bags/Custom%20Cotton%20Bag.avif" style="background-image: url('assets/photos/shop/bags/Custom%20Cotton%20Bag.avif');" aria-label="Custom Cotton Bag"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');" aria-label="Custom Ceramic Tumbler 330ml"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/packaging/onecolor-closed.png" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');" aria-label="Custom Gift Mailer Box"></button>
+      </div>
     </div>
 
     <aside class="pdp__buy">
@@ -858,83 +881,229 @@
 
 </section>
 
-<section class="pdp__info">
+<section class="pdp__accordion-section">
+  <div class="why-us-accordion" id="pdpAccordion">
+    <div class="why-us-accordion__item is-active" data-index="0">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="true">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Heavyweight%20Cotton%20T-Shirt.avif');"></span>
+          <span class="why-us-accordion__title">Custom Unisex Heavyweight Cotton T-Shirt</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
   <div class="pdp__info-nav">
     <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
     <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
-    <button type="button" class="pdp__info-tab" data-tab="sizechart">What&rsquo;s inside</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
   </div>
   <div class="pdp__info-content">
-    <div class="pdp__info-panel is-active" data-panel="specification">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Data for current product configuration</div>
-        <div class="pdp__info-row-text">The Shift</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Products in this kit</div>
-        <div class="pdp__info-row-text">5</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Total pieces</div>
-        <div class="pdp__info-row-text">75</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Recommended for</div>
-        <div class="pdp__info-row-text">Restaurant and hospitality shift teams</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Box</div>
-        <div class="pdp__info-row-text">Custom Gift Mailer Box included</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Branding</div>
-        <div class="pdp__info-row-text">Logo applied to every item, one placement style across the kit</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Packing</div>
-        <div class="pdp__info-row-text">Individually packed, ready for a staff room or a locker</div>
-      </div>
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">100% Cotton</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Grammage</div><div class="pdp__info-row-text">220 GSM</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Fit</div><div class="pdp__info-row-text">Regular, unisex</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front chest or back</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Screen print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care instructions</div><div class="pdp__info-row-text">Machine wash cold, inside out. Do not bleach.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Gender</div><div class="pdp__info-row-text">Unisex</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-2100-72200</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Heavier than a standard tee</div><div class="pdp__info-row-text">220 GSM cotton has more structure than the thin tees that go see-through after a wash or two, which matters for something worn on shift, not just once.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Built for your branding</div><div class="pdp__info-row-text">Front chest or full back placement, screen printed for a crisp, opaque finish on the fabric &mdash; confirmed with a free digital mockup before production.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Made to be worn, not just handed out</div><div class="pdp__info-row-text">Cut for daily wear rather than a one-off event freebie, which is why it holds up on the floor of a restaurant or a warehouse shift after shift.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care that keeps the print looking new</div><div class="pdp__info-row-text">Machine wash cold, inside out, no bleach. Simple care that protects a screen print far longer than most people expect.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Size chart for Custom Unisex Heavyweight Cotton T-Shirt, measurements in centimetres</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Size</th><th scope="col">Chest width</th><th scope="col">Body length</th></tr></thead>
+    <tbody>
+      <tr class="pdp__spec-row"><th scope="row">XS</th><td>46 cm</td><td>66 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">S</th><td>49 cm</td><td>68 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">M</th><td>52 cm</td><td>70 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">L</th><td>55 cm</td><td>72 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">XL</th><td>58 cm</td><td>74 cm</td></tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="description">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Built for the floor, not the photo shoot</div>
-        <div class="pdp__info-row-text">The Shift bundles the pieces a restaurant team actually wears and carries &mdash; a t-shirt and cap for front of house, a tote for takeout, a tumbler for the staff drink that gets three sips before the next order comes in.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Sized for a real roster</div>
-        <div class="pdp__info-row-text">Defaults to 15 of each item, sized for a single-location team. Adjust any line with the Edit button before you order &mdash; useful when front and back of house need different counts.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Consistent branding across every piece</div>
-        <div class="pdp__info-row-text">Your logo is applied the same way across the t-shirt, cap, tote and tumbler, so the kit reads as one uniform instead of four separate giveaways. Our team confirms placement and sizing with a free digital mockup before production.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Ready to ship, ready to open</div>
-        <div class="pdp__info-row-text">Every item is individually packed inside the Custom Gift Mailer Box, so a new starter&rsquo;s kit arrives as one package, not four separate deliveries to sort through.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Swap anything before you order</div>
-        <div class="pdp__info-row-text">Not quite the right mix for your team? Use Edit on any line to change the product, quantity, or colour for that item without rebuilding the whole kit from scratch.</div>
-      </div>
+    <div class="why-us-accordion__item" data-index="1">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/clothes/Custom%205-Panel%20Heavy%20Brushed%20Cotton%20Baseball%20Cap.avif');"></span>
+          <span class="why-us-accordion__title">Custom 5-Panel Heavy Brushed Cotton Baseball Cap</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Heavy brushed cotton</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Construction</div><div class="pdp__info-row-text">5-panel</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Closure</div><div class="pdp__info-row-text">Adjustable strap</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Fit</div><div class="pdp__info-row-text">One size, adjustable, 54&ndash;62 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front panel</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Embroidery</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Colours available</div><div class="pdp__info-row-text">Blue, Green, Orange, Red, White</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-2500-73301</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A structured cap that holds its shape</div><div class="pdp__info-row-text">The 5-panel construction in heavy brushed cotton keeps a crisp profile instead of collapsing like a soft cap after a few wears.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">One size, genuinely fits most</div><div class="pdp__info-row-text">The adjustable strap covers a 54&ndash;62 cm range, so there's no guessing sizes across a team or handing out a mismatched batch at an event.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Embroidery that holds up outdoors</div><div class="pdp__info-row-text">Front panel embroidery survives sun and daily wear far better than a printed logo, which matters for something worn outside on shift or at a stand.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Five colours to match your brand</div><div class="pdp__info-row-text">From neutral White to bolder Blue, Green, Orange and Red &mdash; enough range to match a uniform palette or stand out at an outdoor event.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Fit for Custom 5-Panel Heavy Brushed Cotton Baseball Cap</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Fit</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>One size, adjustable strap, fits 54&ndash;62 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="sizechart">
-      <table class="pdp__spec-table pdp__spec-table--sizes">
-        <caption class="visually-hidden">What's inside The Shift, dimensions and quantities</caption>
-        <thead>
-          <tr class="pdp__spec-row">
-            <th scope="col">Product</th>
-            <th scope="col">Dimensions</th>
-            <th scope="col">Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="pdp__spec-row"><th scope="row">Custom Unisex Heavyweight Cotton T-Shirt</th><td>Unisex, S&ndash;XL</td><td>15 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom 5-Panel Heavy Brushed Cotton Baseball Cap</th><td>One size, adjustable</td><td>15 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Cotton Bag</th><td>38 x 42 cm</td><td>15 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Ceramic Tumbler 330ml</th><td>7.5 x 16 cm</td><td>15 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Gift Mailer Box</th><td>F52 (30 x 20 x 8 cm)</td><td>15 pieces</td></tr>
-        </tbody>
-      </table>
+    <div class="why-us-accordion__item" data-index="2">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/bags/Custom%20Cotton%20Bag.avif');"></span>
+          <span class="why-us-accordion__title">Custom Cotton Bag</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">100% Cotton canvas</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Grammage</div><div class="pdp__info-row-text">220 GSM</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Handles</div><div class="pdp__info-row-text">Long handles, shoulder length</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">38 x 42 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front panel</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Screen print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-6200-51188</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A tote built to actually carry things</div><div class="pdp__info-row-text">220 GSM canvas has enough structure to hold a laundry run or a stack of takeout containers without stretching out of shape after a few uses.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Long enough to wear on a shoulder</div><div class="pdp__info-row-text">Handles are cut long enough to sling over a shoulder rather than just carried by hand, which is what makes a tote get reused instead of stuffed in a drawer.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A logo that reads at a distance</div><div class="pdp__info-row-text">Front panel screen print gives a clean, high-contrast mark visible across a room, useful for staff moving through a busy floor or a takeout counter.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">The kind of extra that gets kept</div><div class="pdp__info-row-text">Simple, useful and unbranded-looking enough to double as a grocery bag outside of work &mdash; which is exactly why it keeps your logo in circulation.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Cotton Bag</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>38 x 42 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="3">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></span>
+          <span class="why-us-accordion__title">Custom Ceramic Tumbler 330ml</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Capacity</div><div class="pdp__info-row-text">330 ml</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Ceramic with silicone lid</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">7.5 x 16 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Wrap-around</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Sublimation</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care instructions</div><div class="pdp__info-row-text">Hand wash recommended</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-4205-21056</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A tumbler that feels like a real mug</div><div class="pdp__info-row-text">Ceramic has more weight and a better sip than a metal or plastic tumbler, closer to a proper mug than a travel cup &mdash; it reads as considered, not throwaway.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A lid that keeps up with a shift</div><div class="pdp__info-row-text">The silicone lid seals well enough to move around a kitchen or a staff room without spilling, useful anywhere people are on their feet.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Branding that wraps all the way round</div><div class="pdp__info-row-text">Sublimation print covers the full circumference rather than one panel, so the logo shows no matter which way it's sitting on a counter.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Built to be reused, not binned</div><div class="pdp__info-row-text">Sturdy enough to survive a daily coffee run for years, which is the difference between a giveaway that gets used and one that gets tossed.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Ceramic Tumbler 330ml</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>7.5 x 16 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="4">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></span>
+          <span class="why-us-accordion__title">Custom Gift Mailer Box</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Corrugated board, E-flute</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Finish</div><div class="pdp__info-row-text">Full colour print, matte lamination</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">F52 (30 x 20 x 8 cm)</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Offset print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Assembly</div><div class="pdp__info-row-text">Flat-packed, self-locking base</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-9052-40033</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A box built for gifting, not just shipping</div><div class="pdp__info-row-text">The unboxing is part of the gift &mdash; a plain shipping carton undercuts everything inside it, this one doesn't.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A snug fit for a small set</div><div class="pdp__info-row-text">F52 dimensions suit a tighter bundle of two to four items without leaving them loose enough to shift around in transit.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Flat-packed until it's filled</div><div class="pdp__info-row-text">Ships and stores flat, folding into shape only when a kit is being packed &mdash; efficient for warehousing a large run ahead of an event or launch.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Full-colour branding, inside and out</div><div class="pdp__info-row-text">Offset print with matte lamination covers the exterior, so the box itself does branding work before anyone opens it.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Gift Mailer Box</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>F52 (30 x 20 x 8 cm)</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
   </div>
 </section>
@@ -1110,6 +1279,7 @@
 </div>
 
 <script src="pdp.js"></script>
+<script src="why-us-accordion.js"></script>
 <script src="item-edit-drawer.js"></script>
 
 <script src="password-gate.js"></script>

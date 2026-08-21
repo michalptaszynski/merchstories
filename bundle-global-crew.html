@@ -787,8 +787,34 @@
 <section class="pdp">
 
   <div class="pdp__hero">
-    <div class="pdp__stage">
-      <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia"></div>
+    <div class="pdp__stage-wrap">
+      <div class="pdp__stage pdp__stage--gallery">
+        <div class="pdp__stage-collage" id="pdpStageCollage">
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Tritan%20Bottle%20500ml.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/bags/Custom%2015%22%20Rolltop%20Laptop%20Backpack%20with%20Reinforced%20Base.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></div>
+        </div>
+        <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia" style="display: none; background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></div>
+      </div>
+      <div class="pdp__gallery" id="pdpGallery">
+        <button type="button" class="pdp__gallery-thumb pdp__gallery-thumb--collage is-active" aria-label="All products">
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Tritan%20Bottle%20500ml.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/bags/Custom%2015%22%20Rolltop%20Laptop%20Backpack%20with%20Reinforced%20Base.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></span>
+        </button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');" aria-label="Custom A5 Notebook With Hard Cover"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/drinkware/Custom%20Tritan%20Bottle%20500ml.avif" style="background-image: url('assets/photos/shop/drinkware/Custom%20Tritan%20Bottle%20500ml.avif');" aria-label="Custom Tritan Bottle 500ml"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/bags/Custom%2015%22%20Rolltop%20Laptop%20Backpack%20with%20Reinforced%20Base.avif" style="background-image: url('assets/photos/shop/bags/Custom%2015%22%20Rolltop%20Laptop%20Backpack%20with%20Reinforced%20Base.avif');" aria-label="Custom 15&quot; Rolltop Laptop Backpack with Reinforced Base"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif');" aria-label="Custom Plant Based Wax Candle In Bamboo 160g"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif');" aria-label="Custom Unisex Oversized Organic Cotton Sweatshirt"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/packaging/onecolor-closed.png" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');" aria-label="Custom Gift Mailer Box"></button>
+      </div>
     </div>
 
     <aside class="pdp__buy">
@@ -867,84 +893,274 @@
 
 </section>
 
-<section class="pdp__info">
+<section class="pdp__accordion-section">
+  <div class="why-us-accordion" id="pdpAccordion">
+    <div class="why-us-accordion__item is-active" data-index="0">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="true">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></span>
+          <span class="why-us-accordion__title">Custom A5 Notebook With Hard Cover</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
   <div class="pdp__info-nav">
     <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
     <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
-    <button type="button" class="pdp__info-tab" data-tab="sizechart">What&rsquo;s inside</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
   </div>
   <div class="pdp__info-content">
-    <div class="pdp__info-panel is-active" data-panel="specification">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Data for current product configuration</div>
-        <div class="pdp__info-row-text">The Global Crew</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Products in this kit</div>
-        <div class="pdp__info-row-text">6</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Total pieces</div>
-        <div class="pdp__info-row-text">150</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Recommended for</div>
-        <div class="pdp__info-row-text">Distributed and remote teams</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Box</div>
-        <div class="pdp__info-row-text">Custom Gift Mailer Box included</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Branding</div>
-        <div class="pdp__info-row-text">Logo applied to every item, one placement style across the kit</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Packing</div>
-        <div class="pdp__info-row-text">Individually packed, shippable to home addresses in different countries</div>
-      </div>
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Format</div><div class="pdp__info-row-text">A5, 96 sheets</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Paper</div><div class="pdp__info-row-text">80 gsm lined paper, recycled option available</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Cover</div><div class="pdp__info-row-text">Hard cover, PU finish</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">14 x 1.6 x 21 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front cover, centred</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Foil stamp / deboss</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Extras</div><div class="pdp__info-row-text">Elastic closure, ribbon bookmark, back pocket</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-5201-30012</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A cover that holds its shape</div><div class="pdp__info-row-text">The hard PU cover keeps corners sharp even after months in a bag, so it still looks new at the next onboarding session or sprint planning.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Foil or deboss, not a sticker</div><div class="pdp__info-row-text">Your logo goes on via foil stamp or deboss directly into the cover, which reads as considerably more premium than a printed label and won't peel.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">96 pages of actual lined paper</div><div class="pdp__info-row-text">Enough room for a full onboarding period or a quarter's worth of meeting notes, on paper that takes ink well without bleeding through.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Details that keep it closed</div><div class="pdp__info-row-text">An elastic band keeps it shut in a bag, a ribbon marks the current page, and a back pocket holds loose business cards or a folded handout.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom A5 Notebook With Hard Cover</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>14 x 1.6 x 21 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="description">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">One kit, any address</div>
-        <div class="pdp__info-row-text">The Global Crew bundles the pieces that hold up across a distributed team&rsquo;s day &mdash; a notebook and bottle for the desk, a backpack for the commute that might not happen, a candle and sweatshirt for the home office. It&rsquo;s built to ship to individual addresses, not just one office.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Built for scattered teams</div>
-        <div class="pdp__info-row-text">Sized for a full distributed roster: 25 of each item by default. Adjust any line with the Edit button before you order &mdash; useful when regional teams need different quantities.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Consistent branding across every piece</div>
-        <div class="pdp__info-row-text">Your logo is applied the same way across the notebook, bottle, backpack, candle and sweatshirt, so the kit reads as one cohesive set no matter which time zone it lands in. Our team confirms placement and sizing with a free digital mockup before production.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Ready to ship, ready to open</div>
-        <div class="pdp__info-row-text">Every item is individually packed inside the Custom Gift Mailer Box, so remote teammates get a single, unboxing-ready package instead of five separate deliveries.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Swap anything before you order</div>
-        <div class="pdp__info-row-text">Not quite the right mix for your team? Use Edit on any line to change the product, quantity, or colour for that item without rebuilding the whole kit from scratch.</div>
-      </div>
+    <div class="why-us-accordion__item" data-index="1">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/drinkware/Custom%20Tritan%20Bottle%20500ml.avif');"></span>
+          <span class="why-us-accordion__title">Custom Tritan Bottle 500ml</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Capacity</div><div class="pdp__info-row-text">500 ml</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Tritan (BPA-free)</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">6 x 19.5 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front panel</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Screen print / UV print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care instructions</div><div class="pdp__info-row-text">Hand wash recommended</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-4110-20083</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Lightweight, shatter-resistant Tritan</div><div class="pdp__info-row-text">Tritan holds up to daily knocks far better than glass and stays clear rather than clouding over like cheaper plastics, so the logo underneath keeps reading well.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A lid that actually seals</div><div class="pdp__info-row-text">The flip-top lid locks shut for a bag or backpack without leaking, and opens one-handed when a hand is already full of a laptop or a coffee.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Logo visible from every angle</div><div class="pdp__info-row-text">The front panel print sits on the widest, flattest part of the bottle, so it's the first thing anyone notices whether it's sitting on a desk or in a cup holder.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Built for repeat use</div><div class="pdp__info-row-text">Wide mouth for easy refills and ice, hand wash recommended to keep the print looking sharp for the long run rather than a one-event giveaway.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Tritan Bottle 500ml</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>6 x 19.5 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="sizechart">
-      <table class="pdp__spec-table pdp__spec-table--sizes">
-        <caption class="visually-hidden">What's inside The Global Crew, dimensions and quantities</caption>
-        <thead>
-          <tr class="pdp__spec-row">
-            <th scope="col">Product</th>
-            <th scope="col">Dimensions</th>
-            <th scope="col">Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="pdp__spec-row"><th scope="row">Custom A5 Notebook With Hard Cover</th><td>14 x 1.6 x 21 cm</td><td>25 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Tritan Bottle 500ml</th><td>6 x 19.5 cm</td><td>25 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom 15" Rolltop Laptop Backpack with Reinforced Base</th><td>30 x 15 x 45 cm</td><td>25 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Plant Based Wax Candle In Bamboo 160g</th><td>8 x 7 cm</td><td>25 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Unisex Oversized Organic Cotton Sweatshirt</th><td>Unisex, S&ndash;XL</td><td>25 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Gift Mailer Box</th><td>F52 (30 x 20 x 8 cm)</td><td>25 pieces</td></tr>
-        </tbody>
-      </table>
+    <div class="why-us-accordion__item" data-index="2">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/bags/Custom%2015%22%20Rolltop%20Laptop%20Backpack%20with%20Reinforced%20Base.avif');"></span>
+          <span class="why-us-accordion__title">Custom 15" Rolltop Laptop Backpack with Reinforced Base</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Recycled polyester, 600D</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Capacity</div><div class="pdp__info-row-text">Fits up to 15" laptop</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Closure</div><div class="pdp__info-row-text">Rolltop with buckle</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">30 x 15 x 45 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front panel</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Embroidery / heat transfer</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-6120-50077</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A reinforced base for the daily grind</div><div class="pdp__info-row-text">The bottom panel is built up to take the weight of a laptop and gear dropped on pavement or a train floor, so it holds its shape well past the first few commutes.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Rolltop that expands when you need it</div><div class="pdp__info-row-text">Roll it down for a slim daily carry, or open it out for a laptop, a change of clothes and everything in between &mdash; one bag instead of two.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Recycled polyester that shrugs off weather</div><div class="pdp__info-row-text">600D recycled polyester handles rain and daily wear without looking worn after a month, a practical choice as much as a sustainable one.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Branding that sits front and centre</div><div class="pdp__info-row-text">The front panel is embroidered or heat-transferred with your logo, sized and placed to be visible from a distance &mdash; useful for events as much as everyday use.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom 15" Rolltop Laptop Backpack with Reinforced Base</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>30 x 15 x 45 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="3">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/home/Custom%20Plant%20Based%20Wax%20Candle%20In%20Bamboo%20160g.avif');"></span>
+          <span class="why-us-accordion__title">Custom Plant Based Wax Candle In Bamboo 160g</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Wax</div><div class="pdp__info-row-text">Plant-based soy &amp; coconut blend</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Weight</div><div class="pdp__info-row-text">160 g</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Vessel</div><div class="pdp__info-row-text">Bamboo</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Burn time</div><div class="pdp__info-row-text">Approx. 35 hours</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">8 x 7 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Label / vessel base</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Custom label print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-7410-60002</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A gift built for a home office</div><div class="pdp__info-row-text">Not every remote teammate has a desk to put a mug on, but almost everyone has a corner they light a candle in &mdash; it lands as personal rather than corporate.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A vessel that gets reused</div><div class="pdp__info-row-text">The bamboo holder outlasts the candle itself, so it ends up on a shelf holding pens or trinkets long after the wax is gone, keeping your brand around.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A clean, plant-based burn</div><div class="pdp__info-row-text">The soy and coconut wax blend burns cleaner than paraffin, with roughly 35 hours of burn time &mdash; enough for weeks of evening use, not a one-night novelty.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Branding that doesn't shout</div><div class="pdp__info-row-text">A custom label on the vessel or base carries your logo without turning the whole candle into an ad, which is exactly the tone this kind of gift calls for.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Plant Based Wax Candle In Bamboo 160g</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>8 x 7 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="4">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Oversized%20Organic%20Cotton%20Sweatshirt.avif');"></span>
+          <span class="why-us-accordion__title">Custom Unisex Oversized Organic Cotton Sweatshirt</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Organic cotton</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Grammage</div><div class="pdp__info-row-text">350 GSM</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Fit</div><div class="pdp__info-row-text">Oversized, unisex</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Composition</div><div class="pdp__info-row-text">100% Organic Cotton</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front chest or back</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Screen print / embroidery</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care instructions</div><div class="pdp__info-row-text">Machine wash cold, do not tumble dry on high</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Colours available</div><div class="pdp__info-row-text">French Navy, Heather Grey, Khaki, Natural Raw, Stone, White, Mocha</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-2401-70044</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A heavier weight than a standard crew</div><div class="pdp__info-row-text">At 350 GSM this sits noticeably heavier than a typical sweatshirt, with an oversized cut that reads as considered rather than just baggy.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Built for your branding</div><div class="pdp__info-row-text">Add your logo via screen print or embroidery on the chest or back &mdash; our team confirms placement and sizing with a free digital mockup before production.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">One cut, every team</div><div class="pdp__info-row-text">The oversized unisex fit means one size range covers the whole roster, no separate men's/women's runs to manage or guess sizes for.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Seven colours to match your brand</div><div class="pdp__info-row-text">From true neutrals like French Navy and White to warmer tones like Khaki and Mocha, there's a backdrop that suits high-contrast or tonal branding either way.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Size chart for Custom Unisex Oversized Organic Cotton Sweatshirt, measurements in centimetres</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Size</th><th scope="col">Chest width</th><th scope="col">Body length</th><th scope="col">Sleeve length</th></tr></thead>
+    <tbody>
+      <tr class="pdp__spec-row"><th scope="row">XS</th><td>54 cm</td><td>66 cm</td><td>60 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">S</th><td>57 cm</td><td>68 cm</td><td>62 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">M</th><td>60 cm</td><td>70 cm</td><td>64 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">L</th><td>63 cm</td><td>72 cm</td><td>66 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">XL</th><td>66 cm</td><td>74 cm</td><td>68 cm</td></tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="5">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></span>
+          <span class="why-us-accordion__title">Custom Gift Mailer Box</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Corrugated board, E-flute</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Finish</div><div class="pdp__info-row-text">Full colour print, matte lamination</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">F52 (30 x 20 x 8 cm)</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Offset print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Assembly</div><div class="pdp__info-row-text">Flat-packed, self-locking base</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-9052-40033</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A box built for gifting, not just shipping</div><div class="pdp__info-row-text">The unboxing is part of the gift &mdash; a plain shipping carton undercuts everything inside it, this one doesn't.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A snug fit for a small set</div><div class="pdp__info-row-text">F52 dimensions suit a tighter bundle of two to four items without leaving them loose enough to shift around in transit.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Flat-packed until it's filled</div><div class="pdp__info-row-text">Ships and stores flat, folding into shape only when a kit is being packed &mdash; efficient for warehousing a large run ahead of an event or launch.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Full-colour branding, inside and out</div><div class="pdp__info-row-text">Offset print with matte lamination covers the exterior, so the box itself does branding work before anyone opens it.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Gift Mailer Box</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>F52 (30 x 20 x 8 cm)</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
   </div>
 </section>
@@ -1120,6 +1336,7 @@
 </div>
 
 <script src="pdp.js"></script>
+<script src="why-us-accordion.js"></script>
 <script src="item-edit-drawer.js"></script>
 
 <script src="password-gate.js"></script>

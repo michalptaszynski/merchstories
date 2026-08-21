@@ -21,8 +21,31 @@
 <section class="pdp">
 
   <div class="pdp__hero">
-    <div class="pdp__stage">
-      <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia"></div>
+    <div class="pdp__stage-wrap">
+      <div class="pdp__stage pdp__stage--gallery">
+        <div class="pdp__stage-collage pdp__stage-collage--tall-first" id="pdpStageCollage">
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Cotton%20Hoodie.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/tech/Custom%20Powerbank%204000mAh%2010W%20.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/packaging/fullcolour-closed.png');"></div>
+        </div>
+        <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia" style="display: none; background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></div>
+      </div>
+      <div class="pdp__gallery" id="pdpGallery">
+        <button type="button" class="pdp__gallery-thumb pdp__gallery-thumb--collage pdp__gallery-thumb--tall-first is-active" aria-label="All products">
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Cotton%20Hoodie.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/tech/Custom%20Powerbank%204000mAh%2010W%20.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/packaging/fullcolour-closed.png');"></span>
+        </button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');" aria-label="Custom Ceramic Tumbler 330ml"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');" aria-label="Custom A5 Notebook With Hard Cover"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/clothes/Custom%20Unisex%20Cotton%20Hoodie.avif" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Cotton%20Hoodie.avif');" aria-label="Custom Unisex Cotton Hoodie"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/tech/Custom%20Powerbank%204000mAh%2010W%20.avif" style="background-image: url('assets/photos/shop/tech/Custom%20Powerbank%204000mAh%2010W%20.avif');" aria-label="Custom Powerbank 4000mAh 10W"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/packaging/fullcolour-closed.png" style="background-image: url('assets/photos/shop/packaging/fullcolour-closed.png');" aria-label="Custom Welcome Mailer Box"></button>
+      </div>
     </div>
 
     <aside class="pdp__buy">
@@ -92,83 +115,230 @@
 
 </section>
 
-<section class="pdp__info">
+<section class="pdp__accordion-section">
+  <div class="why-us-accordion" id="pdpAccordion">
+    <div class="why-us-accordion__item is-active" data-index="0">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="true">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/drinkware/Custom%20Ceramic%20Tumbler%20330ml.avif');"></span>
+          <span class="why-us-accordion__title">Custom Ceramic Tumbler 330ml</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
   <div class="pdp__info-nav">
     <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
     <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
-    <button type="button" class="pdp__info-tab" data-tab="sizechart">What&rsquo;s inside</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
   </div>
   <div class="pdp__info-content">
-    <div class="pdp__info-panel is-active" data-panel="specification">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Data for current product configuration</div>
-        <div class="pdp__info-row-text">The Startup Uniform</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Products in this kit</div>
-        <div class="pdp__info-row-text">5</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Total pieces</div>
-        <div class="pdp__info-row-text">200</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Recommended for</div>
-        <div class="pdp__info-row-text">Tech and product teams</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Box</div>
-        <div class="pdp__info-row-text">Custom Welcome Mailer Box included</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Branding</div>
-        <div class="pdp__info-row-text">Logo applied to every item, one placement style across the kit</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Packing</div>
-        <div class="pdp__info-row-text">Individually packed inside the mailer box, ready to ship</div>
-      </div>
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Capacity</div><div class="pdp__info-row-text">330 ml</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Ceramic with silicone lid</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">7.5 x 16 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Wrap-around</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Sublimation</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care instructions</div><div class="pdp__info-row-text">Hand wash recommended</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-4205-21056</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A tumbler that feels like a real mug</div><div class="pdp__info-row-text">Ceramic has more weight and a better sip than a metal or plastic tumbler, closer to a proper mug than a travel cup &mdash; it reads as considered, not throwaway.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A lid that keeps up with a shift</div><div class="pdp__info-row-text">The silicone lid seals well enough to move around a kitchen or a staff room without spilling, useful anywhere people are on their feet.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Branding that wraps all the way round</div><div class="pdp__info-row-text">Sublimation print covers the full circumference rather than one panel, so the logo shows no matter which way it's sitting on a counter.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Built to be reused, not binned</div><div class="pdp__info-row-text">Sturdy enough to survive a daily coffee run for years, which is the difference between a giveaway that gets used and one that gets tossed.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Ceramic Tumbler 330ml</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>7.5 x 16 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="description">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">A uniform without the uniform feel</div>
-        <div class="pdp__info-row-text">The Startup Uniform bundles the pieces a tech team already reaches for &mdash; a tumbler for the standup, a notebook for the sprint planning, a hoodie for the late pushes, and a powerbank for everything in between.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Built for a growing team</div>
-        <div class="pdp__info-row-text">Sized for a full headcount: 40 of each item by default. Adjust any line with the Edit button before you order &mdash; useful as the team scales between funding rounds.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Consistent branding across every piece</div>
-        <div class="pdp__info-row-text">Your logo is applied the same way across the tumbler, notebook, hoodie and powerbank, so the kit reads as one cohesive set instead of four unrelated giveaways. Our team confirms placement and sizing with a free digital mockup before production.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Ready to ship, ready to open</div>
-        <div class="pdp__info-row-text">Every item is individually packed inside the Custom Welcome Mailer Box, so it arrives as a single, unboxing-ready package rather than a pile of loose swag.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Swap anything before you order</div>
-        <div class="pdp__info-row-text">Not quite the right mix for your team? Use Edit on any line to change the product, quantity, or colour for that item without rebuilding the whole kit from scratch.</div>
-      </div>
+    <div class="why-us-accordion__item" data-index="1">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></span>
+          <span class="why-us-accordion__title">Custom A5 Notebook With Hard Cover</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Format</div><div class="pdp__info-row-text">A5, 96 sheets</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Paper</div><div class="pdp__info-row-text">80 gsm lined paper, recycled option available</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Cover</div><div class="pdp__info-row-text">Hard cover, PU finish</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">14 x 1.6 x 21 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front cover, centred</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Foil stamp / deboss</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Extras</div><div class="pdp__info-row-text">Elastic closure, ribbon bookmark, back pocket</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-5201-30012</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A cover that holds its shape</div><div class="pdp__info-row-text">The hard PU cover keeps corners sharp even after months in a bag, so it still looks new at the next onboarding session or sprint planning.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Foil or deboss, not a sticker</div><div class="pdp__info-row-text">Your logo goes on via foil stamp or deboss directly into the cover, which reads as considerably more premium than a printed label and won't peel.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">96 pages of actual lined paper</div><div class="pdp__info-row-text">Enough room for a full onboarding period or a quarter's worth of meeting notes, on paper that takes ink well without bleeding through.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Details that keep it closed</div><div class="pdp__info-row-text">An elastic band keeps it shut in a bag, a ribbon marks the current page, and a back pocket holds loose business cards or a folded handout.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom A5 Notebook With Hard Cover</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>14 x 1.6 x 21 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="sizechart">
-      <table class="pdp__spec-table pdp__spec-table--sizes">
-        <caption class="visually-hidden">What's inside The Startup Uniform, dimensions and quantities</caption>
-        <thead>
-          <tr class="pdp__spec-row">
-            <th scope="col">Product</th>
-            <th scope="col">Dimensions</th>
-            <th scope="col">Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="pdp__spec-row"><th scope="row">Custom Ceramic Tumbler 330ml</th><td>7.5 x 16 cm</td><td>40 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom A5 Notebook With Hard Cover</th><td>14 x 1.6 x 21 cm</td><td>40 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Unisex Cotton Hoodie</th><td>Unisex, S&ndash;XL</td><td>40 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Powerbank 4000mAh 10W</th><td>6.5 x 1.3 x 10.5 cm</td><td>40 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Welcome Mailer Box</th><td>F59 (32 x 18.2 x 9 cm)</td><td>40 pieces</td></tr>
-        </tbody>
-      </table>
+    <div class="why-us-accordion__item" data-index="2">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/clothes/Custom%20Unisex%20Cotton%20Hoodie.avif');"></span>
+          <span class="why-us-accordion__title">Custom Unisex Cotton Hoodie</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Cotton / polyester blend</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Grammage</div><div class="pdp__info-row-text">300 GSM</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Composition</div><div class="pdp__info-row-text">80% Cotton, 20% Polyester</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Left chest or back</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Screen print / embroidery</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care instructions</div><div class="pdp__info-row-text">Machine wash cold, inside out. Tumble dry low.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Gender</div><div class="pdp__info-row-text">Unisex</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-2214-77501</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A hoodie built for daily wear</div><div class="pdp__info-row-text">300 GSM cotton-poly fleece holds its shape through repeated washes without the fading or pilling that cheaper blends show after a few months.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Built for your branding</div><div class="pdp__info-row-text">Left chest is the classic placement for a subtle mark, while a full back print works for bigger, bolder graphics &mdash; our team confirms sizing with a free digital mockup first.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">One hoodie, every team</div><div class="pdp__info-row-text">The unisex cut and full size run mean one order covers the whole company, from a five-person founding team to a hundred-person office.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care that protects the print</div><div class="pdp__info-row-text">Machine wash cold, inside out, tumble dry low. Keeping heat off the print directly is the single biggest thing that keeps a custom design looking sharp.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Size chart for Custom Unisex Cotton Hoodie, measurements in centimetres</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Size</th><th scope="col">Chest width</th><th scope="col">Body length</th><th scope="col">Sleeve length</th></tr></thead>
+    <tbody>
+      <tr class="pdp__spec-row"><th scope="row">XS</th><td>54 cm</td><td>66 cm</td><td>60 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">S</th><td>57 cm</td><td>68 cm</td><td>62 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">M</th><td>60 cm</td><td>70 cm</td><td>64 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">L</th><td>63 cm</td><td>72 cm</td><td>66 cm</td></tr>
+      <tr class="pdp__spec-row"><th scope="row">XL</th><td>66 cm</td><td>74 cm</td><td>68 cm</td></tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="3">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/tech/Custom%20Powerbank%204000mAh%2010W%20.avif');"></span>
+          <span class="why-us-accordion__title">Custom Powerbank 4000mAh 10W</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Capacity</div><div class="pdp__info-row-text">4000 mAh</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Output</div><div class="pdp__info-row-text">10W USB-A</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Recycled ABS housing</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">6.5 x 1.3 x 10.5 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front face</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">UV print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Certifications</div><div class="pdp__info-row-text">CE, FCC</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-3340-10099</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A backup that fits in any pocket</div><div class="pdp__info-row-text">Slim enough at 1.3 cm thick to slide into a bag pocket without adding bulk, so it's the one that actually gets carried rather than left in a drawer.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Enough charge for a real day</div><div class="pdp__info-row-text">4000 mAh covers most phones for a near-full charge, plenty for a commute, a conference day, or a long meeting stretch away from an outlet.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Branding that stays put</div><div class="pdp__info-row-text">UV print on the front face holds up better than a sticker through daily pocket-and-bag wear &mdash; confirmed with a free digital mockup before production.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A practical, budget-friendly essential</div><div class="pdp__info-row-text">Lower capacity than the flagship model, but priced to bundle in volume for a whole team without stretching a kit's budget.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Powerbank 4000mAh 10W</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>6.5 x 1.3 x 10.5 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="4">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/packaging/fullcolour-closed.png');"></span>
+          <span class="why-us-accordion__title">Custom Welcome Mailer Box</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Corrugated board, E-flute</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Finish</div><div class="pdp__info-row-text">Full colour print, matte lamination</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">F59 (32 x 18.2 x 9 cm)</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Offset print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Assembly</div><div class="pdp__info-row-text">Flat-packed, self-locking base</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-9059-40021</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">The first thing a new hire touches</div><div class="pdp__info-row-text">Before anyone reads a single onboarding doc, they open this box &mdash; it's doing more first-impression work than any welcome email ever will.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Sized to fit a full kit</div><div class="pdp__info-row-text">F59 dimensions give enough depth for a notebook, bottle and a few smaller pieces to sit without rattling around or needing extra padding.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Flat-packed until it's needed</div><div class="pdp__info-row-text">Ships and stores flat, so warehousing a run of these doesn't eat the space a fully assembled box would &mdash; it's built into shape only when it's being filled.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Full-colour branding, inside and out</div><div class="pdp__info-row-text">Offset print with matte lamination covers the whole exterior, so the box itself carries your brand the moment it lands on a desk, not just what's inside it.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Welcome Mailer Box</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>F59 (32 x 18.2 x 9 cm)</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
   </div>
 </section>
@@ -331,6 +501,7 @@
 </div>
 
 <script src="pdp.js"></script>
+<script src="why-us-accordion.js"></script>
 <script src="item-edit-drawer.js"></script>
 
 <script src="password-gate.js"></script>

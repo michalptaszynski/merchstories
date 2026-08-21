@@ -1,5 +1,5 @@
 (function () {
-  var items = document.querySelectorAll('#whyUsAccordion .why-us-accordion__item');
+  var items = document.querySelectorAll('.why-us-accordion .why-us-accordion__item');
   if (!items.length) return;
 
   var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -13,6 +13,7 @@
 
   items.forEach(function (item) {
     var fill = item.querySelector('.why-us-accordion__fill');
+    var rowBtn = item.querySelector('.why-us-accordion__row');
 
     if (canHover && fill) {
       item.addEventListener('mouseenter', function (e) {
@@ -35,15 +36,18 @@
       });
     }
 
-    item.addEventListener('click', function () {
+    if (!rowBtn) return;
+
+    rowBtn.addEventListener('click', function () {
       var isActive = item.classList.contains('is-active');
       items.forEach(function (i) {
         i.classList.remove('is-active');
-        i.setAttribute('aria-expanded', 'false');
+        var btn = i.querySelector('.why-us-accordion__row');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       });
       if (!isActive) {
         item.classList.add('is-active');
-        item.setAttribute('aria-expanded', 'true');
+        rowBtn.setAttribute('aria-expanded', 'true');
       }
     });
   });

@@ -21,8 +21,32 @@
 <section class="pdp">
 
   <div class="pdp__hero">
-    <div class="pdp__stage">
-      <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia"></div>
+    <div class="pdp__stage-wrap">
+      <div class="pdp__stage pdp__stage--gallery">
+        <div class="pdp__stage-collage" id="pdpStageCollage">
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Matte%20Ceramic%20Mug%20300ml.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif');"></div>
+          <div class="pdp__stage-collage-tile" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></div>
+          <div class="pdp__stage-collage-tile"></div>
+          <div class="pdp__stage-collage-tile"></div>
+        </div>
+        <div class="pdp__stage-media pdp__stage-media--fill-width" id="pdpStageMedia" style="display: none; background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></div>
+      </div>
+      <div class="pdp__gallery" id="pdpGallery">
+        <button type="button" class="pdp__gallery-thumb pdp__gallery-thumb--collage is-active" aria-label="All products">
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/drinkware/Custom%20Matte%20Ceramic%20Mug%20300ml.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif');"></span>
+          <span class="pdp__gallery-thumb-tile" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></span>
+          <span class="pdp__gallery-thumb-tile"></span>
+          <span class="pdp__gallery-thumb-tile"></span>
+        </button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');" aria-label="Custom A5 Notebook With Hard Cover"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/drinkware/Custom%20Matte%20Ceramic%20Mug%20300ml.avif" style="background-image: url('assets/photos/shop/drinkware/Custom%20Matte%20Ceramic%20Mug%20300ml.avif');" aria-label="Custom Matte Ceramic Mug 300ml"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif" style="background-image: url('assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif');" aria-label="Custom Antibacterial Stylus Ballpoint Pen"></button>
+        <button type="button" class="pdp__gallery-thumb" data-img="assets/photos/shop/packaging/onecolor-closed.png" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');" aria-label="Custom Gift Mailer Box"></button>
+      </div>
     </div>
 
     <aside class="pdp__buy">
@@ -83,82 +107,179 @@
 
 </section>
 
-<section class="pdp__info">
+<section class="pdp__accordion-section">
+  <div class="why-us-accordion" id="pdpAccordion">
+    <div class="why-us-accordion__item is-active" data-index="0">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="true">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/office/Custom%20A5%20Notebook%20With%20Hard%20Cover.avif');"></span>
+          <span class="why-us-accordion__title">Custom A5 Notebook With Hard Cover</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
   <div class="pdp__info-nav">
     <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
     <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
-    <button type="button" class="pdp__info-tab" data-tab="sizechart">What&rsquo;s inside</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
   </div>
   <div class="pdp__info-content">
-    <div class="pdp__info-panel is-active" data-panel="specification">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Data for current product configuration</div>
-        <div class="pdp__info-row-text">The Launch Day Kit</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Products in this kit</div>
-        <div class="pdp__info-row-text">4</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Total pieces</div>
-        <div class="pdp__info-row-text">200</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Recommended for</div>
-        <div class="pdp__info-row-text">Product launches, press days and briefings</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Box</div>
-        <div class="pdp__info-row-text">Custom Gift Mailer Box included</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Branding</div>
-        <div class="pdp__info-row-text">Logo applied to every item, one placement style across the kit</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Packing</div>
-        <div class="pdp__info-row-text">Individually packed inside the mailer box, ready for a press table</div>
-      </div>
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Format</div><div class="pdp__info-row-text">A5, 96 sheets</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Paper</div><div class="pdp__info-row-text">80 gsm lined paper, recycled option available</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Cover</div><div class="pdp__info-row-text">Hard cover, PU finish</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">14 x 1.6 x 21 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Front cover, centred</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Foil stamp / deboss</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Extras</div><div class="pdp__info-row-text">Elastic closure, ribbon bookmark, back pocket</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-5201-30012</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A cover that holds its shape</div><div class="pdp__info-row-text">The hard PU cover keeps corners sharp even after months in a bag, so it still looks new at the next onboarding session or sprint planning.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Foil or deboss, not a sticker</div><div class="pdp__info-row-text">Your logo goes on via foil stamp or deboss directly into the cover, which reads as considerably more premium than a printed label and won't peel.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">96 pages of actual lined paper</div><div class="pdp__info-row-text">Enough room for a full onboarding period or a quarter's worth of meeting notes, on paper that takes ink well without bleeding through.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Details that keep it closed</div><div class="pdp__info-row-text">An elastic band keeps it shut in a bag, a ribbon marks the current page, and a back pocket holds loose business cards or a folded handout.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom A5 Notebook With Hard Cover</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>14 x 1.6 x 21 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="description">
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Made for launch day</div>
-        <div class="pdp__info-row-text">The Launch Day Kit bundles the pieces that sit well on a press table &mdash; a notebook and pen for note-taking, a mug for the coffee line, all boxed together so it reads as one considered gift, not a grab bag.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Built for a full room</div>
-        <div class="pdp__info-row-text">Sized for a real event headcount: 50 of each item by default. Adjust any line with the Edit button before you order, depending on your guest list.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Consistent branding across every piece</div>
-        <div class="pdp__info-row-text">Your logo is applied the same way across the notebook, mug and pen, so the kit reads as one cohesive set rather than three unrelated giveaways. Our team confirms placement and sizing with a free digital mockup before production.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Ready to ship, ready to open</div>
-        <div class="pdp__info-row-text">Every item is individually packed inside the Custom Gift Mailer Box, so it arrives at the venue &mdash; or a journalist&rsquo;s desk &mdash; as a single, unboxing-ready package.</div>
-      </div>
-      <div class="pdp__info-row">
-        <div class="pdp__info-row-label">Swap anything before you order</div>
-        <div class="pdp__info-row-text">Not quite the right mix for your event? Use Edit on any line to change the product, quantity, or colour for that item without rebuilding the whole kit from scratch.</div>
-      </div>
+    <div class="why-us-accordion__item" data-index="1">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/drinkware/Custom%20Matte%20Ceramic%20Mug%20300ml.avif');"></span>
+          <span class="why-us-accordion__title">Custom Matte Ceramic Mug 300ml</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Capacity</div><div class="pdp__info-row-text">300 ml</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Matte-finish ceramic</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">8 x 9.5 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Wrap-around</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Sublimation</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Care instructions</div><div class="pdp__info-row-text">Dishwasher and microwave safe</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-4301-22067</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A matte finish that reads premium</div><div class="pdp__info-row-text">The soft-touch matte glaze feels different in the hand than a standard glossy mug, closer to something you'd pick up in a coffee shop than a promo table.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">The desk item people keep</div><div class="pdp__info-row-text">A mug earns a permanent spot on a desk in a way most swag doesn't, which makes it one of the highest-visibility, lowest-cost pieces in a kit.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Full wrap-around branding</div><div class="pdp__info-row-text">Sublimation print covers the whole circumference, so the design reads no matter which way the mug is facing on a shelf or desk.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Easy to actually maintain</div><div class="pdp__info-row-text">Dishwasher and microwave safe, so it survives daily office use without special handling instructions nobody reads anyway.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Matte Ceramic Mug 300ml</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>8 x 9.5 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
-    <div class="pdp__info-panel" data-panel="sizechart">
-      <table class="pdp__spec-table pdp__spec-table--sizes">
-        <caption class="visually-hidden">What's inside The Launch Day Kit, dimensions and quantities</caption>
-        <thead>
-          <tr class="pdp__spec-row">
-            <th scope="col">Product</th>
-            <th scope="col">Dimensions</th>
-            <th scope="col">Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="pdp__spec-row"><th scope="row">Custom A5 Notebook With Hard Cover</th><td>14 x 1.6 x 21 cm</td><td>50 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Matte Ceramic Mug 300ml</th><td>8 x 9.5 cm</td><td>50 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Antibacterial Stylus Ballpoint Pen</th><td>1.2 x 14 cm</td><td>50 pieces</td></tr>
-          <tr class="pdp__spec-row"><th scope="row">Custom Gift Mailer Box</th><td>F52 (30 x 20 x 8 cm)</td><td>50 pieces</td></tr>
-        </tbody>
-      </table>
+    <div class="why-us-accordion__item" data-index="2">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/office/Custom%20Antibacterial%20Stylus%20Ballpoint%20Pen%20.avif');"></span>
+          <span class="why-us-accordion__title">Custom Antibacterial Stylus Ballpoint Pen</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Antibacterial ABS plastic barrel</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Ink</div><div class="pdp__info-row-text">Black, medium point</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Extra</div><div class="pdp__info-row-text">Capacitive stylus tip</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">1.2 x 14 cm</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print position</div><div class="pdp__info-row-text">Barrel</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Pad print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-5340-31145</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Two tools in one</div><div class="pdp__info-row-text">A working ballpoint on one end and a capacitive stylus tip on the other &mdash; useful at a badge check-in table where phones and tablets outnumber notepads.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">An additive that actually does something</div><div class="pdp__info-row-text">The barrel is treated with an antibacterial additive, a small detail that reads as thoughtful at a press event or a shared reception desk.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A clean run for your logo</div><div class="pdp__info-row-text">The barrel gives an unbroken surface for pad-printed branding, easy to read whether it's in a hand or sitting in a badge holder tray.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Light enough for a big drop</div><div class="pdp__info-row-text">Built to bundle in volume for press days and launch events where a lot of these change hands in a single afternoon.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Antibacterial Stylus Ballpoint Pen</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>1.2 x 14 cm</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
+    </div>
+    <div class="why-us-accordion__item" data-index="3">
+      <span class="why-us-accordion__fill" aria-hidden="true"></span>
+      <button type="button" class="why-us-accordion__row" aria-expanded="false">
+        <span class="why-us-accordion__row-left">
+          <span class="why-us-accordion__thumb" style="background-image: url('assets/photos/shop/packaging/onecolor-closed.png');"></span>
+          <span class="why-us-accordion__title">Custom Gift Mailer Box</span>
+        </span>
+        <span class="why-us-accordion__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <span class="why-us-accordion__desc"><div class="pdp__info">
+  <div class="pdp__info-nav">
+    <button type="button" class="pdp__info-tab is-active" data-tab="specification">Specification</button>
+    <button type="button" class="pdp__info-tab" data-tab="description">Product description</button>
+    <button type="button" class="pdp__info-tab" data-tab="sizechart">Size chart</button>
+  </div>
+  <div class="pdp__info-content">
+<div class="pdp__info-panel is-active" data-panel="specification">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Material</div><div class="pdp__info-row-text">Corrugated board, E-flute</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Finish</div><div class="pdp__info-row-text">Full colour print, matte lamination</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Dimensions</div><div class="pdp__info-row-text">F52 (30 x 20 x 8 cm)</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Print technique</div><div class="pdp__info-row-text">Offset print</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Assembly</div><div class="pdp__info-row-text">Flat-packed, self-locking base</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Variant SKU</div><div class="pdp__info-row-text">ph-9052-40033</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="description">
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A box built for gifting, not just shipping</div><div class="pdp__info-row-text">The unboxing is part of the gift &mdash; a plain shipping carton undercuts everything inside it, this one doesn't.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">A snug fit for a small set</div><div class="pdp__info-row-text">F52 dimensions suit a tighter bundle of two to four items without leaving them loose enough to shift around in transit.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Flat-packed until it's filled</div><div class="pdp__info-row-text">Ships and stores flat, folding into shape only when a kit is being packed &mdash; efficient for warehousing a large run ahead of an event or launch.</div></div>
+  <div class="pdp__info-row"><div class="pdp__info-row-label">Full-colour branding, inside and out</div><div class="pdp__info-row-text">Offset print with matte lamination covers the exterior, so the box itself does branding work before anyone opens it.</div></div>
+</div>
+<div class="pdp__info-panel" data-panel="sizechart">
+  <table class="pdp__spec-table pdp__spec-table--sizes">
+    <caption class="visually-hidden">Dimensions for Custom Gift Mailer Box</caption>
+    <thead><tr class="pdp__spec-row"><th scope="col">Dimensions</th></tr></thead>
+    <tbody><tr class="pdp__spec-row"><td>F52 (30 x 20 x 8 cm)</td></tr></tbody>
+  </table>
+</div>
+  </div>
+</div></span>
     </div>
   </div>
 </section>
@@ -321,6 +442,7 @@
 </div>
 
 <script src="pdp.js"></script>
+<script src="why-us-accordion.js"></script>
 <script src="item-edit-drawer.js"></script>
 
 <script src="password-gate.js"></script>

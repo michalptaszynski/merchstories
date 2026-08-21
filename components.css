@@ -1229,14 +1229,8 @@
   width: 100%;
   padding-block: var(--space-8);
   padding-inline: var(--space-4);
-  border: 0;
   border-bottom: 1px solid var(--rich-blue-15);
   overflow: hidden;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-  color: inherit;
-  font: inherit;
 }
 .why-us-accordion__fill {
   position: absolute;
@@ -1257,6 +1251,29 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+.why-us-accordion__row-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+.why-us-accordion__thumb {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  background-color: var(--gray-100);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .why-us-accordion__title {
   font-family: var(--font-base);
@@ -1839,14 +1856,23 @@
   grid-template-columns: 62% 1fr;
   gap: var(--space-10);
   align-items: start;
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--space-24);
 }
 
 /* -- stage (single tile, arrow-navigated) -- */
+.pdp__stage-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
 .pdp__stage {
   position: relative;
   height: 784px;
   background-color: var(--gray-200);
+}
+/* 100vh minus utility bar (36px) + sticky nav (56px) + .pdp top padding + stage/gallery gap + gallery thumb row (72px) + bottom breathing room, so the gallery never sits below the fold */
+.pdp__stage--gallery {
+  height: min(784px, calc(100vh - 36px - 56px - var(--space-8) - var(--space-4) - 72px - var(--space-6)));
 }
 .pdp__stage-media {
   width: 100%;
@@ -1857,6 +1883,72 @@
 }
 .pdp__stage-media--fill-width {
   background-size: 100% auto;
+}
+.pdp__stage-collage {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--white);
+}
+.pdp__stage-collage--tall-first {
+  grid-template-rows: repeat(2, 1fr);
+}
+.pdp__stage-collage--tall-first .pdp__stage-collage-tile:first-child {
+  grid-row: span 2;
+}
+.pdp__stage-collage-tile {
+  box-sizing: border-box;
+  padding: 12.5%;
+  background-color: var(--gray-100);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.pdp__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.pdp__gallery-thumb {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+  background-color: var(--gray-100);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+.pdp__gallery-thumb:hover {
+  opacity: 0.75;
+}
+.pdp__gallery-thumb.is-active {
+  opacity: 1;
+  border-color: var(--color-text-primary);
+}
+.pdp__gallery-thumb--collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  padding: 0;
+  background: var(--white);
+  overflow: hidden;
+}
+.pdp__gallery-thumb--collage.pdp__gallery-thumb--tall-first {
+  grid-template-rows: repeat(2, 1fr);
+}
+.pdp__gallery-thumb--collage.pdp__gallery-thumb--tall-first .pdp__gallery-thumb-tile:first-child {
+  grid-row: span 2;
+}
+.pdp__gallery-thumb-tile {
+  background-color: var(--gray-100);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .pdp__stage-arrow {
   position: absolute;
@@ -2076,10 +2168,6 @@
   align-items: center;
   gap: var(--space-4);
   padding-block: var(--space-4);
-  border-top: 1px solid var(--color-border-default);
-}
-.pdp-bundle-item:last-child {
-  border-bottom: 1px solid var(--color-border-default);
 }
 .pdp-bundle-item__thumb {
   width: 72px;
@@ -2135,7 +2223,7 @@
 .pdp__info {
   background: var(--white);
   display: flex;
-  padding: var(--space-10) var(--space-6);
+  padding: var(--space-12) var(--space-6);
 }
 .pdp__info-nav {
   flex: 0 0 200px;
@@ -2243,10 +2331,27 @@
 
 /* -- recommendation carousels -- */
 .pdp__recs {
-  padding-block: var(--space-10);
+  padding-block: var(--space-12);
 }
 .pdp__info + .pdp__recs {
   padding-top: 0;
+}
+.pdp__accordion-section {
+  background: var(--white);
+  padding-block: var(--space-12);
+}
+.pdp__accordion-section + .pdp__recs {
+  padding-top: 0;
+}
+.pdp__accordion-section .why-us-accordion__desc {
+  max-width: none;
+}
+.pdp__accordion-section .why-us-accordion__item.is-active .why-us-accordion__desc {
+  max-height: 2600px;
+}
+.pdp__accordion-section .why-us-accordion__desc .pdp__info {
+  padding: var(--space-6) 0 0;
+  background: none;
 }
 .pdp__recs + .section--cta {
   padding-top: calc(var(--space-20) * 2);
