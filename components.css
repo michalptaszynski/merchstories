@@ -2800,9 +2800,7 @@ body.mobile-nav-open .utility-bar {
 }
 .contact-form-page__head {
   text-align: left;
-  width: 100%;
   max-width: 440px;
-  margin-inline: auto;
 }
 .contact-form-page__title {
   font-size: clamp(2.5rem, 6vw, var(--fs-64));
@@ -2822,7 +2820,7 @@ body.mobile-nav-open .utility-bar {
 }
 @media (min-width: 900px) {
   .contact-form-page {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 0;
     align-items: start;
     padding: var(--space-12) var(--space-10) var(--space-20);
