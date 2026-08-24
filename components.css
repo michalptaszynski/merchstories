@@ -225,6 +225,7 @@
 @media (min-width: 1180px) {
   .site-header__links { display: flex; align-items: center; gap: 0; margin-inline: -12px; }
   .site-header__hamburger { display: none; }
+  .site-header__shop-link { display: none; }
   .site-header__secondary .site-header__lang-btn { display: inline-flex; }
 }
 
@@ -1097,6 +1098,17 @@
 .category-card:hover .category-card__img {
   transform: scale(1.05);
 }
+/* Set/bundle tiles are staged lifestyle photography (already full-bleed
+   compositions) — always fill the tile, regardless of which grid/section
+   they sit in. Single-product tiles get shrunk below per-container. */
+.category-card[href^="bundle-"] .category-card__media {
+  padding: 0;
+}
+.category-card[href^="bundle-"] .category-card__img {
+  background-size: cover;
+  background-repeat: initial;
+  background-origin: initial;
+}
 .section--bestsellers .category-card__media {
   box-sizing: border-box;
   padding: 15%;
@@ -1105,9 +1117,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: content-box;
-}
-.section--bundles .category-card__img {
-  background-size: cover;
 }
 .bundles-grid {
   display: grid;
@@ -2368,14 +2377,6 @@
   background-repeat: no-repeat;
   background-origin: content-box;
 }
-.pdp__recs--bundles .category-card__media {
-  padding: 0;
-}
-.pdp__recs--bundles .category-card__img {
-  background-size: cover;
-  background-repeat: initial;
-  background-origin: initial;
-}
 
 @media (max-width: 900px) {
   .pdp__hero { grid-template-columns: 1fr; }
@@ -3351,35 +3352,8 @@
 }
 
 /* ---------- Quote review ---------- */
-.quote-review-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: var(--z-modal);
-  background: var(--overlay-scrim-40);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--duration-base) var(--ease), visibility var(--duration-base);
-}
-.quote-review-overlay.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-.quote-review {
-  position: fixed;
-  inset: 0;
-  z-index: calc(var(--z-modal) + 1);
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: opacity var(--duration-slow) var(--ease), transform var(--duration-slow) var(--ease), visibility var(--duration-slow);
+.quote-review-page {
   overflow-y: auto;
-}
-.quote-review.is-open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 .quote-review__topbar {
   position: sticky;
@@ -3395,6 +3369,7 @@
 }
 .quote-review__body {
   flex: 1;
+  min-height: calc(100vh - 56px);
   display: grid;
   grid-template-columns: minmax(0, 480px) 1fr;
 }
@@ -3430,7 +3405,7 @@
   justify-content: center;
 }
 .quote-review__title {
-  font-size: var(--fs-40);
+  font-size: var(--fs-20);
   font-weight: 500;
   letter-spacing: -0.01em;
   margin-bottom: var(--space-8);
@@ -3458,7 +3433,7 @@
   max-width: 560px;
 }
 .quote-review__form-title {
-  font-size: var(--fs-40);
+  font-size: var(--fs-20);
   font-weight: 500;
   letter-spacing: -0.01em;
   margin-bottom: var(--space-8);
