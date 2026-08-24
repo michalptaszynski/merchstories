@@ -138,7 +138,7 @@
 }
 .nav-megamenu__col {
   flex-shrink: 0;
-  width: 160px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -150,14 +150,12 @@
   letter-spacing: -0.01em;
   margin-bottom: var(--space-2);
 }
-.nav-megamenu__sublink {
+.nav-megamenu__desc {
   font-family: var(--font-mono);
-  font-size: var(--fs-13);
+  font-size: var(--fs-14);
   letter-spacing: -0.01em;
+  line-height: 1.5;
   color: var(--color-text-secondary);
-}
-.nav-megamenu__sublink:hover {
-  color: var(--color-text-primary);
 }
 .nav-megamenu__seeall {
   margin-top: var(--space-2);
