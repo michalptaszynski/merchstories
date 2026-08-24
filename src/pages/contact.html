@@ -108,10 +108,11 @@
     <div class="contact-form__field">
       <label for="cfFile">File upload</label>
       <label class="contact-form__upload" for="cfFile">
-        <input id="cfFile" name="file" type="file" class="visually-hidden" multiple>
+        <input id="cfFile" name="file" type="file" class="visually-hidden" multiple accept=".jpg,.jpeg,.png,.pdf,.ai,.eps,.doc,.docx,.xls,.xlsx">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
         <span>Click to upload or drag and drop. Max 25&nbsp;MB.</span>
       </label>
+      <p class="contact-form__upload-hint">Accepted formats: JPG, PNG, PDF, AI, EPS, DOC, XLS</p>
       <ul class="contact-form__files" id="cfFilesList" hidden></ul>
     </div>
 

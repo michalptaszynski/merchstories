@@ -2924,6 +2924,12 @@ body.mobile-nav-open .utility-bar {
   border-color: var(--rich-blue);
   background: var(--gray-100);
 }
+.contact-form__upload-hint {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  color: var(--color-text-muted);
+}
 .contact-form__files {
   display: flex;
   flex-direction: column;
