@@ -53,7 +53,11 @@
     </nav>
     <div class="site-header__left">
       <button type="button" class="site-header__hamburger" id="navHamburgerBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileNavDrawer" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <span class="site-header__hamburger-icon">
+          <span class="site-header__hamburger-line"></span>
+          <span class="site-header__hamburger-line"></span>
+          <span class="site-header__hamburger-line"></span>
+        </span>
       </button>
       <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Merch Stories" class="logo-mark"></a>
     </div>
@@ -419,31 +423,33 @@
 </header>
 
 <div class="mobile-nav-drawer-overlay" id="mobileNavOverlay"></div>
-<aside class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-labelledby="mobileNavTitle" aria-hidden="true">
-  <div class="mobile-nav-drawer__header">
-    <p class="mobile-nav-drawer__title" id="mobileNavTitle">Menu</p>
-    <button type="button" class="mobile-nav-drawer__close" id="mobileNavClose" aria-label="Close menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
+<aside class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+  <div class="mobile-nav-drawer__body">
+    <nav class="mobile-nav-drawer__links" aria-label="Categories">
+      <a href="shop.html">Shop all</a>
+      <a href="shop.html?category=packaging" data-filter="packaging">Packaging</a>
+      <a href="shop.html?category=sets" data-filter="sets">Sets</a>
+      <a href="shop.html?category=clothing" data-filter="clothing">Clothing</a>
+      <a href="shop.html?category=bags" data-filter="bags">Bags</a>
+      <a href="shop.html?category=drinkware" data-filter="drinkware">Drinkware</a>
+      <a href="shop.html?category=tech" data-filter="tech">Tech</a>
+      <a href="shop.html?category=office" data-filter="office">Office</a>
+      <a href="shop.html?category=travel" data-filter="travel">Travel</a>
+      <a href="shop.html?category=home" data-filter="home">Home</a>
+    </nav>
+    <div class="mobile-nav-drawer__divider"></div>
+    <nav class="mobile-nav-drawer__utility" aria-label="Utility">
+      <a href="platform.html">Platform</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="contact.html">Contact us</a>
+    </nav>
+    <div class="mobile-nav-drawer__footer">
+      <button type="button" class="btn btn--dark mobile-nav-drawer__quote-btn js-open-quote" aria-haspopup="dialog" aria-controls="quoteDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span>Quote</span>
+      </button>
+    </div>
   </div>
-  <nav class="mobile-nav-drawer__links" aria-label="Categories">
-    <a href="shop.html">Shop all</a>
-    <a href="shop.html?category=packaging" data-filter="packaging">Packaging</a>
-    <a href="shop.html?category=sets" data-filter="sets">Sets</a>
-    <a href="shop.html?category=clothing" data-filter="clothing">Clothing</a>
-    <a href="shop.html?category=bags" data-filter="bags">Bags</a>
-    <a href="shop.html?category=drinkware" data-filter="drinkware">Drinkware</a>
-    <a href="shop.html?category=tech" data-filter="tech">Tech</a>
-    <a href="shop.html?category=office" data-filter="office">Office</a>
-    <a href="shop.html?category=travel" data-filter="travel">Travel</a>
-    <a href="shop.html?category=home" data-filter="home">Home</a>
-  </nav>
-  <div class="mobile-nav-drawer__divider"></div>
-  <nav class="mobile-nav-drawer__utility" aria-label="Utility">
-    <a href="platform.html">Platform</a>
-    <a href="how-it-works.html">How it works</a>
-    <a href="contact.html">Contact us</a>
-  </nav>
 </aside>
 
 <div class="quote-drawer-overlay" id="quoteDrawerOverlay"></div>
@@ -660,6 +666,7 @@
 
 <div class="contact-form-page">
   <div class="contact-form-page__head">
+    <p class="shop-breadcrumb"><a href="index.html">Merch Stories</a> / <span>Get in touch</span></p>
     <h1 class="contact-form-page__title">Get in touch</h1>
     <p class="contact-form-page__subtitle">Tell us about your project. Free designs and a full quote within 24 hours.</p>
   </div>
