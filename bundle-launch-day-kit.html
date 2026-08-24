@@ -662,18 +662,6 @@
       <div class="pdp__swatch-label" id="itemEditSwatchLabel"></div>
     </div>
 
-    <div class="item-edit-drawer__section">
-      <p class="pdp__field-label">Quantity</p>
-      <div class="pdp__qty" id="itemEditQty">
-        <button type="button" class="pdp__qty-toggle" id="itemEditQtyToggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="itemEditQtyPanel">
-          <span class="pdp__qty-toggle-qty"></span>
-          <span class="pdp__qty-toggle-total"></span>
-          <svg class="pdp__qty-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="pdp__qty-panel" id="itemEditQtyPanel" role="listbox"></div>
-      </div>
-    </div>
-
     <div class="item-edit-drawer__section" id="itemEditSizeRow" hidden>
       <p class="pdp__field-label">Size (external)</p>
       <div class="pdp__qty-toggle pdp__qty-toggle--static" id="itemEditSizeBox">
@@ -743,7 +731,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom A5 Notebook With Hard Cover</p>
             <p class="pdp-bundle-item__meta">14 x 1.6 x 21 cm</p>
-            <p class="pdp-bundle-item__meta">50 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -752,7 +739,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom Matte Ceramic Mug 300ml</p>
             <p class="pdp-bundle-item__meta">8 x 9.5 cm</p>
-            <p class="pdp-bundle-item__meta">50 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -761,7 +747,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom Antibacterial Stylus Ballpoint Pen</p>
             <p class="pdp-bundle-item__meta">1.2 x 14 cm</p>
-            <p class="pdp-bundle-item__meta">50 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -770,9 +755,34 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom Gift Mailer Box</p>
             <p class="pdp-bundle-item__meta">F52 (30 x 20 x 8 cm)</p>
-            <p class="pdp-bundle-item__meta">50 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+        </div>
+      </div>
+
+      <p class="pdp__field-label">Quantity</p>
+      <div class="pdp__qty" id="pdpQty" data-unit-singular="kit" data-unit-plural="kits">
+        <button type="button" class="pdp__qty-toggle" id="pdpQtyToggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="pdpQtyPanel">
+          <span class="pdp__qty-toggle-qty">1 kit</span>
+          <span class="pdp__qty-toggle-total">$925.00</span>
+          <svg class="pdp__qty-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="pdp__qty-panel" id="pdpQtyPanel" role="listbox">
+          <button type="button" class="pdp__qty-tier is-active" role="option" aria-selected="true" data-qty="1">
+            <span class="pdp__qty-tier-qty">1</span>
+            <span class="pdp__qty-tier-unit">$925.00/kit</span>
+            <span class="pdp__qty-tier-total">$925.00</span>
+          </button>
+          <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="2">
+            <span class="pdp__qty-tier-qty">2</span>
+            <span class="pdp__qty-tier-unit">$832.50/kit</span>
+            <span class="pdp__qty-tier-total">$1,665.00</span>
+          </button>
+          <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="4">
+            <span class="pdp__qty-tier-qty">4</span>
+            <span class="pdp__qty-tier-unit">$740.00/kit</span>
+            <span class="pdp__qty-tier-total">$2,960.00</span>
+          </button>
         </div>
       </div>
 

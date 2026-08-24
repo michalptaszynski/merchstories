@@ -662,18 +662,6 @@
       <div class="pdp__swatch-label" id="itemEditSwatchLabel"></div>
     </div>
 
-    <div class="item-edit-drawer__section">
-      <p class="pdp__field-label">Quantity</p>
-      <div class="pdp__qty" id="itemEditQty">
-        <button type="button" class="pdp__qty-toggle" id="itemEditQtyToggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="itemEditQtyPanel">
-          <span class="pdp__qty-toggle-qty"></span>
-          <span class="pdp__qty-toggle-total"></span>
-          <svg class="pdp__qty-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="pdp__qty-panel" id="itemEditQtyPanel" role="listbox"></div>
-      </div>
-    </div>
-
     <div class="item-edit-drawer__section" id="itemEditSizeRow" hidden>
       <p class="pdp__field-label">Size (external)</p>
       <div class="pdp__qty-toggle pdp__qty-toggle--static" id="itemEditSizeBox">
@@ -745,7 +733,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom A5 Notebook With Hard Cover</p>
             <p class="pdp-bundle-item__meta">14 x 1.6 x 21 cm</p>
-            <p class="pdp-bundle-item__meta">25 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -754,7 +741,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom Tritan Bottle 500ml</p>
             <p class="pdp-bundle-item__meta">6 x 19.5 cm</p>
-            <p class="pdp-bundle-item__meta">25 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -763,7 +749,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom 15" Rolltop Laptop Backpack with Reinforced Base</p>
             <p class="pdp-bundle-item__meta">30 x 15 x 45 cm</p>
-            <p class="pdp-bundle-item__meta">25 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -772,7 +757,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom Plant Based Wax Candle In Bamboo 160g</p>
             <p class="pdp-bundle-item__meta">8 x 7 cm</p>
-            <p class="pdp-bundle-item__meta">25 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -781,7 +765,6 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom Unisex Oversized Organic Cotton Sweatshirt</p>
             <p class="pdp-bundle-item__meta">Unisex, S&ndash;XL</p>
-            <p class="pdp-bundle-item__meta">25 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
         </div>
@@ -790,9 +773,34 @@
           <div class="pdp-bundle-item__body">
             <p class="pdp-bundle-item__name">Custom Gift Mailer Box</p>
             <p class="pdp-bundle-item__meta">F52 (30 x 20 x 8 cm)</p>
-            <p class="pdp-bundle-item__meta">25 pieces</p>
           </div>
           <button type="button" class="btn btn--stroke btn--sm pdp-bundle-item__edit"><span>Edit</span></button>
+        </div>
+      </div>
+
+      <p class="pdp__field-label">Quantity</p>
+      <div class="pdp__qty" id="pdpQty" data-unit-singular="kit" data-unit-plural="kits">
+        <button type="button" class="pdp__qty-toggle" id="pdpQtyToggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="pdpQtyPanel">
+          <span class="pdp__qty-toggle-qty">1 kit</span>
+          <span class="pdp__qty-toggle-total">$1,867.50</span>
+          <svg class="pdp__qty-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="pdp__qty-panel" id="pdpQtyPanel" role="listbox">
+          <button type="button" class="pdp__qty-tier is-active" role="option" aria-selected="true" data-qty="1">
+            <span class="pdp__qty-tier-qty">1</span>
+            <span class="pdp__qty-tier-unit">$1,867.50/kit</span>
+            <span class="pdp__qty-tier-total">$1,867.50</span>
+          </button>
+          <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="2">
+            <span class="pdp__qty-tier-qty">2</span>
+            <span class="pdp__qty-tier-unit">$1,680.75/kit</span>
+            <span class="pdp__qty-tier-total">$3,361.50</span>
+          </button>
+          <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="4">
+            <span class="pdp__qty-tier-qty">4</span>
+            <span class="pdp__qty-tier-unit">$1,494.00/kit</span>
+            <span class="pdp__qty-tier-total">$5,976.00</span>
+          </button>
         </div>
       </div>
 

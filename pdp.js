@@ -61,6 +61,8 @@
   var qtyToggleQty = qty ? qty.querySelector('.pdp__qty-toggle-qty') : null;
   var qtyToggleTotal = qty ? qty.querySelector('.pdp__qty-toggle-total') : null;
   var qtyTiers = Array.prototype.slice.call(document.querySelectorAll('.pdp__qty-tier'));
+  var qtyUnitSingular = qty ? (qty.dataset.unitSingular || 'piece') : 'piece';
+  var qtyUnitPlural = qty ? (qty.dataset.unitPlural || 'pieces') : 'pieces';
 
   function closeQty() {
     if (qty) qty.classList.remove('is-open');
@@ -87,7 +89,8 @@
       tier.setAttribute('aria-selected', 'true');
       var qtyVal = tier.querySelector('.pdp__qty-tier-qty').textContent;
       var totalVal = tier.querySelector('.pdp__qty-tier-total').textContent;
-      if (qtyToggleQty) qtyToggleQty.textContent = qtyVal + ' pieces';
+      var unitWord = qtyVal === '1' ? qtyUnitSingular : qtyUnitPlural;
+      if (qtyToggleQty) qtyToggleQty.textContent = qtyVal + ' ' + unitWord;
       if (qtyToggleTotal) qtyToggleTotal.textContent = totalVal;
       closeQty();
     });
