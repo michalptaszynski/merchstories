@@ -2120,6 +2120,19 @@ body.mobile-nav-open .utility-bar {
   margin-left: auto;
   margin-right: var(--space-2);
 }
+.pdp__qty-toggle-total.is-custom-quote {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-accent-alt);
+  color: var(--white);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
 .pdp__qty-chevron {
   width: 16px;
   height: 16px;
@@ -2182,6 +2195,48 @@ body.mobile-nav-open .utility-bar {
   font-size: var(--fs-13);
   font-weight: 500;
   color: var(--color-text-primary);
+}
+.pdp__qty-custom {
+  padding: var(--space-4);
+  background: var(--gray-100);
+}
+.pdp__qty-custom-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+.pdp__qty-custom-hint {
+  margin-top: 2px;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  color: var(--color-text-muted);
+}
+.pdp__qty-custom-row {
+  display: flex;
+  gap: var(--space-2);
+}
+.pdp__qty-custom-input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding-inline: var(--space-4);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--color-text-primary);
+  background: var(--white);
+}
+.pdp__qty-custom-input:focus {
+  outline: none;
+  border-color: var(--rich-blue);
+}
+.pdp__qty-custom-apply {
+  flex-shrink: 0;
+  height: 40px;
 }
 .pdp__title {
   font-family: var(--font-base);

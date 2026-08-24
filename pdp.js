@@ -79,22 +79,60 @@
     });
   }
 
+  var customInput = document.getElementById('pdpQtyCustomInput');
+  var customApply = document.getElementById('pdpQtyCustomApply');
+  var minQty = qty ? parseInt(qty.dataset.minQty, 10) : NaN;
+
+  function deactivateTiers() {
+    qtyTiers.forEach(function (t) {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+    });
+  }
+
   qtyTiers.forEach(function (tier) {
     tier.addEventListener('click', function () {
-      qtyTiers.forEach(function (t) {
-        t.classList.remove('is-active');
-        t.setAttribute('aria-selected', 'false');
-      });
+      deactivateTiers();
       tier.classList.add('is-active');
       tier.setAttribute('aria-selected', 'true');
+      if (customInput) customInput.value = '';
       var qtyVal = tier.querySelector('.pdp__qty-tier-qty').textContent;
       var totalVal = tier.querySelector('.pdp__qty-tier-total').textContent;
       var unitWord = qtyVal === '1' ? qtyUnitSingular : qtyUnitPlural;
       if (qtyToggleQty) qtyToggleQty.textContent = qtyVal + ' ' + unitWord;
-      if (qtyToggleTotal) qtyToggleTotal.textContent = totalVal;
+      if (qtyToggleTotal) {
+        qtyToggleTotal.textContent = totalVal;
+        qtyToggleTotal.classList.remove('is-custom-quote');
+      }
       closeQty();
     });
   });
+
+  function applyCustomQty() {
+    if (!customInput) return;
+    var val = parseInt(customInput.value, 10);
+    if (!val) return;
+    if (!isNaN(minQty) && val < minQty) val = minQty;
+    customInput.value = val;
+    deactivateTiers();
+    var unitWord = val === 1 ? qtyUnitSingular : qtyUnitPlural;
+    if (qtyToggleQty) qtyToggleQty.textContent = val + ' ' + unitWord;
+    if (qtyToggleTotal) {
+      qtyToggleTotal.textContent = 'Custom quote';
+      qtyToggleTotal.classList.add('is-custom-quote');
+    }
+    closeQty();
+  }
+
+  if (customApply) customApply.addEventListener('click', applyCustomQty);
+  if (customInput) {
+    customInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        applyCustomQty();
+      }
+    });
+  }
 
   var promoText = document.getElementById('pdpPromoText');
   var promoToggle = document.getElementById('pdpPromoToggle');
