@@ -3876,6 +3876,14 @@ body.mobile-nav-open .utility-bar {
 .platform-split--reverse {
   align-items: stretch;
 }
+/* Homepage "Made for business" content sits below a section-head that hugs
+   the true page edge (padding-inline only, no max-width) — drop the shared
+   .platform-split's contained centering here too, so both line up on wide
+   viewports instead of this block floating centered under a left-pinned headline. */
+.industries__steps-layout {
+  max-width: none;
+  margin-inline: 0;
+}
 /* Height = the old 4:3-derived height (based on the column's own fluid width) + 240px. */
 .platform-split__media .ph {
   height: calc((100vw - 48px) * 0.75 + 240px);
