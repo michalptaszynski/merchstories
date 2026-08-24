@@ -24,7 +24,7 @@
 
 <!-- CATEGORY: keep new categories in sync across shop.html (this row + #shopOverview + catalog grid below), src/partials/nav-header.html (megamenu) and index.html (Who we are). -->
 <h2 class="visually-hidden">Browse by category</h2>
-<div class="shop-cats">
+<div class="shop-cats category-grid">
     <a href="#" class="category-card js-category-filter" data-filter="packaging">
       <div class="category-card__media"><div class="category-card__img" style="background-image: url('assets/photos/shop/packaging/white-closed.png');"></div></div>
       <div class="category-card__body">
@@ -79,6 +79,13 @@
         <h3 class="category-card__title">Home accessories</h3>
       </div>
     </a>
+</div>
+<div class="carousel-progress">
+  <div class="carousel-progress__arrows">
+    <button type="button" class="carousel-arrow" data-dir="-1" aria-label="Previous categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button type="button" class="carousel-arrow" data-dir="1" aria-label="Next categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 6l6 6-6 6"/></svg></button>
+  </div>
+  <div class="carousel-progress__track"><div class="carousel-progress__bar"></div></div>
 </div>
 
 <div id="shopOverview">

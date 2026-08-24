@@ -11,6 +11,8 @@
 
     function updateBar() {
       var max = grid.scrollWidth - grid.clientWidth;
+      progress.hidden = max <= 1;
+      if (progress.hidden) return;
       var progressRatio = max > 0 ? grid.scrollLeft / max : 0;
       var visibleRatio = grid.clientWidth / grid.scrollWidth;
       var barWidth = Math.max(visibleRatio * 100, 8);
