@@ -3583,24 +3583,11 @@ body.mobile-nav-open .utility-bar {
   display: grid;
   grid-template-columns: minmax(0, 480px) 1fr;
 }
-.quote-review__close {
+.quote-review__back {
   position: absolute;
   top: 50%;
-  right: var(--space-6);
+  left: var(--space-6);
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-primary);
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-.quote-review__close svg {
-  width: 20px;
-  height: 20px;
 }
 .quote-review__col {
   padding: var(--space-12) var(--space-10);
