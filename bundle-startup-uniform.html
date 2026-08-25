@@ -768,38 +768,33 @@
       </div>
 
       <p class="pdp__field-label">Quantity</p>
-      <div class="pdp__qty" id="pdpQty" data-unit-singular="kit" data-unit-plural="kits" data-min-qty="1">
+      <div class="pdp__qty" id="pdpQty" data-unit-singular="kit" data-unit-plural="kits" data-min-qty="30">
         <button type="button" class="pdp__qty-toggle" id="pdpQtyToggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="pdpQtyPanel">
           <span class="pdp__qty-toggle-qty">1 kit</span>
-          <span class="pdp__qty-toggle-total">$2,128.00</span>
+          <span class="pdp__qty-toggle-total"></span>
           <svg class="pdp__qty-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="pdp__qty-panel" id="pdpQtyPanel" role="listbox">
           <button type="button" class="pdp__qty-tier is-active" role="option" aria-selected="true" data-qty="1">
             <span class="pdp__qty-tier-qty">1</span>
-            <span class="pdp__qty-tier-unit">$2,128.00/kit</span>
-            <span class="pdp__qty-tier-total">$2,128.00</span>
           </button>
           <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="2">
             <span class="pdp__qty-tier-qty">2</span>
-            <span class="pdp__qty-tier-unit">$1,915.20/kit</span>
-            <span class="pdp__qty-tier-total">$3,830.40</span>
           </button>
           <button type="button" class="pdp__qty-tier" role="option" aria-selected="false" data-qty="4">
             <span class="pdp__qty-tier-qty">4</span>
-            <span class="pdp__qty-tier-unit">$1,702.40/kit</span>
-            <span class="pdp__qty-tier-total">$6,809.60</span>
           </button>
           <div class="pdp__qty-custom">
             <label for="pdpQtyCustomInput" class="pdp__qty-custom-label">Custom quantity</label>
-            <p class="pdp__qty-custom-hint">1-kit minimum</p>
+            <p class="pdp__qty-custom-hint">30-kit minimum</p>
             <div class="pdp__qty-custom-row">
-              <input type="number" id="pdpQtyCustomInput" class="pdp__qty-custom-input" min="1" step="1" placeholder="Enter quantity">
+              <input type="number" id="pdpQtyCustomInput" class="pdp__qty-custom-input" min="30" step="1" placeholder="Enter quantity">
               <button type="button" class="btn btn--dark btn--sm pdp__qty-custom-apply" id="pdpQtyCustomApply"><span>Apply</span></button>
             </div>
           </div>
         </div>
       </div>
+      <p class="pdp__qty-from">From $1,702.40/kit</p>
 
       <button type="button" class="btn btn--dark pdp__cta js-open-quote"><span>Add to list</span></button>
     </aside>

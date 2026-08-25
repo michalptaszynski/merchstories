@@ -97,11 +97,11 @@
       tier.setAttribute('aria-selected', 'true');
       if (customInput) customInput.value = '';
       var qtyVal = tier.querySelector('.pdp__qty-tier-qty').textContent;
-      var totalVal = tier.querySelector('.pdp__qty-tier-total').textContent;
+      var totalEl = tier.querySelector('.pdp__qty-tier-total');
       var unitWord = qtyVal === '1' ? qtyUnitSingular : qtyUnitPlural;
       if (qtyToggleQty) qtyToggleQty.textContent = qtyVal + ' ' + unitWord;
       if (qtyToggleTotal) {
-        qtyToggleTotal.textContent = totalVal;
+        qtyToggleTotal.textContent = totalEl ? totalEl.textContent : '';
         qtyToggleTotal.classList.remove('is-custom-quote');
       }
       closeQty();
