@@ -2435,11 +2435,24 @@ body.mobile-nav-open .utility-bar {
   border-top: 1px solid var(--color-text-primary);
 }
 .pdp__info-panel[data-panel="specification"] .pdp__info-row,
-.pdp__info-panel[data-panel="description"] .pdp__info-row {
+.pdp__info-panel[data-panel="description"] .pdp__info-row,
+.pdp__info-panel[data-panel="options"] .pdp__info-row {
   padding-block: var(--space-4);
 }
 .pdp__info-row:last-child {
   border-bottom: 1px solid var(--color-text-primary);
+}
+.pdp__spec-group-heading {
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-top: var(--space-8);
+}
+.pdp__spec-group-heading:first-child {
+  margin-top: 0;
 }
 .pdp__info-row-label {
   flex: 0 0 30%;
