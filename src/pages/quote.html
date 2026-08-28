@@ -14,11 +14,10 @@
 <div id="siteContent" style="display:none;">
 
 <main class="quote-review-page">
-  <div class="quote-review__topbar">
-    <a href="shop.html" class="btn btn--stroke btn--sm quote-review__back"><span>Back</span></a>
-    <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Merch Stories" class="logo-mark"></a>
-  </div>
   <div class="quote-review__body">
+  <div class="quote-review__toolbar">
+    <a href="shop.html" class="btn btn--stroke btn--sm quote-review__back"><span>Back</span></a>
+  </div>
   <div class="quote-review__col quote-review__col--overview">
     <h2 class="quote-review__title">Overview</h2>
     <div class="quote-review__items" id="quoteReviewItems"></div>
@@ -39,7 +38,21 @@
   </div>
   <div class="quote-review__col quote-review__col--form">
     <div class="quote-review__form-wrap">
-      <h2 class="quote-review__form-title">Your contact details</h2>
+      <div class="quote-review__form-header">
+        <h2 class="quote-review__form-title">Your contact details</h2>
+        <div class="quote-trust-card">
+          <div class="quote-trust-card__avatars">
+            <img src="assets/photos/experts/expert-01.png" alt="" class="quote-trust-card__avatar">
+            <img src="assets/photos/experts/expert-02.png" alt="" class="quote-trust-card__avatar">
+            <img src="assets/photos/experts/expert-03.png" alt="" class="quote-trust-card__avatar">
+          </div>
+          <div class="quote-trust-card__list">
+            <div class="quote-trust-card__row">
+              <span>Free Quote in 24 Hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="quote-review__form-card">
         <form class="contact-form" id="quoteReviewForm">
           <div class="contact-form__field">
@@ -77,7 +90,6 @@
           <button type="submit" class="contact-form__submit">Request free designs &amp; quote</button>
         </form>
       </div>
-      <p class="quote-review__trust">Free quote in 24 hours &middot; Rated on Trustpilot</p>
     </div>
   </div>
   </div>
