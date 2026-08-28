@@ -918,8 +918,13 @@ body.mobile-nav-open .utility-bar {
   padding-inline: var(--space-6);
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: var(--space-8);
+}
+.site-footer__mark {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
 }
 .site-footer__cols {
   display: flex;
