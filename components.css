@@ -909,6 +909,55 @@ body.mobile-nav-open .utility-bar {
   }
 }
 
+/* ---------- Site footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--color-border-default);
+  padding-block: var(--space-8) var(--space-12);
+}
+.site-footer__inner {
+  padding-inline: var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+.site-footer__cols {
+  display: flex;
+  gap: var(--space-16);
+}
+.site-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.site-footer__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+.site-footer__col a {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  transition: color var(--duration-fast) var(--ease);
+}
+.site-footer__col a:hover {
+  color: var(--color-accent-alt);
+}
+@media (max-width: 700px) {
+  .site-footer__inner {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  .site-footer__cols {
+    gap: var(--space-10);
+  }
+}
+
 /* ---------- Lifestyle section ---------- */
 .lifestyle__panel {
   position: relative;

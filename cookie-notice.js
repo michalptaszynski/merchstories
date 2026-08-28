@@ -7,13 +7,19 @@
   var settingsModal = document.getElementById('cookieSettingsModal');
   var cancelModal = document.getElementById('cookieCancelModal');
   var analyticsToggle = document.getElementById('cookieAnalyticsToggle');
+  var footerSettingsLink = document.getElementById('footerCookieSettings');
 
-  if (localStorage.getItem(STORAGE_KEY)) return;
+  var stored = localStorage.getItem(STORAGE_KEY);
+  var hasConsent = !!stored;
 
-  notice.hidden = false;
+  if (!hasConsent) {
+    notice.hidden = false;
+  }
 
   function persist(consent, analytics) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ consent: consent, analytics: analytics }));
+    stored = JSON.stringify({ consent: consent, analytics: analytics });
+    localStorage.setItem(STORAGE_KEY, stored);
+    hasConsent = true;
   }
 
   function closeAll() {
@@ -26,6 +32,9 @@
 
   function openSettings() {
     notice.hidden = true;
+    if (stored) {
+      analyticsToggle.checked = JSON.parse(stored).analytics;
+    }
     overlay.classList.add('is-open');
     cancelModal.classList.remove('is-open');
     cancelModal.setAttribute('aria-hidden', 'true');
@@ -44,6 +53,14 @@
     notice.hidden = true;
   }
 
+  function cancelSettings() {
+    if (hasConsent) {
+      closeAll();
+    } else {
+      openCancelConfirm();
+    }
+  }
+
   document.getElementById('cookieNoticeAccept').addEventListener('click', function () {
     persist('accepted', true);
     dismissNotice();
@@ -53,8 +70,14 @@
     e.preventDefault();
     openSettings();
   });
+  if (footerSettingsLink) {
+    footerSettingsLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      openSettings();
+    });
+  }
 
-  document.getElementById('cookieSettingsCancel').addEventListener('click', openCancelConfirm);
+  document.getElementById('cookieSettingsCancel').addEventListener('click', cancelSettings);
   document.getElementById('cookieSettingsSave').addEventListener('click', function () {
     persist('customised', analyticsToggle.checked);
     closeAll();
@@ -72,7 +95,7 @@
     if (cancelModal.classList.contains('is-open')) {
       openSettings();
     } else if (settingsModal.classList.contains('is-open')) {
-      openCancelConfirm();
+      cancelSettings();
     }
   });
 
@@ -81,7 +104,7 @@
     if (cancelModal.classList.contains('is-open')) {
       openSettings();
     } else if (settingsModal.classList.contains('is-open')) {
-      openCancelConfirm();
+      cancelSettings();
     }
   });
 })();

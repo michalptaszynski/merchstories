@@ -1181,6 +1181,26 @@
     </div>
   </div>
 </section>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__cols">
+      <div class="site-footer__col">
+        <p class="site-footer__label">Sitemap</p>
+        <a href="shop.html">Catalog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="site-footer__col">
+        <p class="site-footer__label">Terms</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#" id="footerCookieSettings">Cookie Settings</a>
+      </div>
+    </div>
+    <div class="site-footer__col site-footer__col--contact">
+      <p class="site-footer__label">Contact</p>
+      <a href="mailto:hello@merchstories.com">hello@merchstories.com</a>
+    </div>
+  </div>
+</footer>
 
 
 </main>
@@ -1197,6 +1217,77 @@
 <script src="pdp.js"></script>
 <script src="why-us-accordion.js"></script>
 <script src="item-edit-drawer.js"></script>
+
+<div class="cookie-notice" id="cookieNotice" role="region" aria-label="Cookie notice" hidden>
+  <div class="cookie-notice__copy">
+    <p class="cookie-notice__heading">This site uses cookies</p>
+    <p class="cookie-notice__text">We use cookies (including from analytics providers) to personalise content and ads and to analyse traffic. We share information about your use of our site with our social media, advertising and analytics partners. By clicking &ldquo;Accept all&rdquo;, you consent to the use of all cookies and related data processing. You can change or withdraw your consent at any time in &ldquo;Cookie settings&rdquo;. For more information, see our <a href="#" class="cookie-notice__policy-link">Privacy Policy</a>.</p>
+  </div>
+  <div class="cookie-notice__actions">
+    <button type="button" class="btn btn--dark btn--sm" id="cookieNoticeAccept"><span>Accept all</span></button>
+    <button type="button" class="btn btn--stroke btn--sm" id="cookieNoticeSettings"><span>Cookie settings</span></button>
+    <a href="#" class="cookie-notice__more" id="cookieNoticeMore">Read more</a>
+  </div>
+</div>
+
+<div class="cookie-modal-overlay" id="cookieModalOverlay"></div>
+
+<div class="cookie-modal" id="cookieSettingsModal" role="dialog" aria-modal="true" aria-labelledby="cookieSettingsTitle" aria-hidden="true">
+  <div class="cookie-modal__header">
+    <h2 class="cookie-modal__title" id="cookieSettingsTitle">Data collection preferences on this site</h2>
+  </div>
+  <div class="cookie-modal__body">
+    <p class="cookie-modal__intro">We use data collected through cookies and JavaScript libraries to improve your browsing experience, analyse traffic on our site, deliver personalised advertising and improve our website&rsquo;s overall performance.</p>
+    <div class="cookie-modal__table">
+      <div class="cookie-modal__table-head">
+        <span>Allow</span>
+        <span>Category</span>
+        <span>Purpose</span>
+      </div>
+      <div class="cookie-modal__row">
+        <label class="copy-switch cookie-modal__switch">
+          <input type="checkbox" checked disabled aria-label="Functional cookies (always on)">
+          <span class="copy-switch__track"></span>
+        </label>
+        <p class="cookie-modal__row-title">Functional</p>
+        <div class="cookie-modal__row-purpose">
+          <p class="cookie-modal__row-desc">Cookies required for the site to work properly.</p>
+          <p class="cookie-modal__row-desc cookie-modal__row-desc--full">These cookies let the site remember choices you make (such as your username, language or region) and provide enhanced, more personal features. They may also be used to remember changes you&rsquo;ve made to text size, fonts and other parts of pages you can customise.</p>
+        </div>
+      </div>
+      <div class="cookie-modal__row">
+        <label class="copy-switch cookie-modal__switch">
+          <input type="checkbox" id="cookieAnalyticsToggle" aria-label="Analytics cookies">
+          <span class="copy-switch__track"></span>
+        </label>
+        <p class="cookie-modal__row-title">Analytics</p>
+        <div class="cookie-modal__row-purpose">
+          <p class="cookie-modal__row-desc">Understanding visitor behaviour to give you a more relevant browsing experience and personalise the content on our site.</p>
+          <p class="cookie-modal__row-desc cookie-modal__row-desc--full">For instance, we collect information about which pages you visit to help us present more relevant information.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cookie-modal__footer">
+    <button type="button" class="btn btn--stroke" id="cookieSettingsCancel"><span>Cancel</span></button>
+    <button type="button" class="btn btn--dark" id="cookieSettingsSave"><span>Save</span></button>
+  </div>
+</div>
+
+<div class="cookie-modal" id="cookieCancelModal" role="dialog" aria-modal="true" aria-labelledby="cookieCancelTitle" aria-hidden="true">
+  <div class="cookie-modal__header">
+    <h2 class="cookie-modal__title" id="cookieCancelTitle">Are you sure you want to cancel?</h2>
+  </div>
+  <div class="cookie-modal__body">
+    <p class="cookie-modal__intro">Your preferences haven&rsquo;t been saved. If you continue using our website, we&rsquo;ll assume you&rsquo;re okay with our default cookie settings &mdash; see our <a href="#" class="cookie-notice__policy-link">Privacy Policy</a> for details.</p>
+  </div>
+  <div class="cookie-modal__footer">
+    <button type="button" class="btn btn--stroke" id="cookieCancelBack"><span>Back</span></button>
+    <button type="button" class="btn btn--dark" id="cookieCancelConfirm"><span>Yes, cancel</span></button>
+  </div>
+</div>
+
+<script src="cookie-notice.js"></script>
 
 <script src="password-gate.js"></script>
 </body>
