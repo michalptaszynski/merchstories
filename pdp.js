@@ -40,6 +40,7 @@
         if (stageMedia) {
           stageMedia.style.display = '';
           stageMedia.style.backgroundImage = "url('" + thumb.dataset.img + "')";
+          stageMedia.classList.toggle('pdp__stage-media--cover', thumb.classList.contains('pdp__gallery-thumb--lifestyle'));
         }
       } else {
         if (stageCollage) stageCollage.style.display = '';
