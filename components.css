@@ -613,7 +613,7 @@ body.mobile-nav-open .utility-bar {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,6,26,0.28) 0%, rgba(0,6,26,0) 22%, rgba(0,6,26,0) 55%, rgba(0,6,26,0.55) 100%);
+  background: linear-gradient(180deg, rgba(0,6,26,0.3) 0%, rgba(0,6,26,0.08) 22%, rgba(0,6,26,0.3) 50%, rgba(0,6,26,0.8) 100%);
   pointer-events: none;
 }
 .hero__content {
@@ -918,7 +918,7 @@ body.mobile-nav-open .utility-bar {
   padding-inline: var(--space-6);
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-8);
 }
 .site-footer__cols {
