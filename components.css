@@ -613,7 +613,7 @@ body.mobile-nav-open .utility-bar {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,6,26,0.3) 0%, rgba(0,6,26,0.08) 22%, rgba(0,6,26,0.3) 50%, rgba(0,6,26,0.8) 100%);
+  background: linear-gradient(180deg, rgba(0,6,26,0.4) 0%, rgba(0,6,26,0.15) 22%, rgba(0,6,26,0.5) 50%, rgba(0,6,26,0.92) 100%);
   pointer-events: none;
 }
 .hero__content {
