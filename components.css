@@ -932,7 +932,7 @@ body.mobile-nav-open .utility-bar {
 }
 .site-footer__label {
   font-family: var(--font-mono);
-  font-size: var(--fs-13);
+  font-size: var(--fs-12);
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--color-text-primary);
@@ -940,7 +940,7 @@ body.mobile-nav-open .utility-bar {
 }
 .site-footer__col a {
   font-family: var(--font-mono);
-  font-size: var(--fs-13);
+  font-size: var(--fs-12);
   letter-spacing: -0.01em;
   color: var(--color-text-primary);
   transition: color var(--duration-fast) var(--ease);
