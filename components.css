@@ -1221,7 +1221,7 @@ body.mobile-nav-open .utility-bar {
   inset: 0;
   box-sizing: border-box;
   padding: 12%;
-  background-color: var(--white);
+  background-color: var(--gray-200);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
