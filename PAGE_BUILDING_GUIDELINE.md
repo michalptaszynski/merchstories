@@ -1,4 +1,4 @@
-# packhelp-merch — Guideline budowania stron
+# merchstories — Guideline budowania stron
 
 Ten dokument opisuje, jakich sekcji i komponentów używać, w jakim kontekście,
 jak je ze sobą parować i jakie odstępy stosować między nimi. Powstał na

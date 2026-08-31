@@ -1,4 +1,4 @@
-# packhelp-merch — Voice & copy guideline
+# merchstories — Voice & copy guideline
 
 Zasady tonu i wzorce tekstu wyciągnięte z realnego copy na `index.html`,
 `shop.html`, `product.html`, `platform.html`, `contact.html`,

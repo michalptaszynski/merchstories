@@ -1,4 +1,4 @@
-# packhelp-merch — Biblioteka snippetów
+# merchstories — Biblioteka snippetów
 
 Gotowe, realne bloki HTML wycięte z istniejących stron (nie wymyślone od
 nowa). Kopiuj stąd i adaptuj (podmień tekst/obrazki/linki) zamiast

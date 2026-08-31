@@ -1,4 +1,4 @@
-# packhelp-merch — QA checklist przed "gotowe"
+# merchstories — QA checklist przed "gotowe"
 
 Lista do przejścia po zbudowaniu/edycji strony, zanim ją pokażę jako
 skończoną. Nie jest to lista rzeczy do *opisania* — każdy punkt wymaga

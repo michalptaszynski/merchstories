@@ -1,4 +1,4 @@
-# packhelp-merch
+# merchstories
 
 Static site, served as-is from the repo root (GitHub Pages).
 

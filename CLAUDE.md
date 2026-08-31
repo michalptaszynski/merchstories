@@ -1,4 +1,4 @@
-# packhelp-merch — instrukcje projektu
+# merchstories — instrukcje projektu
 
 Przed zbudowaniem lub edycją jakiejkolwiek strony/sekcji w tym repo przeczytaj
 [`PAGE_BUILDING_GUIDELINE.md`](PAGE_BUILDING_GUIDELINE.md). Mapuje on intencję
